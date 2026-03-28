@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — OIL Benchmarks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0c0c0e;
+  --bg-card: #141418;
+  --bg-hover: #1a1a20;
+  --text: #e8e4dc;
+  --text-muted: #8a8780;
+  --accent: #c9a84c;
+  --accent-dim: rgba(201,168,76,0.15);
+  --border: #2a2a30;
+  --font: 'DM Mono', monospace;
+}
+[data-theme="light"] {
+  --bg: #f4f2ed;
+  --bg-card: #ffffff;
+  --bg-hover: #eae8e3;
+  --text: #1a1a1e;
+  --text-muted: #6b6860;
+  --border: #d4d2cd;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 14px;
+  min-height: 100vh;
+}
+a { color: var(--accent); text-decoration: none; transition: opacity .2s; }
+a:hover { opacity: .8; }
+.header {
+  border-bottom: 1px solid var(--border);
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 10;
+  backdrop-filter: blur(8px);
+}
+.logo {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+}
+.logo span { color: var(--text-muted); font-weight: 300; }
+.back-link {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  transition: border-color .2s, background .2s;
+}
+.back-link:hover { border-color: var(--accent); background: var(--accent-dim); opacity: 1; }
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
+}
+h1 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+.effective {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  letter-spacing: 0.03em;
+}
+h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-top: 2.5rem;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+h3 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+p { margin-bottom: 1rem; color: var(--text); }
+ul, ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+li { margin-bottom: 0.4rem; }
+.highlight {
+  background: var(--accent-dim);
+  border-left: 3px solid var(--accent);
+  padding: 1rem 1.2rem;
+  margin: 1.2rem 0;
+  border-radius: 0 4px 4px 0;
+  font-size: 0.85rem;
+}
+.footer-note {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .header { padding: 1rem 1.2rem; }
+  .container { padding: 2rem 1.2rem 3rem; }
+  h1 { font-size: 1.3rem; }
+}
+.lang-toggle {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  padding: 0.35rem 0.8rem;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  font-family: var(--font);
+  font-weight: 500;
+  transition: border-color .2s, background .2s;
+}
+.lang-toggle:hover { border-color: var(--accent); background: var(--accent-dim); }
+.header-right { display: flex; align-items: center; gap: 0.6rem; }
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="logo">OIL <span>BENCHMARKS</span></div>
+  <div class="header-right">
+    <button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">PT</button>
+    <a href="/" class="back-link" id="back-link">Back to App</a>
+  </div>
+</header>
+<main class="container">
+  <div id="content-en">
+  <h1>Privacy Policy</h1>
+  <p class="effective">Effective Date: March 28, 2026</p>
+
+  <h2>1. Introduction</h2>
+  <p>This Privacy Policy explains how OIL Benchmarks ("the Service"), operated by Nuno Ribeiro ("we," "us," or "our"), collects, uses, stores, and protects your personal data when you use our WTI crude oil price tracking application.</p>
+  <p>We are committed to protecting your privacy and being transparent about our data practices. This policy applies to all users of the Service, whether registered or unregistered.</p>
+
+  <h2>2. Data Controller</h2>
+  <p>The data controller responsible for your personal data is:</p>
+  <div class="highlight">
+    <strong>Nuno Ribeiro</strong><br>
+    OIL Benchmarks<br>
+    Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f794989983969483b7989e9b959299949f9a96859c84d994989a">[email&#160;protected]</a>
+  </div>
+
+  <h2>3. Data We Collect</h2>
+  <p>We collect the following categories of data to provide and improve the Service:</p>
+
+  <h3>3.1 Account Information</h3>
+  <ul>
+    <li><strong>Name:</strong> Your display name, provided during registration</li>
+    <li><strong>Email address:</strong> Used for account identification, communication, and password recovery</li>
+    <li><strong>Password:</strong> Stored as a one-way hash using bcryptjs; your plain-text password is never stored or accessible</li>
+    <li><strong>User plan:</strong> Your account tier (Free or Admin)</li>
+  </ul>
+
+  <h3>3.2 Profile Data</h3>
+  <ul>
+    <li><strong>Avatar:</strong> Your profile image, if uploaded or selected</li>
+    <li><strong>Avatar background color:</strong> Your chosen profile background color preference</li>
+  </ul>
+
+  <h3>3.3 Authentication Data</h3>
+  <ul>
+    <li><strong>OAuth provider and ID:</strong> If you register or log in via a third-party social login provider, we store the provider name and your unique identifier from that provider</li>
+    <li><strong>TOTP secret:</strong> If you enable two-factor authentication, an encrypted TOTP secret is stored to generate verification codes</li>
+    <li><strong>Email verification status:</strong> Whether your email address has been verified</li>
+    <li><strong>Email verification tokens:</strong> Temporary tokens generated for the email verification process</li>
+    <li><strong>Password reset tokens:</strong> Temporary tokens generated when you request a password reset</li>
+    <li><strong>Failed login attempts:</strong> Count of consecutive failed login attempts for account lockout protection</li>
+    <li><strong>Account lockout timestamp:</strong> The time at which your account was locked due to failed attempts</li>
+  </ul>
+
+  <h3>3.4 Usage Data</h3>
+  <ul>
+    <li><strong>Last login time:</strong> Timestamp of your most recent login</li>
+    <li><strong>Login count:</strong> Total number of times you have logged in</li>
+    <li><strong>Last settings change:</strong> Timestamp of the most recent change to your account settings</li>
+  </ul>
+
+  <h3>3.5 Analytics Data</h3>
+  <p>We operate a <strong>self-hosted, privacy-respecting analytics system</strong>. We explicitly <strong>do not store IP addresses</strong> in our analytics. The following data is collected:</p>
+  <ul>
+    <li><strong>Page views:</strong> The page URL visited, referrer URL, screen dimensions, browser language, browser name and version, operating system, device type (desktop/mobile/tablet), and a non-identifying session hash</li>
+    <li><strong>Analytics events:</strong> Event name (e.g., feature usage, button clicks), associated metadata, and session hash</li>
+  </ul>
+  <div class="highlight">
+    Session hashes are non-persistent, non-identifying tokens used to group page views within a single session. They cannot be used to identify or track individual users across sessions.
+  </div>
+
+  <h3>3.6 Cookie and Consent Data</h3>
+  <ul>
+    <li><strong>Cookie consent preferences:</strong> Your choices regarding essential, analytics, and functional cookies</li>
+    <li><strong>Session cookies:</strong> Server-side session data stored in SQLite, referenced by a session cookie in your browser</li>
+  </ul>
+
+  <h3>3.7 Price Alert Data</h3>
+  <ul>
+    <li><strong>Alert rules:</strong> The product being monitored, price direction (above/below), and threshold value for each alert you configure</li>
+  </ul>
+
+  <h3>3.8 Notification Data</h3>
+  <ul>
+    <li><strong>In-app notifications:</strong> Notifications generated by the Service and stored for display within your account</li>
+    <li><strong>Notification preferences:</strong> Your settings for email notifications, in-app notifications, and push notifications</li>
+  </ul>
+
+  <h3>3.9 User Settings</h3>
+  <ul>
+    <li><strong>Price alerts preference:</strong> Whether price alerts are enabled or disabled</li>
+    <li><strong>Weekly newsletter preference:</strong> Whether you have opted in to the weekly newsletter</li>
+    <li><strong>Dark mode preference:</strong> Your chosen display theme</li>
+  </ul>
+
+  <h2>4. How We Use Your Data</h2>
+  <p>We use the data we collect for the following purposes:</p>
+  <ul>
+    <li><strong>Providing the Service:</strong> Displaying oil price data, managing your account, delivering price alerts, and storing your preferences</li>
+    <li><strong>Authentication and security:</strong> Verifying your identity, protecting against unauthorized access, enforcing account lockout policies, and managing sessions</li>
+    <li><strong>Communication:</strong> Sending email verification messages, password reset links, price alert notifications, and optional weekly newsletters</li>
+    <li><strong>Analytics and improvement:</strong> Understanding how the Service is used to improve features, fix issues, and optimize performance — using only privacy-respecting, self-hosted analytics</li>
+    <li><strong>Legal compliance:</strong> Meeting any applicable legal obligations</li>
+  </ul>
+  <p>We do not sell, rent, or trade your personal data to third parties.</p>
+
+  <h2>5. Cookies and Tracking</h2>
+  <p>The Service uses cookies organized into three categories:</p>
+  <h3>5.1 Essential Cookies</h3>
+  <p>Required for the Service to function. These include:</p>
+  <ul>
+    <li>Session cookies (SQLite-backed server-side sessions referenced by a secure, HTTP-only cookie)</li>
+    <li>CSRF protection tokens</li>
+    <li>Cookie consent preference storage</li>
+  </ul>
+  <p>These cookies cannot be disabled without breaking core Service functionality.</p>
+  <h3>5.2 Analytics Cookies</h3>
+  <p>Used by our self-hosted analytics to understand usage patterns. These cookies:</p>
+  <ul>
+    <li>Track page views and feature usage events</li>
+    <li>Use non-identifying session hashes (not IP addresses)</li>
+    <li>Can be disabled through the cookie consent interface</li>
+  </ul>
+  <h3>5.3 Functional Cookies</h3>
+  <p>Enable personalization features such as:</p>
+  <ul>
+    <li>Theme preference (dark/light mode)</li>
+    <li>User interface preferences and settings</li>
+  </ul>
+  <p>You can manage your cookie preferences at any time through the cookie consent interface provided within the Service.</p>
+
+  <h2>6. Data Storage and Security</h2>
+  <p>We take the security of your data seriously and implement multiple layers of protection:</p>
+  <h3>6.1 Storage</h3>
+  <ul>
+    <li>All data is stored in SQLite databases on our servers using the better-sqlite3 driver</li>
+    <li>Session data is stored server-side in SQLite, not in client-side cookies</li>
+  </ul>
+  <h3>6.2 Encryption and Hashing</h3>
+  <ul>
+    <li>Passwords are hashed using bcryptjs with appropriate salt rounds; plain-text passwords are never stored</li>
+    <li>TOTP secrets for two-factor authentication are stored in encrypted form</li>
+    <li>All connections to the Service are encrypted using TLS/HTTPS</li>
+  </ul>
+  <h3>6.3 Application Security</h3>
+  <ul>
+    <li><strong>Content Security Policy (CSP):</strong> Enforced via Helmet middleware with per-request nonces to prevent cross-site scripting (XSS) attacks</li>
+    <li><strong>HTTP Strict Transport Security (HSTS):</strong> Ensures browsers only connect via HTTPS</li>
+    <li><strong>CSRF protection:</strong> Cross-Site Request Forgery tokens are required for state-changing operations</li>
+    <li><strong>Account lockout:</strong> Accounts are temporarily locked after multiple consecutive failed login attempts</li>
+    <li><strong>CAPTCHA:</strong> Login forms are protected by CAPTCHA verification</li>
+    <li><strong>Secure cookies:</strong> Session cookies are configured with secure, HTTP-only, and same-site flags</li>
+  </ul>
+  <h3>6.4 Automated Database Backups</h3>
+  <p>To protect against data loss from hardware failure, corruption, or other incidents, we maintain a comprehensive automated SQLite backup infrastructure:</p>
+  <h4>6.4.1 Backup Retention Policy</h4>
+  <p>Backups are retained on a tiered schedule to balance recovery granularity with storage efficiency:</p>
+  <ul>
+    <li><strong>Hourly snapshots:</strong> A database snapshot is taken every hour. The most recent hourly snapshots are available for point-in-time recovery</li>
+    <li><strong>7 daily backups:</strong> One full backup per day is retained for the past 7 days, providing day-level recovery granularity for the previous week</li>
+    <li><strong>4 weekly backups:</strong> One full backup per week is retained for the past 4 weeks, covering the previous month</li>
+    <li><strong>12 monthly backups:</strong> One full backup per month is retained for the past 12 months, enabling recovery from long-term issues</li>
+  </ul>
+  <p>Older backups are automatically rotated and securely deleted when they fall outside the retention window.</p>
+  <h4>6.4.2 Point-in-Time Recovery</h4>
+  <p>The Service supports point-in-time recovery (PITR) using a combination of periodic snapshots and SQLite write-ahead log (WAL) archiving. This allows us to restore the database to any specific moment in time — not just to the last backup — minimising data loss in the event of an incident. PITR is particularly effective for recovering from accidental data corruption or erroneous bulk operations without reverting unrelated changes.</p>
+  <h4>6.4.3 Backup Integrity Verification</h4>
+  <p>Every backup is automatically verified to ensure it can be reliably restored:</p>
+  <ul>
+    <li><strong>Checksum validation:</strong> A SHA-256 checksum is computed at backup creation and re-verified before any restore operation to detect file corruption or tampering</li>
+    <li><strong>Automated restore tests:</strong> Periodic restore drills are performed against an isolated test environment to confirm that backups produce a fully functional, consistent database. These tests validate schema integrity, row counts, and foreign key constraints</li>
+    <li><strong>Alerting:</strong> If any backup fails its integrity check, the operations team is notified immediately so corrective action can be taken before the next retention window expires</li>
+  </ul>
+  <h4>6.4.4 One-Click Restore from Admin Panel</h4>
+  <p>Authorised administrators can initiate a database restore directly from the admin panel. The restore interface lists all available recovery points (hourly, daily, weekly, monthly) and supports one-click restore with automatic pre-restore backup creation. This ensures that even during a restore operation, no data is irreversibly lost. The admin panel logs all restore operations for audit purposes.</p>
+  <h4>6.4.5 Backup Security</h4>
+  <ul>
+    <li>All backup files are stored on the same server infrastructure, encrypted at rest, and subject to the same access controls as the primary database</li>
+    <li>Backups are not transferred to or stored on third-party services</li>
+    <li>Access to backup files and restore operations is restricted to authorised administrators and logged for audit</li>
+  </ul>
+  <p>When a user account is deleted, all personal data associated with that account is purged from both the primary database and all existing backup copies within the next scheduled backup cycle (within 1 hour maximum). See Section 7.1 for full details on data erasure.</p>
+  <h3>6.5 WAL Checkpoint Management</h3>
+  <p>The Service uses SQLite's Write-Ahead Logging (WAL) mode for improved concurrent read/write performance. To maintain database health and prevent unbounded WAL file growth, we implement active checkpoint management:</p>
+  <ul>
+    <li><strong>Automatic checkpointing:</strong> WAL checkpoints are triggered automatically when the WAL file reaches a configured size threshold, transferring committed changes from the WAL back into the main database file</li>
+    <li><strong>Scheduled full checkpoints:</strong> A TRUNCATE checkpoint is performed at regular intervals during low-traffic periods to fully reset the WAL file, keeping it compact and ensuring optimal read performance</li>
+    <li><strong>Pre-backup checkpoints:</strong> A checkpoint is forced before each backup snapshot to ensure the backup captures a fully consistent state, with no uncommitted WAL data left outside the main database file</li>
+    <li><strong>Graceful shutdown checkpoints:</strong> As described in Section 6.6, all WAL entries are flushed and committed during the graceful shutdown sequence before the database connection is closed</li>
+  </ul>
+  <p>This checkpoint strategy ensures that your data is always durably written and that backup files are self-contained and reliable.</p>
+  <h3>6.6 Graceful Shutdown</h3>
+  <p>To safeguard data integrity during server maintenance, updates, or unexpected events, the Service implements a graceful shutdown procedure. When the server process receives a termination signal:</p>
+  <ul>
+    <li><strong>Connection draining:</strong> All in-flight HTTP requests are allowed to complete before the server stops accepting new connections. No active user sessions are abruptly terminated</li>
+    <li><strong>Database closure:</strong> The SQLite database connection is closed cleanly using the better-sqlite3 driver, ensuring all pending write-ahead log (WAL) entries are flushed and committed. This prevents data corruption or partial writes</li>
+    <li><strong>Session persistence:</strong> Active session data stored in the SQLite session store is preserved through the shutdown, so users are not forcibly logged out when the server restarts</li>
+    <li><strong>Signal handling:</strong> The process listens for SIGTERM and SIGINT signals, triggering the orderly shutdown sequence rather than an abrupt process kill</li>
+  </ul>
+  <p>This means that scheduled maintenance windows, deployments, and server restarts do not result in data loss, corrupted records, or interrupted transactions. Your data remains consistent and intact across all service restarts.</p>
+  <h3>6.7 Data Migration Tooling</h3>
+  <p>To ensure long-term scalability and data portability, the Service includes tooling for migrating data from SQLite to PostgreSQL or other relational database systems if the platform needs to scale beyond SQLite's capabilities:</p>
+  <ul>
+    <li><strong>Schema export:</strong> The complete database schema (tables, indices, constraints) can be exported and converted to PostgreSQL-compatible DDL statements</li>
+    <li><strong>Data export:</strong> All database contents can be exported to standard formats (SQL dump, CSV) for import into a target database system</li>
+    <li><strong>Migration validation:</strong> Automated checks verify row counts, data types, and referential integrity after migration to ensure no data is lost or corrupted during the transfer</li>
+    <li><strong>User data portability:</strong> Individual user data can be exported independently of a full migration, supporting your Right to Data Portability (Section 8)</li>
+  </ul>
+  <p>In the event that a migration is performed, we will notify all users in advance and ensure that no data is lost during the transition. The Service's privacy protections, backup procedures, and data erasure commitments apply equally regardless of the underlying database technology.</p>
+
+  <h2>7. Data Retention</h2>
+  <p>We retain your data for the following periods:</p>
+  <ul>
+    <li><strong>Account data:</strong> Retained for as long as your account is active</li>
+    <li><strong>Analytics data:</strong> Retained in aggregated, non-identifying form. Individual session data is periodically purged</li>
+    <li><strong>Email verification and password reset tokens:</strong> Automatically expire and are deleted after their validity period</li>
+    <li><strong>Session data:</strong> Expired sessions are periodically cleaned from the database</li>
+    <li><strong>Price alert data:</strong> Retained for as long as your account is active and the alerts are configured</li>
+  </ul>
+
+  <h3>7.1 Right to Be Forgotten — Complete Data Erasure on Account Deletion</h3>
+  <p>When you delete your account, we perform <strong>complete and permanent erasure</strong> of all personal data associated with your account. This is not a soft delete or deactivation — your data is irreversibly removed from our systems. Specifically, the following data is permanently deleted:</p>
+  <ul>
+    <li><strong>Account information:</strong> Your name, email address, subscription plan, and all account metadata (last login timestamps, login counts, failed login attempts, lockout records)</li>
+    <li><strong>Authentication data:</strong> Password hashes, OAuth provider links and identifiers, TOTP two-factor authentication secrets</li>
+    <li><strong>Profile data:</strong> Avatar images and avatar background colour selections</li>
+    <li><strong>User settings and preferences:</strong> Price alert preferences, weekly newsletter opt-in status, dark mode preference, notification preferences (email, in-app, push)</li>
+    <li><strong>Price alert rules:</strong> All configured price alert rules and their associated conditions</li>
+    <li><strong>Notifications:</strong> All in-app notifications sent to your account</li>
+    <li><strong>Active sessions:</strong> All server-side session records linked to your account</li>
+    <li><strong>Security tokens:</strong> Any pending email verification tokens and password reset tokens</li>
+  </ul>
+  <div class="highlight">
+    <strong>Our commitment:</strong> We do not retain shadow profiles or residual data after account deletion. Your personal data is purged from the primary database immediately and from all backup copies within the next hourly backup cycle (maximum 1 hour). Once fully purged, there is no way to recover your data. This erasure is irreversible.
+  </div>
+  <p>Anonymised, aggregated analytics data (page views, events) that cannot be linked back to your identity may be retained for service improvement purposes, as this data does not constitute personal data.</p>
+
+  <h2>8. Your Rights</h2>
+  <p>You have the following rights regarding your personal data:</p>
+  <ul>
+    <li><strong>Right of access:</strong> You may request a copy of the personal data we hold about you</li>
+    <li><strong>Right to correction:</strong> You may request that we correct inaccurate or incomplete personal data. You can also update your name, email, avatar, and preferences directly through your account settings</li>
+    <li><strong>Right to erasure (Right to be Forgotten):</strong> You have the right to request complete and permanent deletion of all personal data we hold about you. When you delete your account — either through your account settings or by contacting us — all data listed in Section 7.1 is permanently and irreversibly erased from our systems, including all backup copies (purged within the next hourly backup cycle). No residual data or shadow profiles are retained. You may also request erasure without deleting your account by contacting us directly, in which case we will delete all data that is not strictly necessary for account operation</li>
+    <li><strong>Right to data portability:</strong> You may request a machine-readable export of your personal data prior to account deletion</li>
+    <li><strong>Right to withdraw consent:</strong> Where processing is based on consent (e.g., analytics cookies, newsletter), you may withdraw consent at any time without affecting the lawfulness of prior processing</li>
+    <li><strong>Right to object:</strong> You may object to the processing of your personal data in certain circumstances</li>
+    <li><strong>Right to restriction of processing:</strong> You may request that we restrict the processing of your personal data while a complaint or request is being resolved</li>
+  </ul>
+  <p>To exercise any of these rights, please contact us using the details provided in Section 12 below. We will respond to your request within 30 days. Requests for account deletion and complete data erasure are processed immediately upon confirmation.</p>
+
+  <h2>9. Third-Party Services</h2>
+  <p>The Service uses a limited number of third-party resources:</p>
+  <ul>
+    <li><strong>Google Fonts:</strong> We load the DM Mono typeface from Google Fonts. When your browser requests these font files, Google may receive your IP address and standard request headers. Please refer to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a> for details on their data handling practices</li>
+    <li><strong>CDN resources:</strong> Certain front-end libraries may be loaded from content delivery networks (CDNs). These CDN providers may receive your IP address and standard request headers when serving these resources</li>
+  </ul>
+  <p>We do not use any third-party analytics services. All analytics are processed by our self-hosted system, and no analytics data is shared with external parties.</p>
+
+  <h2>10. Children's Privacy</h2>
+  <p>The Service is not directed at children under the age of 16. We do not knowingly collect personal data from children under 16. If you are a parent or guardian and believe your child has provided us with personal data, please contact us so that we can delete the data.</p>
+
+  <h2>11. Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. When we make material changes, we will:</p>
+  <ul>
+    <li>Update the "Effective Date" at the top of this page</li>
+    <li>Notify you through in-app notifications or email (if you have opted in)</li>
+  </ul>
+  <p>We encourage you to review this Privacy Policy periodically. Your continued use of the Service after any changes constitutes acceptance of the updated policy.</p>
+
+  <h2>12. Contact Information</h2>
+  <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
+  <div class="highlight">
+    <strong>Nuno Ribeiro</strong><br>
+    OIL Benchmarks<br>
+    Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="14777b7a60757760547b7d7876717a777c7975667f673a777b79">[email&#160;protected]</a>
+  </div>
+
+  <div class="footer-note">
+    OIL Benchmarks &mdash; operated by Nuno Ribeiro<br>
+    <a href="terms.html">Terms of Service</a>
+  </div>
+  </div>
+
+  <div id="content-pt" style="display:none">
+  <h1>Política de Privacidade</h1>
+  <p class="effective">Data de Vigência: 28 de Março de 2026</p>
+
+  <h2>1. Introdução</h2>
+  <p>Esta Política de Privacidade explica como o OIL Benchmarks ("o Serviço"), operado por Nuno Ribeiro ("nós" ou "nosso"), recolhe, utiliza, armazena e protege os seus dados pessoais quando utiliza a nossa aplicação de acompanhamento de preços do petróleo bruto WTI.</p>
+  <p>Estamos comprometidos em proteger a sua privacidade e ser transparentes sobre as nossas práticas de dados. Esta política aplica-se a todos os utilizadores do Serviço, registados ou não registados.</p>
+
+  <h2>2. Responsável pelo Tratamento de Dados</h2>
+  <p>O responsável pelo tratamento dos seus dados pessoais é:</p>
+  <div class="highlight">
+    <strong>Nuno Ribeiro</strong><br>
+    OIL Benchmarks<br>
+    Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5b3834352f3a382f1b343237393e353833363a29302875383436">[email&#160;protected]</a>
+  </div>
+
+  <h2>3. Dados que Recolhemos</h2>
+  <p>Recolhemos as seguintes categorias de dados para fornecer e melhorar o Serviço:</p>
+
+  <h3>3.1 Informações da Conta</h3>
+  <ul>
+    <li><strong>Nome:</strong> O seu nome de exibição, fornecido durante o registo</li>
+    <li><strong>Endereço de email:</strong> Utilizado para identificação da conta, comunicação e recuperação de palavra-passe</li>
+    <li><strong>Palavra-passe:</strong> Armazenada como hash unidirecional usando bcryptjs; a sua palavra-passe em texto simples nunca é armazenada ou acessível</li>
+    <li><strong>Plano do utilizador:</strong> O nível da sua conta (Gratuito ou Administrador)</li>
+  </ul>
+
+  <h3>3.2 Dados de Perfil</h3>
+  <ul>
+    <li><strong>Avatar:</strong> A sua imagem de perfil, se carregada ou selecionada</li>
+    <li><strong>Cor de fundo do avatar:</strong> A sua preferência de cor de fundo do perfil escolhida</li>
+  </ul>
+
+  <h3>3.3 Dados de Autenticação</h3>
+  <ul>
+    <li><strong>Fornecedor e ID OAuth:</strong> Se se registar ou iniciar sessão através de um fornecedor de login social de terceiros, armazenamos o nome do fornecedor e o seu identificador único desse fornecedor</li>
+    <li><strong>Segredo TOTP:</strong> Se ativar a autenticação de dois fatores, um segredo TOTP encriptado é armazenado para gerar códigos de verificação</li>
+    <li><strong>Estado de verificação de email:</strong> Se o seu endereço de email foi verificado</li>
+    <li><strong>Tokens de verificação de email:</strong> Tokens temporários gerados para o processo de verificação de email</li>
+    <li><strong>Tokens de redefinição de palavra-passe:</strong> Tokens temporários gerados quando solicita uma redefinição de palavra-passe</li>
+    <li><strong>Tentativas de login falhadas:</strong> Contagem de tentativas consecutivas de login falhadas para proteção de bloqueio de conta</li>
+    <li><strong>Timestamp de bloqueio de conta:</strong> O momento em que a sua conta foi bloqueada devido a tentativas falhadas</li>
+  </ul>
+  <h3>3.4 Dados de Utilização</h3>
+  <ul>
+    <li><strong>Último login:</strong> Timestamp do seu login mais recente</li>
+    <li><strong>Contagem de logins:</strong> Número total de vezes que iniciou sessão</li>
+    <li><strong>Última alteração de definições:</strong> Timestamp da alteração mais recente às definições da sua conta</li>
+  </ul>
+
+  <h3>3.5 Dados de Análise</h3>
+  <p>Operamos um <strong>sistema de análise auto-hospedado que respeita a privacidade</strong>. <strong>Não armazenamos endereços IP</strong> explicitamente nas nossas análises. Os seguintes dados são recolhidos:</p>
+  <ul>
+    <li><strong>Visualizações de página:</strong> O URL da página visitada, URL de referência, dimensões do ecrã, idioma do navegador, nome e versão do navegador, sistema operativo, tipo de dispositivo (desktop/móvel/tablet) e um hash de sessão não identificável</li>
+    <li><strong>Eventos de análise:</strong> Nome do evento (ex.: utilização de funcionalidades, cliques em botões), metadados associados e hash de sessão</li>
+  </ul>
+  <div class="highlight">
+    Os hashes de sessão são tokens não persistentes e não identificáveis utilizados para agrupar visualizações de página dentro de uma única sessão. Não podem ser utilizados para identificar ou rastrear utilizadores individuais entre sessões.
+  </div>
+
+  <h3>3.6 Dados de Cookies e Consentimento</h3>
+  <ul>
+    <li><strong>Preferências de consentimento de cookies:</strong> As suas escolhas relativamente a cookies essenciais, de análise e funcionais</li>
+    <li><strong>Cookies de sessão:</strong> Dados de sessão do lado do servidor armazenados em SQLite, referenciados por um cookie de sessão no seu navegador</li>
+  </ul>
+
+  <h3>3.7 Dados de Alertas de Preço</h3>
+  <ul>
+    <li><strong>Regras de alerta:</strong> O produto monitorizado, direção do preço (acima/abaixo) e valor limite para cada alerta que configura</li>
+  </ul>
+
+  <h3>3.8 Dados de Notificações</h3>
+  <ul>
+    <li><strong>Notificações na aplicação:</strong> Notificações geradas pelo Serviço e armazenadas para exibição na sua conta</li>
+    <li><strong>Preferências de notificação:</strong> As suas definições para notificações por email, na aplicação e push</li>
+  </ul>
+
+  <h3>3.9 Definições do Utilizador</h3>
+  <ul>
+    <li><strong>Preferência de alertas de preço:</strong> Se os alertas de preço estão ativados ou desativados</li>
+    <li><strong>Preferência de newsletter semanal:</strong> Se optou por receber a newsletter semanal</li>
+    <li><strong>Preferência de modo escuro:</strong> O seu tema de exibição escolhido</li>
+  </ul>
+
+  <h2>4. Como Utilizamos os Seus Dados</h2>
+  <p>Utilizamos os dados que recolhemos para os seguintes fins:</p>
+  <ul>
+    <li><strong>Fornecimento do Serviço:</strong> Exibir dados de preços do petróleo, gerir a sua conta, entregar alertas de preço e armazenar as suas preferências</li>
+    <li><strong>Autenticação e segurança:</strong> Verificar a sua identidade, proteger contra acesso não autorizado, aplicar políticas de bloqueio de conta e gerir sessões</li>
+    <li><strong>Comunicação:</strong> Enviar mensagens de verificação de email, links de redefinição de palavra-passe, notificações de alertas de preço e newsletters semanais opcionais</li>
+    <li><strong>Análise e melhoria:</strong> Compreender como o Serviço é utilizado para melhorar funcionalidades, corrigir problemas e otimizar o desempenho — utilizando apenas análises auto-hospedadas que respeitam a privacidade</li>
+    <li><strong>Conformidade legal:</strong> Cumprir quaisquer obrigações legais aplicáveis</li>
+  </ul>
+  <p>Não vendemos, alugamos ou negociamos os seus dados pessoais com terceiros.</p>
+
+  <h2>5. Cookies e Rastreamento</h2>
+  <p>O Serviço utiliza cookies organizados em três categorias:</p>
+  <h3>5.1 Cookies Essenciais</h3>
+  <p>Necessários para o funcionamento do Serviço. Incluem:</p>
+  <ul>
+    <li>Cookies de sessão (sessões do lado do servidor em SQLite referenciadas por um cookie seguro e HTTP-only)</li>
+    <li>Tokens de proteção CSRF</li>
+    <li>Armazenamento de preferências de consentimento de cookies</li>
+  </ul>
+  <p>Estes cookies não podem ser desativados sem comprometer a funcionalidade principal do Serviço.</p>
+  <h3>5.2 Cookies de Análise</h3>
+  <p>Utilizados pelo nosso sistema de análise auto-hospedado para compreender padrões de utilização. Estes cookies:</p>
+  <ul>
+    <li>Rastreiam visualizações de página e eventos de utilização de funcionalidades</li>
+    <li>Utilizam hashes de sessão não identificáveis (não endereços IP)</li>
+    <li>Podem ser desativados através da interface de consentimento de cookies</li>
+  </ul>
+  <h3>5.3 Cookies Funcionais</h3>
+  <p>Permitem funcionalidades de personalização como:</p>
+  <ul>
+    <li>Preferência de tema (modo escuro/claro)</li>
+    <li>Preferências e definições da interface de utilizador</li>
+  </ul>
+  <p>Pode gerir as suas preferências de cookies a qualquer momento através da interface de consentimento de cookies fornecida no Serviço.</p>
+
+  <h2>6. Armazenamento e Segurança de Dados</h2>
+  <p>Levamos a segurança dos seus dados a sério e implementamos múltiplas camadas de proteção:</p>
+  <h3>6.1 Armazenamento</h3>
+  <ul>
+    <li>Todos os dados são armazenados em bases de dados SQLite nos nossos servidores utilizando o driver better-sqlite3</li>
+    <li>Os dados de sessão são armazenados do lado do servidor em SQLite, não em cookies do lado do cliente</li>
+  </ul>
+  <h3>6.2 Encriptação e Hashing</h3>
+  <ul>
+    <li>As palavras-passe são encriptadas usando bcryptjs com rondas de salt apropriadas; palavras-passe em texto simples nunca são armazenadas</li>
+    <li>Os segredos TOTP para autenticação de dois fatores são armazenados de forma encriptada</li>
+    <li>Todas as ligações ao Serviço são encriptadas usando TLS/HTTPS</li>
+  </ul>
+  <h3>6.3 Segurança da Aplicação</h3>
+  <ul>
+    <li><strong>Content Security Policy (CSP):</strong> Aplicada via middleware Helmet com nonces por pedido para prevenir ataques de cross-site scripting (XSS)</li>
+    <li><strong>HTTP Strict Transport Security (HSTS):</strong> Garante que os navegadores se ligam apenas via HTTPS</li>
+    <li><strong>Proteção CSRF:</strong> Tokens de Cross-Site Request Forgery são necessários para operações que alteram estado</li>
+    <li><strong>Bloqueio de conta:</strong> As contas são temporariamente bloqueadas após múltiplas tentativas consecutivas de login falhadas</li>
+    <li><strong>CAPTCHA:</strong> Os formulários de login são protegidos por verificação CAPTCHA</li>
+    <li><strong>Cookies seguros:</strong> Os cookies de sessão são configurados com flags secure, HTTP-only e same-site</li>
+  </ul>
+  <h3>6.4 Cópias de Segurança Automatizadas da Base de Dados</h3>
+  <p>Para proteger contra perda de dados por falha de hardware, corrupção ou outros incidentes, mantemos uma infraestrutura abrangente de cópias de segurança automatizadas SQLite:</p>
+  <h4>6.4.1 Política de Retenção de Cópias de Segurança</h4>
+  <p>As cópias de segurança são retidas num calendário escalonado para equilibrar a granularidade de recuperação com a eficiência de armazenamento:</p>
+  <ul>
+    <li><strong>Snapshots horários:</strong> Um snapshot da base de dados é realizado a cada hora. Os snapshots horários mais recentes estão disponíveis para recuperação point-in-time</li>
+    <li><strong>7 cópias diárias:</strong> Uma cópia de segurança completa por dia é retida durante os últimos 7 dias, proporcionando granularidade de recuperação ao nível do dia para a semana anterior</li>
+    <li><strong>4 cópias semanais:</strong> Uma cópia de segurança completa por semana é retida durante as últimas 4 semanas, cobrindo o mês anterior</li>
+    <li><strong>12 cópias mensais:</strong> Uma cópia de segurança completa por mês é retida durante os últimos 12 meses, permitindo recuperação de problemas de longo prazo</li>
+  </ul>
+  <p>As cópias de segurança mais antigas são automaticamente rotacionadas e eliminadas de forma segura quando ultrapassam a janela de retenção.</p>
+  <h4>6.4.2 Recuperação Point-in-Time</h4>
+  <p>O Serviço suporta recuperação point-in-time (PITR) utilizando uma combinação de snapshots periódicos e arquivamento do write-ahead log (WAL) do SQLite. Isto permite-nos restaurar a base de dados para qualquer momento específico no tempo — não apenas para a última cópia de segurança — minimizando a perda de dados em caso de incidente. O PITR é particularmente eficaz para recuperar de corrupção acidental de dados ou operações em massa erróneas sem reverter alterações não relacionadas.</p>
+  <h4>6.4.3 Verificação de Integridade das Cópias de Segurança</h4>
+  <p>Cada cópia de segurança é automaticamente verificada para garantir que pode ser restaurada de forma fiável:</p>
+  <ul>
+    <li><strong>Validação de checksum:</strong> Um checksum SHA-256 é calculado na criação da cópia e re-verificado antes de qualquer operação de restauro para detetar corrupção ou adulteração de ficheiros</li>
+    <li><strong>Testes de restauro automatizados:</strong> Exercícios periódicos de restauro são realizados contra um ambiente de teste isolado para confirmar que as cópias produzem uma base de dados totalmente funcional e consistente. Estes testes validam a integridade do esquema, contagens de registos e restrições de chave estrangeira</li>
+    <li><strong>Alertas:</strong> Se alguma cópia de segurança falhar a sua verificação de integridade, a equipa de operações é notificada imediatamente para que possam ser tomadas medidas corretivas antes da próxima janela de retenção expirar</li>
+  </ul>
+  <h4>6.4.4 Restauro com Um Clique a partir do Painel de Administração</h4>
+  <p>Os administradores autorizados podem iniciar um restauro da base de dados diretamente a partir do painel de administração. A interface de restauro lista todos os pontos de recuperação disponíveis (horários, diários, semanais, mensais) e suporta restauro com um clique com criação automática de cópia de segurança pré-restauro. Isto garante que mesmo durante uma operação de restauro, nenhum dado é irreversivelmente perdido. O painel de administração regista todas as operações de restauro para fins de auditoria.</p>
+  <h4>6.4.5 Segurança das Cópias de Segurança</h4>
+  <ul>
+    <li>Todos os ficheiros de cópia de segurança são armazenados na mesma infraestrutura de servidores, encriptados em repouso e sujeitos aos mesmos controlos de acesso que a base de dados principal</li>
+    <li>As cópias de segurança não são transferidas para nem armazenadas em serviços de terceiros</li>
+    <li>O acesso aos ficheiros de cópia de segurança e às operações de restauro é restrito a administradores autorizados e registado para auditoria</li>
+  </ul>
+  <p>Quando uma conta de utilizador é eliminada, todos os dados pessoais associados a essa conta são purgados tanto da base de dados principal como de todas as cópias de segurança existentes no próximo ciclo de cópia de segurança agendado (no máximo 1 hora). Consulte a Secção 7.1 para detalhes completos sobre a eliminação de dados.</p>
+  <h3>6.5 Gestão de Checkpoints WAL</h3>
+  <p>O Serviço utiliza o modo Write-Ahead Logging (WAL) do SQLite para melhorar o desempenho de leitura/escrita concorrente. Para manter a saúde da base de dados e prevenir o crescimento ilimitado do ficheiro WAL, implementamos gestão ativa de checkpoints:</p>
+  <ul>
+    <li><strong>Checkpointing automático:</strong> Os checkpoints WAL são acionados automaticamente quando o ficheiro WAL atinge um limiar de tamanho configurado, transferindo as alterações confirmadas do WAL de volta para o ficheiro principal da base de dados</li>
+    <li><strong>Checkpoints completos agendados:</strong> Um checkpoint TRUNCATE é realizado em intervalos regulares durante períodos de baixo tráfego para resetar completamente o ficheiro WAL, mantendo-o compacto e garantindo desempenho de leitura ótimo</li>
+    <li><strong>Checkpoints pré-cópia de segurança:</strong> Um checkpoint é forçado antes de cada snapshot de cópia de segurança para garantir que a cópia captura um estado totalmente consistente, sem dados WAL não confirmados fora do ficheiro principal da base de dados</li>
+    <li><strong>Checkpoints de encerramento gracioso:</strong> Conforme descrito na Secção 6.6, todas as entradas WAL são descarregadas e confirmadas durante a sequência de encerramento gracioso antes de a ligação à base de dados ser encerrada</li>
+  </ul>
+  <p>Esta estratégia de checkpoints garante que os seus dados são sempre escritos de forma durável e que os ficheiros de cópia de segurança são autónomos e fiáveis.</p>
+  <h3>6.6 Encerramento Gracioso</h3>
+  <p>Para salvaguardar a integridade dos dados durante manutenção do servidor, atualizações ou eventos inesperados, o Serviço implementa um procedimento de encerramento gracioso. Quando o processo do servidor recebe um sinal de terminação:</p>
+  <ul>
+    <li><strong>Drenagem de ligações:</strong> Todos os pedidos HTTP em curso são autorizados a completar antes de o servidor parar de aceitar novas ligações. Nenhuma sessão de utilizador ativa é terminada abruptamente</li>
+    <li><strong>Fecho da base de dados:</strong> A ligação à base de dados SQLite é encerrada de forma limpa utilizando o driver better-sqlite3, garantindo que todas as entradas pendentes do write-ahead log (WAL) são descarregadas e confirmadas. Isto previne corrupção de dados ou escritas parciais</li>
+    <li><strong>Persistência de sessões:</strong> Os dados de sessão ativos armazenados no armazenamento de sessões SQLite são preservados durante o encerramento, para que os utilizadores não sejam forçados a terminar sessão quando o servidor reinicia</li>
+    <li><strong>Tratamento de sinais:</strong> O processo escuta sinais SIGTERM e SIGINT, acionando a sequência de encerramento ordenado em vez de uma terminação abrupta do processo</li>
+  </ul>
+  <p>Isto significa que janelas de manutenção agendadas, implementações e reinícios do servidor não resultam em perda de dados, registos corrompidos ou transações interrompidas. Os seus dados permanecem consistentes e intactos durante todos os reinícios do serviço.</p>
+  <h3>6.7 Ferramentas de Migração de Dados</h3>
+  <p>Para garantir escalabilidade a longo prazo e portabilidade dos dados, o Serviço inclui ferramentas para migrar dados do SQLite para PostgreSQL ou outros sistemas de bases de dados relacionais, caso a plataforma necessite de escalar para além das capacidades do SQLite:</p>
+  <ul>
+    <li><strong>Exportação de esquema:</strong> O esquema completo da base de dados (tabelas, índices, restrições) pode ser exportado e convertido para instruções DDL compatíveis com PostgreSQL</li>
+    <li><strong>Exportação de dados:</strong> Todo o conteúdo da base de dados pode ser exportado para formatos padrão (dump SQL, CSV) para importação num sistema de base de dados de destino</li>
+    <li><strong>Validação de migração:</strong> Verificações automatizadas confirmam contagens de registos, tipos de dados e integridade referencial após a migração para garantir que nenhum dado é perdido ou corrompido durante a transferência</li>
+    <li><strong>Portabilidade de dados do utilizador:</strong> Os dados individuais do utilizador podem ser exportados independentemente de uma migração completa, apoiando o seu Direito à Portabilidade de Dados (Secção 8)</li>
+  </ul>
+  <p>No caso de uma migração ser realizada, notificaremos todos os utilizadores com antecedência e garantiremos que nenhum dado é perdido durante a transição. As proteções de privacidade, procedimentos de cópia de segurança e compromissos de eliminação de dados do Serviço aplicam-se igualmente independentemente da tecnologia de base de dados subjacente.</p>
+
+  <h2>7. Retenção de Dados</h2>
+  <p>Retemos os seus dados pelos seguintes períodos:</p>
+  <ul>
+    <li><strong>Dados da conta:</strong> Retidos enquanto a sua conta estiver ativa</li>
+    <li><strong>Dados de análise:</strong> Retidos de forma agregada e não identificável. Os dados de sessão individuais são periodicamente eliminados</li>
+    <li><strong>Tokens de verificação de email e redefinição de palavra-passe:</strong> Expiram automaticamente e são eliminados após o seu período de validade</li>
+    <li><strong>Dados de sessão:</strong> As sessões expiradas são periodicamente limpas da base de dados</li>
+    <li><strong>Dados de alertas de preço:</strong> Retidos enquanto a sua conta estiver ativa e os alertas estiverem configurados</li>
+  </ul>
+
+  <h3>7.1 Direito ao Esquecimento — Eliminação Completa de Dados na Eliminação da Conta</h3>
+  <p>Quando elimina a sua conta, realizamos a <strong>eliminação completa e permanente</strong> de todos os dados pessoais associados à sua conta. Não se trata de uma desativação ou eliminação temporária — os seus dados são irreversivelmente removidos dos nossos sistemas. Especificamente, os seguintes dados são permanentemente eliminados:</p>
+  <ul>
+    <li><strong>Informações da conta:</strong> O seu nome, endereço de email, plano de subscrição e todos os metadados da conta (carimbos de data/hora do último login, contagens de login, tentativas de login falhadas, registos de bloqueio)</li>
+    <li><strong>Dados de autenticação:</strong> Hashes de palavras-passe, ligações e identificadores de fornecedores OAuth, segredos TOTP de autenticação de dois fatores</li>
+    <li><strong>Dados de perfil:</strong> Imagens de avatar e seleções de cor de fundo do avatar</li>
+    <li><strong>Definições e preferências do utilizador:</strong> Preferências de alertas de preço, estado de subscrição da newsletter semanal, preferência de modo escuro, preferências de notificação (email, na aplicação, push)</li>
+    <li><strong>Regras de alertas de preço:</strong> Todas as regras de alertas de preço configuradas e as suas condições associadas</li>
+    <li><strong>Notificações:</strong> Todas as notificações na aplicação enviadas para a sua conta</li>
+    <li><strong>Sessões ativas:</strong> Todos os registos de sessão do lado do servidor ligados à sua conta</li>
+    <li><strong>Tokens de segurança:</strong> Quaisquer tokens pendentes de verificação de email e redefinição de palavra-passe</li>
+  </ul>
+  <div class="highlight">
+    <strong>O nosso compromisso:</strong> Não retemos perfis sombra ou dados residuais após a eliminação da conta. Os seus dados pessoais são purgados da base de dados principal imediatamente e de todas as cópias de segurança no próximo ciclo de cópia de segurança horária (máximo 1 hora). Uma vez totalmente purgados, não existe forma de recuperar os seus dados. Esta eliminação é irreversível.
+  </div>
+  <p>Dados de análise anonimizados e agregados (visualizações de página, eventos) que não podem ser associados à sua identidade podem ser retidos para fins de melhoria do serviço, uma vez que estes dados não constituem dados pessoais.</p>
+
+  <h2>8. Os Seus Direitos</h2>
+  <p>Tem os seguintes direitos relativamente aos seus dados pessoais:</p>
+  <ul>
+    <li><strong>Direito de acesso:</strong> Pode solicitar uma cópia dos dados pessoais que detemos sobre si</li>
+    <li><strong>Direito de retificação:</strong> Pode solicitar que corrijamos dados pessoais imprecisos ou incompletos. Também pode atualizar o seu nome, email, avatar e preferências diretamente através das definições da conta</li>
+    <li><strong>Direito ao apagamento (Direito ao Esquecimento):</strong> Tem o direito de solicitar a eliminação completa e permanente de todos os dados pessoais que detemos sobre si. Quando elimina a sua conta — seja através das definições da conta ou contactando-nos — todos os dados listados na Secção 7.1 são permanente e irreversivelmente apagados dos nossos sistemas, incluindo todas as cópias de segurança (purgadas no próximo ciclo de cópia de segurança horária). Nenhum dado residual ou perfil sombra é retido. Pode também solicitar o apagamento sem eliminar a sua conta contactando-nos diretamente, caso em que eliminaremos todos os dados que não sejam estritamente necessários para o funcionamento da conta</li>
+    <li><strong>Direito à portabilidade de dados:</strong> Pode solicitar uma exportação legível por máquina dos seus dados pessoais antes da eliminação da conta</li>
+    <li><strong>Direito de retirar o consentimento:</strong> Quando o tratamento se baseia no consentimento (ex.: cookies de análise, newsletter), pode retirar o consentimento a qualquer momento sem afetar a legalidade do tratamento anterior</li>
+    <li><strong>Direito de oposição:</strong> Pode opor-se ao tratamento dos seus dados pessoais em determinadas circunstâncias</li>
+    <li><strong>Direito à limitação do tratamento:</strong> Pode solicitar que limitemos o tratamento dos seus dados pessoais enquanto uma reclamação ou pedido estiver a ser resolvido</li>
+  </ul>
+  <p>Para exercer qualquer destes direitos, contacte-nos usando os detalhes fornecidos na Secção 12 abaixo. Responderemos ao seu pedido dentro de 30 dias. Os pedidos de eliminação de conta e apagamento completo de dados são processados imediatamente após confirmação.</p>
+
+  <h2>9. Serviços de Terceiros</h2>
+  <p>O Serviço utiliza um número limitado de recursos de terceiros:</p>
+  <ul>
+    <li><strong>Google Fonts:</strong> Carregamos a tipografia DM Mono do Google Fonts. Quando o seu navegador solicita estes ficheiros de fontes, a Google pode receber o seu endereço IP e cabeçalhos de pedido padrão. Consulte a <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidade da Google</a> para detalhes sobre as suas práticas de tratamento de dados</li>
+    <li><strong>Recursos CDN:</strong> Certas bibliotecas de front-end podem ser carregadas a partir de redes de distribuição de conteúdo (CDNs). Estes fornecedores de CDN podem receber o seu endereço IP e cabeçalhos de pedido padrão ao servir estes recursos</li>
+  </ul>
+  <p>Não utilizamos quaisquer serviços de análise de terceiros. Todas as análises são processadas pelo nosso sistema auto-hospedado, e nenhum dado de análise é partilhado com partes externas.</p>
+
+  <h2>10. Privacidade de Menores</h2>
+  <p>O Serviço não se destina a crianças com menos de 16 anos. Não recolhemos intencionalmente dados pessoais de crianças com menos de 16 anos. Se é pai ou tutor e acredita que o seu filho nos forneceu dados pessoais, contacte-nos para que possamos eliminar os dados.</p>
+
+  <h2>11. Alterações a Esta Política</h2>
+  <p>Podemos atualizar esta Política de Privacidade periodicamente para refletir alterações nas nossas práticas, tecnologia, requisitos legais ou outros fatores. Quando fizermos alterações materiais, iremos:</p>
+  <ul>
+    <li>Atualizar a "Data de Vigência" no topo desta página</li>
+    <li>Notificá-lo através de notificações na aplicação ou email (se tiver optado por receber)</li>
+  </ul>
+  <p>Encorajamo-lo a rever esta Política de Privacidade periodicamente. O seu uso continuado do Serviço após quaisquer alterações constitui aceitação da política atualizada.</p>
+
+  <h2>12. Informações de Contacto</h2>
+  <p>Se tiver alguma questão, preocupação ou pedido relativamente a esta Política de Privacidade ou às nossas práticas de dados, por favor contacte-nos:</p>
+  <div class="highlight">
+    <strong>Nuno Ribeiro</strong><br>
+    OIL Benchmarks<br>
+    Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f794989983969483b7989e9b959299949f9a96859c84d994989a">[email&#160;protected]</a>
+  </div>
+
+  <div class="footer-note">
+    OIL Benchmarks &mdash; operado por Nuno Ribeiro<br>
+    <a href="terms.html">Termos de Serviço</a>
+  </div>
+  </div>
+</main>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function toggleLang() {
+  var en = document.getElementById('content-en');
+  var pt = document.getElementById('content-pt');
+  var btn = document.getElementById('lang-toggle');
+  var link = document.getElementById('back-link');
+  if (en.style.display === 'none') {
+    en.style.display = ''; pt.style.display = 'none';
+    btn.textContent = 'PT'; link.textContent = 'Back to App';
+    document.documentElement.lang = 'en';
+    localStorage.setItem('oil-lang', 'en');
+  } else {
+    en.style.display = 'none'; pt.style.display = '';
+    btn.textContent = 'EN'; link.textContent = 'Voltar';
+    document.documentElement.lang = 'pt';
+    localStorage.setItem('oil-lang', 'pt');
+  }
+}
+(function() {
+  var lang = localStorage.getItem('oil-lang');
+  if (lang === 'pt') toggleLang();
+})();
+</script>
+</body>
+</html>

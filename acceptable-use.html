@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acceptable Use Policy — OIL Benchmarks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0c0c0e;
+  --bg-card: #141418;
+  --bg-hover: #1a1a20;
+  --text: #e8e4dc;
+  --text-muted: #8a8780;
+  --accent: #c9a84c;
+  --accent-dim: rgba(201,168,76,0.15);
+  --border: #2a2a30;
+  --font: 'DM Mono', monospace;
+}
+[data-theme="light"] {
+  --bg: #f4f2ed;
+  --bg-card: #ffffff;
+  --bg-hover: #eae8e3;
+  --text: #1a1a1e;
+  --text-muted: #6b6860;
+  --border: #d4d2cd;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 14px;
+  min-height: 100vh;
+}
+a { color: var(--accent); text-decoration: none; transition: opacity .2s; }
+a:hover { opacity: .8; }
+.header {
+  border-bottom: 1px solid var(--border);
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 10;
+  backdrop-filter: blur(8px);
+}
+.logo {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+}
+.logo span { color: var(--text-muted); font-weight: 300; }
+.back-link {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  transition: border-color .2s, background .2s;
+}
+.back-link:hover { border-color: var(--accent); background: var(--accent-dim); opacity: 1; }
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
+}
+h1 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+.effective {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  letter-spacing: 0.03em;
+}
+h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-top: 2.5rem;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+h3 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+p { margin-bottom: 1rem; color: var(--text); }
+ul, ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+li { margin-bottom: 0.4rem; }
+.highlight {
+  background: var(--accent-dim);
+  border-left: 3px solid var(--accent);
+  padding: 1rem 1.2rem;
+  margin: 1.2rem 0;
+  border-radius: 0 4px 4px 0;
+  font-size: 0.85rem;
+}
+.footer-note {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .header { padding: 1rem 1.2rem; }
+  .container { padding: 2rem 1.2rem 3rem; }
+  h1 { font-size: 1.3rem; }
+}
+.lang-toggle {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  padding: 0.35rem 0.8rem;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  font-family: var(--font);
+  font-weight: 500;
+  transition: border-color .2s, background .2s;
+}
+.lang-toggle:hover { border-color: var(--accent); background: var(--accent-dim); }
+.header-right { display: flex; align-items: center; gap: 0.6rem; }
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="logo">OIL <span>BENCHMARKS</span></div>
+  <div class="header-right">
+    <button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">PT</button>
+    <a href="/" class="back-link" id="back-link">Back to App</a>
+  </div>
+</header>
+<main class="container">
+  <div id="content-en">
+  <h1>Acceptable Use Policy</h1>
+  <p class="effective">Effective Date: March 28, 2026</p>
+
+  <h2>1. Purpose and Scope</h2>
+  <p>This Acceptable Use Policy ("AUP") governs your access to and use of the OIL Benchmarks web application ("the Service"), operated by Nuno Ribeiro. This policy applies to all users, whether registered or unregistered, and covers all features of the Service including the WTI crude oil price charts, live scoreboard, price alerts, user accounts, and any associated APIs or data feeds.</p>
+  <p>By accessing or using the Service, you agree to comply with this AUP. This policy supplements and operates alongside our <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a>. In the event of any conflict between this AUP and the Terms of Service, the Terms of Service shall prevail.</p>
+
+  <h2>2. Permitted Use</h2>
+  <p>You are permitted to use OIL Benchmarks for the following purposes:</p>
+  <ul>
+    <li>Personal, non-commercial viewing and exploration of WTI crude oil price data and historical charts spanning from 1950 to present</li>
+    <li>Setting up and managing price alert notifications for personal informational purposes</li>
+    <li>Creating and maintaining a user account to access personalized features</li>
+    <li>Toggling between dark and light display themes for your viewing comfort</li>
+    <li>Using the Progressive Web App (PWA) offline capabilities for personal reference</li>
+    <li>Sharing links to the Service with others</li>
+  </ul>
+
+  <h2>3. Prohibited Conduct</h2>
+  <p>You agree not to engage in any of the following prohibited activities when using the Service:</p>
+  <h3>3.1 Automated Access and Data Harvesting</h3>
+  <ul>
+    <li>Using automated scripts, bots, crawlers, spiders, or scrapers to access, collect, or extract data from the Service</li>
+    <li>Systematically downloading, storing, or redistributing oil price data or chart visualizations through automated means</li>
+    <li>Using any data mining, robots, or similar data-gathering tools on the Service</li>
+  </ul>
+  <h3>3.2 Unauthorized Access</h3>
+  <ul>
+    <li>Attempting to gain unauthorized access to other user accounts, administrative interfaces, or server infrastructure</li>
+    <li>Probing, scanning, or testing the vulnerability of the Service or any associated system or network</li>
+    <li>Accessing areas of the Service that you are not authorized to access, including Admin-only features without an Admin plan</li>
+  </ul>
+  <h3>3.3 Circumventing Security Measures</h3>
+  <ul>
+    <li>Bypassing or attempting to bypass CSRF token protection</li>
+    <li>Circumventing rate limiting controls or account lockout mechanisms</li>
+    <li>Evading CAPTCHA verification systems</li>
+    <li>Tampering with session cookies or authentication tokens</li>
+    <li>Disabling, interfering with, or circumventing any security-related features of the Service</li>
+  </ul>
+  <h3>3.4 Malicious Activity</h3>
+  <ul>
+    <li>Distributing malware, viruses, trojans, worms, or any other malicious code through or targeting the Service</li>
+    <li>Launching denial-of-service (DoS) or distributed denial-of-service (DDoS) attacks against the Service</li>
+    <li>Overloading servers with excessive, disproportionate, or unreasonably frequent requests</li>
+  </ul>
+  <h3>3.5 Impersonation and Misrepresentation</h3>
+  <ul>
+    <li>Impersonating other users, Nuno Ribeiro, or any OIL Benchmarks representative</li>
+    <li>Creating accounts under false identities or with misleading information</li>
+    <li>Misrepresenting your affiliation with any person or entity</li>
+  </ul>
+  <h3>3.6 Misuse of Data</h3>
+  <div class="highlight">
+    OIL Benchmarks provides market data for <strong>informational purposes only</strong>. You must not use data obtained from the Service as the sole basis for financial trading decisions, investment strategies, or any form of financial advice.
+  </div>
+  <ul>
+    <li>Reselling, redistributing, sublicensing, or commercially exploiting data obtained from the Service without prior written consent</li>
+    <li>Presenting data from OIL Benchmarks as your own proprietary data or analysis</li>
+    <li>Using price alert features as a substitute for professional trading tools or financial advisory services</li>
+  </ul>
+  <h3>3.7 Reverse Engineering</h3>
+  <ul>
+    <li>Reverse engineering, decompiling, disassembling, or otherwise attempting to derive the source code of the Service</li>
+    <li>Attempting to reconstruct or discover any underlying algorithms, data models, or architecture of the Service</li>
+  </ul>
+
+  <h2>4. Account Security Responsibilities</h2>
+  <p>As a registered user of OIL Benchmarks, you are responsible for maintaining the security of your account. You agree to:</p>
+  <ul>
+    <li>Choose a strong, unique password that is not used on other services</li>
+    <li>Enable two-factor authentication (TOTP-based 2FA) for enhanced account protection &mdash; this is strongly recommended</li>
+    <li>Never share your account credentials, session tokens, or 2FA recovery codes with any third party</li>
+    <li>Log out of your account when using shared or public devices</li>
+    <li>Notify us immediately if you suspect any unauthorized access to your account</li>
+    <li>Keep your account information accurate and up to date</li>
+  </ul>
+  <p>We implement multiple layers of account protection including bcrypt password hashing, account lockout after failed login attempts, and CAPTCHA verification. However, these measures are most effective when combined with responsible account management on your part.</p>
+
+  <h2>5. Rate Limiting and Access Controls</h2>
+  <p>To ensure fair access and protect the quality of the Service for all users, OIL Benchmarks implements rate limiting and access control measures. These include:</p>
+  <ul>
+    <li>Request rate limits on API endpoints and page requests</li>
+    <li>Account-level throttling for price alert creation and management</li>
+    <li>Temporary IP-based restrictions for suspicious activity patterns</li>
+    <li>Progressive account lockout after repeated failed authentication attempts</li>
+  </ul>
+  <p>If you encounter rate limiting during normal use, please wait before retrying. Persistent attempts to exceed rate limits may be treated as a violation of this AUP.</p>
+
+  <h2>6. Reporting Violations</h2>
+  <p>If you become aware of any violation of this Acceptable Use Policy by another user or any third party, please report it to us promptly. Reports can be submitted via email to the address listed in the Contact Information section below.</p>
+  <p>When reporting a violation, please include as much detail as possible, including:</p>
+  <ul>
+    <li>A description of the suspected violation</li>
+    <li>The date and time of the incident (if known)</li>
+    <li>Any relevant URLs, usernames, or identifying information</li>
+    <li>Screenshots or other evidence, if available</li>
+  </ul>
+  <p>We take all reports seriously and will investigate in a timely manner. Reports may be submitted anonymously, though providing contact information may help us follow up if needed.</p>
+
+  <h2>7. Enforcement</h2>
+  <p>We reserve the right to take any action we deem appropriate in response to violations of this AUP, including but not limited to:</p>
+  <ul>
+    <li><strong>Warning:</strong> A written notice identifying the violation and requesting immediate cessation of the prohibited activity</li>
+    <li><strong>Temporary Suspension:</strong> Temporary restriction of access to the Service or specific features, pending investigation</li>
+    <li><strong>Account Termination:</strong> Permanent removal of your account and all associated data, without prior notice for severe violations</li>
+    <li><strong>Legal Action:</strong> Pursuing legal remedies for violations that cause harm to OIL Benchmarks, its users, or its operator</li>
+  </ul>
+  <p>The severity of enforcement action will be proportionate to the nature and impact of the violation. Repeated minor violations may result in escalated enforcement measures. We may, at our sole discretion, skip any intermediate steps and proceed directly to account termination for egregious violations.</p>
+
+  <h2>8. Contact Information</h2>
+  <p>If you have any questions about this Acceptable Use Policy, wish to report a violation, or need further clarification on any of its provisions, please contact us:</p>
+  <div class="highlight">
+    <strong>Nuno Ribeiro</strong><br>
+    OIL Benchmarks<br>
+    Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="41222e2f35202235012e282d23242f22292c20332a326f222e2c">[email&#160;protected]</a>
+  </div>
+
+  <div class="footer-note">
+    OIL Benchmarks &mdash; operated by Nuno Ribeiro<br>
+    <a href="terms.html">Terms of Service</a> &middot;
+    <a href="privacy.html">Privacy Policy</a> &middot;
+    <a href="cookie-policy.html">Cookie Policy</a> &middot;
+    <a href="copyright.html">Copyright</a> &middot;
+    <a href="market-data.html">Market Data Disclaimer</a>
+  </div>
+  </div>
+
+  <div id="content-pt" style="display:none">
+  <h1>Política de Uso Aceitável</h1>
+  <p class="effective">Data de Vigência: 28 de Março de 2026</p>
+
+  <h2>1. Objetivo e Âmbito</h2>
+  <p>Esta Política de Uso Aceitável ("PUA") rege o seu acesso e utilização da aplicação web OIL Benchmarks ("o Serviço"), operado por Nuno Ribeiro. Esta política aplica-se a todos os utilizadores, registados ou não registados, e abrange todas as funcionalidades do Serviço, incluindo os gráficos de preços do petróleo bruto WTI, painel de cotações em tempo real, alertas de preço, contas de utilizador e quaisquer APIs ou feeds de dados associados.</p>
+  <p>Ao aceder ou utilizar o Serviço, concorda em cumprir esta PUA. Esta política complementa e opera em conjunto com os nossos <a href="terms.html">Termos de Serviço</a> e <a href="privacy.html">Política de Privacidade</a>. Em caso de conflito entre esta PUA e os Termos de Serviço, os Termos de Serviço prevalecerão.</p>
+
+  <h2>2. Uso Permitido</h2>
+  <p>Está autorizado a utilizar o OIL Benchmarks para os seguintes fins:</p>
+  <ul>
+    <li>Visualização pessoal e não comercial e exploração de dados de preços do petróleo bruto WTI e gráficos históricos desde 1950 até ao presente</li>
+    <li>Configuração e gestão de notificações de alertas de preço para fins informativos pessoais</li>
+    <li>Criação e manutenção de uma conta de utilizador para aceder a funcionalidades personalizadas</li>
+    <li>Alternância entre temas de exibição escuro e claro para o seu conforto visual</li>
+    <li>Utilização das capacidades offline da Progressive Web App (PWA) para referência pessoal</li>
+    <li>Partilha de links para o Serviço com outros</li>
+  </ul>
+
+  <h2>3. Conduta Proibida</h2>
+  <p>Concorda em não se envolver em nenhuma das seguintes atividades proibidas ao utilizar o Serviço:</p>
+  <h3>3.1 Acesso Automatizado e Recolha de Dados</h3>
+  <ul>
+    <li>Utilizar scripts automatizados, bots, crawlers, spiders ou scrapers para aceder, recolher ou extrair dados do Serviço</li>
+    <li>Descarregar, armazenar ou redistribuir sistematicamente dados de preços do petróleo ou visualizações de gráficos através de meios automatizados</li>
+    <li>Utilizar quaisquer ferramentas de mineração de dados, robôs ou ferramentas semelhantes de recolha de dados no Serviço</li>
+  </ul>
+  <h3>3.2 Acesso Não Autorizado</h3>
+  <ul>
+    <li>Tentar obter acesso não autorizado a outras contas de utilizador, interfaces administrativas ou infraestrutura de servidores</li>
+    <li>Sondar, verificar ou testar a vulnerabilidade do Serviço ou qualquer sistema ou rede associada</li>
+    <li>Aceder a áreas do Serviço para as quais não está autorizado, incluindo funcionalidades exclusivas de Administrador sem um plano de Administrador</li>
+  </ul>
+  <h3>3.3 Contornar Medidas de Segurança</h3>
+  <ul>
+    <li>Contornar ou tentar contornar a proteção de tokens CSRF</li>
+    <li>Contornar controlos de limitação de taxa ou mecanismos de bloqueio de conta</li>
+    <li>Evadir sistemas de verificação CAPTCHA</li>
+    <li>Manipular cookies de sessão ou tokens de autenticação</li>
+    <li>Desativar, interferir ou contornar quaisquer funcionalidades relacionadas com a segurança do Serviço</li>
+  </ul>
+  <h3>3.4 Atividade Maliciosa</h3>
+  <ul>
+    <li>Distribuir malware, vírus, trojans, worms ou qualquer outro código malicioso através ou direcionado ao Serviço</li>
+    <li>Lançar ataques de negação de serviço (DoS) ou negação de serviço distribuída (DDoS) contra o Serviço</li>
+    <li>Sobrecarregar servidores com pedidos excessivos, desproporcionados ou irracionalmente frequentes</li>
+  </ul>
+  <h3>3.5 Personificação e Deturpação</h3>
+  <ul>
+    <li>Fazer-se passar por outros utilizadores, Nuno Ribeiro ou qualquer representante do OIL Benchmarks</li>
+    <li>Criar contas com identidades falsas ou informações enganosas</li>
+    <li>Deturpar a sua afiliação com qualquer pessoa ou entidade</li>
+  </ul>
+  <h3>3.6 Uso Indevido de Dados</h3>
+  <div class="highlight">
+    O OIL Benchmarks fornece dados de mercado <strong>apenas para fins informativos</strong>. Não deve utilizar dados obtidos do Serviço como base exclusiva para decisões de negociação financeira, estratégias de investimento ou qualquer forma de aconselhamento financeiro.
+  </div>
+  <ul>
+    <li>Revender, redistribuir, sublicenciar ou explorar comercialmente dados obtidos do Serviço sem consentimento prévio por escrito</li>
+    <li>Apresentar dados do OIL Benchmarks como os seus próprios dados ou análise proprietária</li>
+    <li>Utilizar funcionalidades de alertas de preço como substituto de ferramentas profissionais de negociação ou serviços de consultoria financeira</li>
+  </ul>
+  <h3>3.7 Engenharia Reversa</h3>
+  <ul>
+    <li>Fazer engenharia reversa, descompilar, desmontar ou tentar derivar o código-fonte do Serviço</li>
+    <li>Tentar reconstruir ou descobrir quaisquer algoritmos subjacentes, modelos de dados ou arquitetura do Serviço</li>
+  </ul>
+
+  <h2>4. Responsabilidades de Segurança da Conta</h2>
+  <p>Como utilizador registado do OIL Benchmarks, é responsável por manter a segurança da sua conta. Concorda em:</p>
+  <ul>
+    <li>Escolher uma palavra-passe forte e única que não seja utilizada noutros serviços</li>
+    <li>Ativar a autenticação de dois fatores (2FA baseada em TOTP) para proteção reforçada da conta &mdash; isto é fortemente recomendado</li>
+    <li>Nunca partilhar as credenciais da sua conta, tokens de sessão ou códigos de recuperação 2FA com terceiros</li>
+    <li>Terminar sessão na sua conta quando utilizar dispositivos partilhados ou públicos</li>
+    <li>Notificar-nos imediatamente se suspeitar de qualquer acesso não autorizado à sua conta</li>
+    <li>Manter as informações da sua conta precisas e atualizadas</li>
+  </ul>
+  <p>Implementamos múltiplas camadas de proteção da conta, incluindo hashing de palavras-passe com bcrypt, bloqueio de conta após tentativas de login falhadas e verificação CAPTCHA. No entanto, estas medidas são mais eficazes quando combinadas com uma gestão responsável da conta da sua parte.</p>
+
+  <h2>5. Limitação de Taxa e Controlos de Acesso</h2>
+  <p>Para garantir acesso justo e proteger a qualidade do Serviço para todos os utilizadores, o OIL Benchmarks implementa limitação de taxa e medidas de controlo de acesso. Estas incluem:</p>
+  <ul>
+    <li>Limites de taxa de pedidos em endpoints de API e pedidos de página</li>
+    <li>Limitação ao nível da conta para criação e gestão de alertas de preço</li>
+    <li>Restrições temporárias baseadas em IP para padrões de atividade suspeita</li>
+    <li>Bloqueio progressivo de conta após tentativas repetidas de autenticação falhadas</li>
+  </ul>
+  <p>Se encontrar limitação de taxa durante o uso normal, por favor aguarde antes de tentar novamente. Tentativas persistentes de exceder os limites de taxa podem ser tratadas como uma violação desta PUA.</p>
+
+  <h2>6. Reportar Violações</h2>
+  <p>Se tomar conhecimento de qualquer violação desta Política de Uso Aceitável por outro utilizador ou qualquer terceiro, por favor reporte-nos prontamente. Os relatórios podem ser submetidos por email para o endereço indicado na secção de Informações de Contacto abaixo.</p>
+  <p>Ao reportar uma violação, por favor inclua o máximo de detalhes possível, incluindo:</p>
+  <ul>
+    <li>Uma descrição da violação suspeita</li>
+    <li>A data e hora do incidente (se conhecida)</li>
+    <li>Quaisquer URLs, nomes de utilizador ou informações de identificação relevantes</li>
+    <li>Capturas de ecrã ou outras provas, se disponíveis</li>
+  </ul>
+  <p>Levamos todos os relatórios a sério e investigaremos de forma atempada. Os relatórios podem ser submetidos anonimamente, embora fornecer informações de contacto possa ajudar-nos a fazer seguimento se necessário.</p>
+
+  <h2>7. Aplicação</h2>
+  <p>Reservamo-nos o direito de tomar qualquer ação que consideremos apropriada em resposta a violações desta PUA, incluindo mas não limitado a:</p>
+  <ul>
+    <li><strong>Aviso:</strong> Um aviso escrito identificando a violação e solicitando a cessação imediata da atividade proibida</li>
+    <li><strong>Suspensão Temporária:</strong> Restrição temporária do acesso ao Serviço ou funcionalidades específicas, pendente de investigação</li>
+    <li><strong>Encerramento da Conta:</strong> Remoção permanente da sua conta e todos os dados associados, sem aviso prévio para violações graves</li>
+    <li><strong>Ação Legal:</strong> Prosseguir com recursos legais para violações que causem danos ao OIL Benchmarks, aos seus utilizadores ou ao seu operador</li>
+  </ul>
+  <p>A severidade da ação de aplicação será proporcional à natureza e impacto da violação. Violações menores repetidas podem resultar em medidas de aplicação escalonadas. Podemos, a nosso exclusivo critério, saltar quaisquer passos intermédios e proceder diretamente ao encerramento da conta para violações graves.</p>
+
+  <h2>8. Informações de Contacto</h2>
+  <p>Se tiver alguma questão sobre esta Política de Uso Aceitável, desejar reportar uma violação ou precisar de esclarecimento adicional sobre qualquer das suas disposições, por favor contacte-nos:</p>
+  <div class="highlight">
+    <strong>Nuno Ribeiro</strong><br>
+    OIL Benchmarks<br>
+    Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="294a46475d484a5d694640454b4c474a4144485b425a074a4644">[email&#160;protected]</a>
+  </div>
+
+  <div class="footer-note">
+    OIL Benchmarks &mdash; operado por Nuno Ribeiro<br>
+    <a href="terms.html">Termos de Serviço</a> &middot;
+    <a href="privacy.html">Política de Privacidade</a> &middot;
+    <a href="cookie-policy.html">Política de Cookies</a> &middot;
+    <a href="copyright.html">Direitos de Autor</a> &middot;
+    <a href="market-data.html">Aviso de Dados de Mercado</a>
+  </div>
+  </div>
+</main>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function toggleLang() {
+  var en = document.getElementById('content-en');
+  var pt = document.getElementById('content-pt');
+  var btn = document.getElementById('lang-toggle');
+  var link = document.getElementById('back-link');
+  if (en.style.display === 'none') {
+    en.style.display = ''; pt.style.display = 'none';
+    btn.textContent = 'PT'; link.textContent = 'Back to App';
+    document.documentElement.lang = 'en';
+    localStorage.setItem('oil-lang', 'en');
+  } else {
+    en.style.display = 'none'; pt.style.display = '';
+    btn.textContent = 'EN'; link.textContent = 'Voltar';
+    document.documentElement.lang = 'pt';
+    localStorage.setItem('oil-lang', 'pt');
+  }
+}
+(function() {
+  var lang = localStorage.getItem('oil-lang');
+  if (lang === 'pt') toggleLang();
+})();
+</script>
+</body>
+</html>

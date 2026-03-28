@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cookie Policy — OIL Benchmarks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0c0c0e;
+  --bg-card: #141418;
+  --bg-hover: #1a1a20;
+  --text: #e8e4dc;
+  --text-muted: #8a8780;
+  --accent: #c9a84c;
+  --accent-dim: rgba(201,168,76,0.15);
+  --border: #2a2a30;
+  --font: 'DM Mono', monospace;
+}
+[data-theme="light"] {
+  --bg: #f4f2ed;
+  --bg-card: #ffffff;
+  --bg-hover: #eae8e3;
+  --text: #1a1a1e;
+  --text-muted: #6b6860;
+  --border: #d4d2cd;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 14px;
+  min-height: 100vh;
+}
+a { color: var(--accent); text-decoration: none; transition: opacity .2s; }
+a:hover { opacity: .8; }
+.header {
+  border-bottom: 1px solid var(--border);
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 10;
+  backdrop-filter: blur(8px);
+}
+.logo {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+}
+.logo span { color: var(--text-muted); font-weight: 300; }
+.back-link {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  transition: border-color .2s, background .2s;
+}
+.back-link:hover { border-color: var(--accent); background: var(--accent-dim); opacity: 1; }
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
+}
+h1 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+.effective {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  letter-spacing: 0.03em;
+}
+h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-top: 2.5rem;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+h3 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+p { margin-bottom: 1rem; color: var(--text); }
+ul, ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+li { margin-bottom: 0.4rem; }
+.highlight {
+  background: var(--accent-dim);
+  border-left: 3px solid var(--accent);
+  padding: 1rem 1.2rem;
+  margin: 1.2rem 0;
+  border-radius: 0 4px 4px 0;
+  font-size: 0.85rem;
+}
+.footer-note {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .header { padding: 1rem 1.2rem; }
+  .container { padding: 2rem 1.2rem 3rem; }
+  h1 { font-size: 1.3rem; }
+}
+.lang-toggle {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  padding: 0.35rem 0.8rem;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  font-family: var(--font);
+  font-weight: 500;
+  transition: border-color .2s, background .2s;
+}
+.lang-toggle:hover { border-color: var(--accent); background: var(--accent-dim); }
+.header-right { display: flex; align-items: center; gap: 0.6rem; }
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="logo">OIL <span>BENCHMARKS</span></div>
+  <div class="header-right">
+    <button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">PT</button>
+    <a href="/" class="back-link" id="back-link">Back to App</a>
+  </div>
+</header>
+<main class="container">
+  <div id="content-en">
+  <h1>Cookie Policy</h1>
+  <p class="effective">Effective Date: March 28, 2026</p>
+
+  <h2>1. What Are Cookies</h2>
+  <p>Cookies are small text files that are placed on your device (computer, tablet, or mobile phone) when you visit a website. They are widely used to make websites function properly, improve user experience, and provide information to website operators. Cookies may be set by the website you are visiting ("first-party cookies") or by third-party services that the website uses ("third-party cookies").</p>
+  <p>In addition to traditional cookies, OIL Benchmarks also uses similar technologies such as localStorage and sessionStorage (collectively referred to as "cookies" in this policy for simplicity) to store data locally in your browser.</p>
+
+  <h2>2. How We Use Cookies</h2>
+  <p>OIL Benchmarks, operated by Nuno Ribeiro, uses cookies to:</p>
+  <ul>
+    <li>Maintain your authenticated session as you navigate the Service</li>
+    <li>Protect against cross-site request forgery (CSRF) attacks</li>
+    <li>Remember your cookie consent preferences</li>
+    <li>Collect anonymous, privacy-respecting analytics to improve the Service</li>
+    <li>Store your display preferences such as dark or light theme</li>
+    <li>Cache API responses locally to improve page load performance</li>
+  </ul>
+
+  <h2>3. Cookie Categories</h2>
+  <p>We organize our cookies into three categories. You can manage your preferences for optional categories through our cookie consent banner.</p>
+
+  <h3>3.1 Essential Cookies (Always Active)</h3>
+  <div class="highlight">
+    Essential cookies are required for the Service to function and <strong>cannot be disabled</strong>. Without these cookies, basic features such as user authentication and security protections would not work.
+  </div>
+  <ul>
+    <li><strong>Session Cookie (connect.sid):</strong> Maintains your authenticated session with the server. This cookie is backed by a SQLite session store on the server side. It expires when you close your browser or after the configured server-side session timeout. It is set as HTTP-only and secure, meaning it cannot be accessed by client-side scripts.</li>
+    <li><strong>CSRF Token Cookie:</strong> Contains a token used to validate that form submissions and API requests originate from our application, preventing cross-site request forgery attacks. This cookie is essential for the security of all authenticated actions.</li>
+    <li><strong>Cookie Consent Preference:</strong> Stores your cookie category choices (which optional categories you have accepted or declined) so that the consent banner is not shown repeatedly and your preferences are respected on subsequent visits.</li>
+  </ul>
+
+  <h3>3.2 Analytics Cookies (Optional &mdash; Requires Consent)</h3>
+  <p>OIL Benchmarks uses a <strong>self-hosted, privacy-respecting analytics system</strong>. We do not use any third-party analytics services such as Google Analytics. When you consent to analytics cookies, the following data may be collected:</p>
+  <ul>
+    <li><strong>Page views:</strong> The page URL visited and referring page (referrer)</li>
+    <li><strong>Screen dimensions:</strong> Your screen width and height for responsive design optimization</li>
+    <li><strong>Language:</strong> Your browser's language setting</li>
+    <li><strong>Browser and OS:</strong> Browser name/version and operating system</li>
+    <li><strong>Device type:</strong> Whether you are using a desktop, tablet, or mobile device</li>
+    <li><strong>Session hash:</strong> A hashed identifier used to group page views within a single session &mdash; this is <strong>not</strong> your IP address and cannot be used to identify you personally</li>
+    <li><strong>Analytics events:</strong> Anonymous tracking of feature usage and button clicks to understand how the Service is used (e.g., chart interactions, alert creation, theme toggles)</li>
+  </ul>
+  <div class="highlight">
+    <strong>Privacy commitment:</strong> We never store your IP address in our analytics database. All analytics data is stored in a local SQLite database on our servers and is <strong>never shared with third parties</strong>.
+  </div>
+
+  <h3>3.3 Functional Cookies (Optional &mdash; Requires Consent)</h3>
+  <p>Functional cookies enable personalization features and performance improvements that enhance your experience but are not strictly necessary for the Service to operate.</p>
+  <ul>
+    <li><strong>Dark/Light Theme Preference:</strong> Stores your chosen display theme so it persists across visits and page reloads</li>
+    <li><strong>LocalStorage API Response Cache:</strong> Caches responses from the OIL Benchmarks API in your browser's localStorage to reduce load times on subsequent visits. Cached data has a time-to-live (TTL) expiry and is automatically refreshed when stale.</li>
+    <li><strong>User Interface Preferences:</strong> Stores other UI state and preferences to provide a consistent experience across sessions</li>
+  </ul>
+
+  <h2>4. Third-Party Resources</h2>
+  <p>OIL Benchmarks loads certain resources from external services to provide its functionality. While we do not set third-party tracking cookies, these external services may set their own cookies or collect data according to their own privacy policies:</p>
+  <ul>
+    <li><strong>Google Fonts</strong> (fonts.googleapis.com, fonts.gstatic.com): Used to load the DM Mono, Instrument Serif, and Lora typefaces. Google may collect anonymized usage data when fonts are loaded. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+    <li><strong>jsDelivr CDN</strong> (cdn.jsdelivr.net): Used to load the Chart.js library for rendering interactive price charts. jsDelivr may collect access logs. See <a href="https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net" target="_blank" rel="noopener">jsDelivr's Privacy Policy</a>.</li>
+    <li><strong>QR Server API</strong> (api.qrserver.com): Used to generate QR code images during two-factor authentication (TOTP) setup. This service is only accessed when you enable 2FA on your account.</li>
+  </ul>
+
+  <h2>5. Managing Your Cookies</h2>
+  <p>You have several options for managing cookies on OIL Benchmarks:</p>
+  <h3>5.1 Cookie Consent Banner</h3>
+  <p>When you first visit OIL Benchmarks, a cookie consent banner is displayed, allowing you to accept or decline optional cookie categories (Analytics and Functional). Essential cookies are always active and cannot be opted out of, as they are necessary for the Service to function.</p>
+  <p>You can change your cookie preferences at any time by accessing the cookie settings through the link in the footer of the application.</p>
+  <h3>5.2 Browser Settings</h3>
+  <p>Most web browsers allow you to control cookies through their settings. You can typically:</p>
+  <ul>
+    <li>View and delete existing cookies</li>
+    <li>Block all cookies or only third-party cookies</li>
+    <li>Set preferences for specific websites</li>
+    <li>Clear cookies when you close your browser</li>
+  </ul>
+  <p>Please refer to your browser's help documentation for instructions on managing cookies. Common browsers include Chrome, Firefox, Safari, and Edge.</p>
+
+  <h2>6. Impact of Disabling Cookies</h2>
+  <p>Disabling certain cookies may affect your experience with OIL Benchmarks:</p>
+  <ul>
+    <li><strong>Essential cookies:</strong> Cannot be disabled. If blocked via browser settings, the Service will not function correctly &mdash; you will be unable to log in, maintain a session, or submit forms securely.</li>
+    <li><strong>Analytics cookies:</strong> Disabling these has no impact on your use of the Service. It simply means your visits will not be counted in our anonymous usage statistics.</li>
+    <li><strong>Functional cookies:</strong> Disabling these means your theme preference will not persist between visits (the Service will default to dark mode), API response caching will be disabled (resulting in slightly longer load times), and other UI preferences will reset each session.</li>
+  </ul>
+
+  <h2>7. Changes to This Policy</h2>
+  <p>We may update this Cookie Policy from time to time to reflect changes in our practices, technology, or legal requirements. When we make changes, we will update the "Effective Date" at the top of this page. Material changes will be communicated through the Service.</p>
+  <p>We encourage you to review this policy periodically. Your continued use of the Service after changes are posted constitutes acceptance of the updated Cookie Policy.</p>
+
+  <h2>8. Contact Information</h2>
+  <p>If you have any questions about our use of cookies or this Cookie Policy, please contact us:</p>
+  <div class="highlight">
+    <strong>Nuno Ribeiro</strong><br>
+    OIL Benchmarks<br>
+    Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="50333f3e24313324103f393c32353e33383d31223b237e333f3d">[email&#160;protected]</a>
+  </div>
+
+  <div class="footer-note">
+    OIL Benchmarks &mdash; operated by Nuno Ribeiro<br>
+    <a href="terms.html">Terms of Service</a> &middot;
+    <a href="privacy.html">Privacy Policy</a> &middot;
+    <a href="acceptable-use.html">Acceptable Use</a> &middot;
+    <a href="copyright.html">Copyright</a> &middot;
+    <a href="market-data.html">Market Data Disclaimer</a>
+  </div>
+  </div>
+
+  <div id="content-pt" style="display:none">
+  <h1>Política de Cookies</h1>
+  <p class="effective">Data de Vigência: 28 de Março de 2026</p>
+
+  <h2>1. O Que São Cookies</h2>
+  <p>Cookies são pequenos ficheiros de texto que são colocados no seu dispositivo (computador, tablet ou telemóvel) quando visita um website. São amplamente utilizados para fazer os websites funcionar corretamente, melhorar a experiência do utilizador e fornecer informações aos operadores do website. Os cookies podem ser definidos pelo website que está a visitar ("cookies primários") ou por serviços de terceiros que o website utiliza ("cookies de terceiros").</p>
+  <p>Para além dos cookies tradicionais, o OIL Benchmarks também utiliza tecnologias semelhantes como localStorage e sessionStorage (referidos coletivamente como "cookies" nesta política por simplicidade) para armazenar dados localmente no seu navegador.</p>
+
+  <h2>2. Como Utilizamos Cookies</h2>
+  <p>O OIL Benchmarks, operado por Nuno Ribeiro, utiliza cookies para:</p>
+  <ul>
+    <li>Manter a sua sessão autenticada enquanto navega no Serviço</li>
+    <li>Proteger contra ataques de falsificação de pedidos entre sites (CSRF)</li>
+    <li>Lembrar as suas preferências de consentimento de cookies</li>
+    <li>Recolher análises anónimas e que respeitam a privacidade para melhorar o Serviço</li>
+    <li>Armazenar as suas preferências de exibição, como tema escuro ou claro</li>
+    <li>Fazer cache de respostas de API localmente para melhorar o desempenho de carregamento da página</li>
+  </ul>
+
+  <h2>3. Categorias de Cookies</h2>
+  <p>Organizamos os nossos cookies em três categorias. Pode gerir as suas preferências para categorias opcionais através do nosso banner de consentimento de cookies.</p>
+
+  <h3>3.1 Cookies Essenciais (Sempre Ativos)</h3>
+  <div class="highlight">
+    Os cookies essenciais são necessários para o funcionamento do Serviço e <strong>não podem ser desativados</strong>. Sem estes cookies, funcionalidades básicas como autenticação de utilizador e proteções de segurança não funcionariam.
+  </div>
+  <ul>
+    <li><strong>Cookie de Sessão (connect.sid):</strong> Mantém a sua sessão autenticada com o servidor. Este cookie é suportado por um armazenamento de sessões SQLite no lado do servidor. Expira quando fecha o navegador ou após o tempo limite de sessão configurado no servidor. É definido como HTTP-only e seguro, o que significa que não pode ser acedido por scripts do lado do cliente.</li>
+    <li><strong>Cookie de Token CSRF:</strong> Contém um token utilizado para validar que as submissões de formulários e pedidos de API provêm da nossa aplicação, prevenindo ataques de falsificação de pedidos entre sites. Este cookie é essencial para a segurança de todas as ações autenticadas.</li>
+    <li><strong>Preferência de Consentimento de Cookies:</strong> Armazena as suas escolhas de categorias de cookies (quais categorias opcionais aceitou ou recusou) para que o banner de consentimento não seja mostrado repetidamente e as suas preferências sejam respeitadas em visitas subsequentes.</li>
+  </ul>
+
+  <h3>3.2 Cookies de Análise (Opcionais &mdash; Requerem Consentimento)</h3>
+  <p>O OIL Benchmarks utiliza um <strong>sistema de análise auto-hospedado que respeita a privacidade</strong>. Não utilizamos quaisquer serviços de análise de terceiros como o Google Analytics. Quando consente com os cookies de análise, os seguintes dados podem ser recolhidos:</p>
+  <ul>
+    <li><strong>Visualizações de página:</strong> O URL da página visitada e página de referência (referrer)</li>
+    <li><strong>Dimensões do ecrã:</strong> A largura e altura do seu ecrã para otimização do design responsivo</li>
+    <li><strong>Idioma:</strong> A definição de idioma do seu navegador</li>
+    <li><strong>Navegador e SO:</strong> Nome/versão do navegador e sistema operativo</li>
+    <li><strong>Tipo de dispositivo:</strong> Se está a utilizar um desktop, tablet ou dispositivo móvel</li>
+    <li><strong>Hash de sessão:</strong> Um identificador com hash utilizado para agrupar visualizações de página dentro de uma única sessão &mdash; isto <strong>não</strong> é o seu endereço IP e não pode ser utilizado para o identificar pessoalmente</li>
+    <li><strong>Eventos de análise:</strong> Rastreamento anónimo de utilização de funcionalidades e cliques em botões para compreender como o Serviço é utilizado (ex.: interações com gráficos, criação de alertas, alternância de temas)</li>
+  </ul>
+  <div class="highlight">
+    <strong>Compromisso de privacidade:</strong> Nunca armazenamos o seu endereço IP na nossa base de dados de análise. Todos os dados de análise são armazenados numa base de dados SQLite local nos nossos servidores e <strong>nunca são partilhados com terceiros</strong>.
+  </div>
+
+  <h3>3.3 Cookies Funcionais (Opcionais &mdash; Requerem Consentimento)</h3>
+  <p>Os cookies funcionais permitem funcionalidades de personalização e melhorias de desempenho que melhoram a sua experiência mas não são estritamente necessários para o funcionamento do Serviço.</p>
+  <ul>
+    <li><strong>Preferência de Tema Escuro/Claro:</strong> Armazena o seu tema de exibição escolhido para que persista entre visitas e recarregamentos de página</li>
+    <li><strong>Cache de Respostas de API no LocalStorage:</strong> Faz cache de respostas da API do OIL Benchmarks no localStorage do seu navegador para reduzir tempos de carregamento em visitas subsequentes. Os dados em cache têm um tempo de vida (TTL) e são automaticamente atualizados quando obsoletos.</li>
+    <li><strong>Preferências da Interface de Utilizador:</strong> Armazena outro estado e preferências da UI para fornecer uma experiência consistente entre sessões</li>
+  </ul>
+
+  <h2>4. Recursos de Terceiros</h2>
+  <p>O OIL Benchmarks carrega certos recursos de serviços externos para fornecer a sua funcionalidade. Embora não definamos cookies de rastreamento de terceiros, estes serviços externos podem definir os seus próprios cookies ou recolher dados de acordo com as suas próprias políticas de privacidade:</p>
+  <ul>
+    <li><strong>Google Fonts</strong> (fonts.googleapis.com, fonts.gstatic.com): Utilizado para carregar as tipografias DM Mono, Instrument Serif e Lora. A Google pode recolher dados de utilização anonimizados quando as fontes são carregadas. Ver <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidade da Google</a>.</li>
+    <li><strong>jsDelivr CDN</strong> (cdn.jsdelivr.net): Utilizado para carregar a biblioteca Chart.js para renderizar gráficos de preços interativos. O jsDelivr pode recolher registos de acesso. Ver <a href="https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net" target="_blank" rel="noopener">Política de Privacidade do jsDelivr</a>.</li>
+    <li><strong>API QR Server</strong> (api.qrserver.com): Utilizado para gerar imagens de códigos QR durante a configuração da autenticação de dois fatores (TOTP). Este serviço só é acedido quando ativa o 2FA na sua conta.</li>
+  </ul>
+
+  <h2>5. Gerir os Seus Cookies</h2>
+  <p>Tem várias opções para gerir cookies no OIL Benchmarks:</p>
+  <h3>5.1 Banner de Consentimento de Cookies</h3>
+  <p>Quando visita o OIL Benchmarks pela primeira vez, é apresentado um banner de consentimento de cookies, permitindo-lhe aceitar ou recusar categorias de cookies opcionais (Análise e Funcionais). Os cookies essenciais estão sempre ativos e não podem ser desativados, pois são necessários para o funcionamento do Serviço.</p>
+  <p>Pode alterar as suas preferências de cookies a qualquer momento acedendo às definições de cookies através do link no rodapé da aplicação.</p>
+  <h3>5.2 Definições do Navegador</h3>
+  <p>A maioria dos navegadores web permite controlar cookies através das suas definições. Normalmente pode:</p>
+  <ul>
+    <li>Ver e eliminar cookies existentes</li>
+    <li>Bloquear todos os cookies ou apenas cookies de terceiros</li>
+    <li>Definir preferências para websites específicos</li>
+    <li>Limpar cookies quando fecha o navegador</li>
+  </ul>
+  <p>Consulte a documentação de ajuda do seu navegador para instruções sobre como gerir cookies. Os navegadores mais comuns incluem Chrome, Firefox, Safari e Edge.</p>
+
+  <h2>6. Impacto da Desativação de Cookies</h2>
+  <p>Desativar certos cookies pode afetar a sua experiência com o OIL Benchmarks:</p>
+  <ul>
+    <li><strong>Cookies essenciais:</strong> Não podem ser desativados. Se bloqueados através das definições do navegador, o Serviço não funcionará corretamente &mdash; não poderá iniciar sessão, manter uma sessão ou submeter formulários de forma segura.</li>
+    <li><strong>Cookies de análise:</strong> Desativar estes não tem impacto na sua utilização do Serviço. Simplesmente significa que as suas visitas não serão contabilizadas nas nossas estatísticas de utilização anónimas.</li>
+    <li><strong>Cookies funcionais:</strong> Desativar estes significa que a sua preferência de tema não persistirá entre visitas (o Serviço usará o modo escuro por defeito), o cache de respostas de API será desativado (resultando em tempos de carregamento ligeiramente mais longos) e outras preferências de UI serão reiniciadas a cada sessão.</li>
+  </ul>
+
+  <h2>7. Alterações a Esta Política</h2>
+  <p>Podemos atualizar esta Política de Cookies periodicamente para refletir alterações nas nossas práticas, tecnologia ou requisitos legais. Quando fizermos alterações, atualizaremos a "Data de Vigência" no topo desta página. Alterações materiais serão comunicadas através do Serviço.</p>
+  <p>Encorajamo-lo a rever esta política periodicamente. O seu uso continuado do Serviço após a publicação de alterações constitui aceitação da Política de Cookies atualizada.</p>
+
+  <h2>8. Informações de Contacto</h2>
+  <p>Se tiver alguma questão sobre a nossa utilização de cookies ou esta Política de Cookies, por favor contacte-nos:</p>
+  <div class="highlight">
+    <strong>Nuno Ribeiro</strong><br>
+    OIL Benchmarks<br>
+    Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f0939f9e84919384b09f999c92959e93989d91829b83de939f9d">[email&#160;protected]</a>
+  </div>
+
+  <div class="footer-note">
+    OIL Benchmarks &mdash; operado por Nuno Ribeiro<br>
+    <a href="terms.html">Termos de Serviço</a> &middot;
+    <a href="privacy.html">Política de Privacidade</a> &middot;
+    <a href="acceptable-use.html">Uso Aceitável</a> &middot;
+    <a href="copyright.html">Direitos de Autor</a> &middot;
+    <a href="market-data.html">Aviso de Dados de Mercado</a>
+  </div>
+  </div>
+
+</main>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function toggleLang() {
+  var en = document.getElementById('content-en');
+  var pt = document.getElementById('content-pt');
+  var btn = document.getElementById('lang-toggle');
+  var link = document.getElementById('back-link');
+  if (en.style.display === 'none') {
+    en.style.display = ''; pt.style.display = 'none';
+    btn.textContent = 'PT'; link.textContent = 'Back to App';
+    document.documentElement.lang = 'en';
+    localStorage.setItem('oil-lang', 'en');
+  } else {
+    en.style.display = 'none'; pt.style.display = '';
+    btn.textContent = 'EN'; link.textContent = 'Voltar';
+    document.documentElement.lang = 'pt';
+    localStorage.setItem('oil-lang', 'pt');
+  }
+}
+(function() {
+  var lang = localStorage.getItem('oil-lang');
+  if (lang === 'pt') toggleLang();
+})();
+</script>
+</body>
+</html>

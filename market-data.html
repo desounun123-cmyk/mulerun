@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market Data Disclaimer — OIL Benchmarks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0c0c0e;
+  --bg-card: #141418;
+  --bg-hover: #1a1a20;
+  --text: #e8e4dc;
+  --text-muted: #8a8780;
+  --accent: #c9a84c;
+  --accent-dim: rgba(201,168,76,0.15);
+  --border: #2a2a30;
+  --font: 'DM Mono', monospace;
+}
+[data-theme="light"] {
+  --bg: #f4f2ed;
+  --bg-card: #ffffff;
+  --bg-hover: #eae8e3;
+  --text: #1a1a1e;
+  --text-muted: #6b6860;
+  --border: #d4d2cd;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 14px;
+  min-height: 100vh;
+}
+a { color: var(--accent); text-decoration: none; transition: opacity .2s; }
+a:hover { opacity: .8; }
+.header {
+  border-bottom: 1px solid var(--border);
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 10;
+  backdrop-filter: blur(8px);
+}
+.logo {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+}
+.logo span { color: var(--text-muted); font-weight: 300; }
+.back-link {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  transition: border-color .2s, background .2s;
+}
+.back-link:hover { border-color: var(--accent); background: var(--accent-dim); opacity: 1; }
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
+}
+h1 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+.effective {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  letter-spacing: 0.03em;
+}
+h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-top: 2.5rem;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+h3 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+p { margin-bottom: 1rem; color: var(--text); }
+ul, ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+li { margin-bottom: 0.4rem; }
+.highlight {
+  background: var(--accent-dim);
+  border-left: 3px solid var(--accent);
+  padding: 1rem 1.2rem;
+  margin: 1.2rem 0;
+  border-radius: 0 4px 4px 0;
+  font-size: 0.85rem;
+}
+.footer-note {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .header { padding: 1rem 1.2rem; }
+  .container { padding: 2rem 1.2rem 3rem; }
+  h1 { font-size: 1.3rem; }
+}
+.lang-toggle {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  padding: 0.35rem 0.8rem;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  font-family: var(--font);
+  font-weight: 500;
+  transition: border-color .2s, background .2s;
+}
+.lang-toggle:hover { border-color: var(--accent); background: var(--accent-dim); }
+.header-right { display: flex; align-items: center; gap: 0.6rem; }
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="logo">OIL <span>BENCHMARKS</span></div>
+  <div class="header-right">
+    <button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">PT</button>
+    <a href="/" class="back-link" id="back-link">Back to App</a>
+  </div>
+</header>
+<main class="container">
+<div id="content-en">
+  <h1>Market Data Disclaimer</h1>
+  <p class="effective">Effective Date: March 28, 2026</p>
+
+  <h2>1. General Disclaimer</h2>
+  <div class="highlight">
+    All WTI crude oil price data, charts, historical information, price alerts, and related content provided through OIL Benchmarks are offered on an <strong>"as is" basis for informational purposes only</strong>. Nothing on this Service constitutes financial, investment, trading, tax, legal, or any other form of professional advice.
+  </div>
+  <p>OIL Benchmarks, operated by Nuno Ribeiro, is an independent data visualization tool. We are not a registered broker-dealer, investment advisor, financial institution, or data vendor. The Service is designed to present WTI crude oil price data in a user-friendly format for educational and informational use.</p>
+
+  <h2>2. Not Financial Advice</h2>
+  <p>You expressly acknowledge and agree that:</p>
+  <ul>
+    <li>OIL Benchmarks does not provide financial, investment, or trading advice of any kind</li>
+    <li>Price data, charts, and visualizations displayed on the Service should <strong>not</strong> be used as the sole basis for any financial decision, including buying, selling, or holding any commodity, security, or financial instrument</li>
+    <li>Historical price trends and patterns shown on the Service are not indicative of future performance or price movements</li>
+    <li>You should always consult a qualified financial professional, licensed broker, or investment advisor before making any financial or investment decisions</li>
+    <li>Any reliance you place on information provided by the Service is strictly at your own risk</li>
+  </ul>
+
+  <h2>3. Data Accuracy and Timeliness</h2>
+  <p>While we strive to provide accurate and up-to-date information, you acknowledge that:</p>
+  <ul>
+    <li>Historical price data covers the period from approximately 1950 to the present day, and may contain inaccuracies, gaps, or inconsistencies, particularly for older time periods</li>
+    <li>Real-time or near-real-time prices displayed on the live scoreboard may be subject to delays and may not reflect the most current market prices at any given moment</li>
+    <li>Data may be temporarily unavailable due to server maintenance, network issues, data provider outages, or other technical factors</li>
+    <li>We do not guarantee the completeness, accuracy, reliability, or timeliness of any price data or market information displayed on the Service</li>
+    <li>Discrepancies may exist between the data shown on OIL Benchmarks and data provided by official exchanges, government agencies, or other authoritative sources</li>
+    <li>Past performance of crude oil prices does not indicate, guarantee, or predict future results</li>
+  </ul>
+
+  <h2>4. Price Alert Disclaimer</h2>
+  <p>OIL Benchmarks offers a price alert feature that allows users to set notifications when WTI crude oil prices cross specified thresholds (above or below). Regarding this feature:</p>
+  <ul>
+    <li>Price alerts are provided as a <strong>convenience feature only</strong> and should not be relied upon for time-sensitive trading or financial decisions</li>
+    <li>Alerts may be delayed due to server processing times, network latency, data feed delays, or other technical factors</li>
+    <li>Alerts may fail to trigger entirely due to system errors, service interruptions, or data availability issues</li>
+    <li>Alert thresholds are compared against data that may itself be delayed or approximate</li>
+    <li>OIL Benchmarks is not liable for any losses, damages, or missed opportunities resulting from delayed, inaccurate, or failed price alerts</li>
+    <li>Users should not depend on price alerts as a substitute for professional trading platforms, market monitoring tools, or financial advisory services</li>
+  </ul>
+  <div class="highlight">
+    <strong>Important:</strong> Do not rely on OIL Benchmarks price alerts for any time-critical financial decisions. Alerts are informational only and may not reflect real-time market conditions.
+  </div>
+
+  <h2>5. Historical Event Annotations</h2>
+  <p>OIL Benchmarks displays historical event annotations on its price charts to provide educational context about events that may have influenced oil prices. You acknowledge that:</p>
+  <ul>
+    <li>Event descriptions are simplified summaries intended for general educational context and are not comprehensive historical analyses</li>
+    <li>Annotations may not capture all factors, causes, or nuances that contributed to price movements during any given period</li>
+    <li>The correlation between annotated events and price changes is presented for informational purposes and should not be interpreted as establishing causation</li>
+    <li>Event annotations reflect editorial selections and may not include every significant event relevant to oil markets</li>
+    <li>The accuracy of historical event descriptions is provided on a best-effort basis and may contain simplifications or minor inaccuracies</li>
+  </ul>
+
+  <h2>6. Third-Party Data</h2>
+  <p>Oil price data displayed on OIL Benchmarks may be sourced from third-party data providers, public datasets, and external APIs. Regarding third-party data:</p>
+  <ul>
+    <li>We do not control the accuracy, completeness, or timeliness of data provided by third-party sources</li>
+    <li>Third-party data providers may change, discontinue, or modify their data feeds without notice</li>
+    <li>We are not responsible for errors, omissions, or interruptions in third-party data</li>
+    <li>The availability of data from third-party sources may affect the Service's ability to display current or historical prices</li>
+  </ul>
+
+  <h2>7. Limitation of Liability</h2>
+  <p>To the maximum extent permitted by applicable law:</p>
+  <ul>
+    <li>Nuno Ribeiro and OIL Benchmarks shall not be held liable for any direct, indirect, incidental, special, consequential, or punitive damages arising from your use of or reliance on market data, price alerts, charts, or any other information provided by the Service</li>
+    <li>We shall not be liable for any financial losses, lost profits, or lost trading opportunities resulting from decisions made based on information obtained from the Service</li>
+    <li>We shall not be liable for any losses resulting from service interruptions, data inaccuracies, delayed alerts, or system downtime, whether planned or unplanned</li>
+    <li>Our total liability for any claim arising from the Service shall not exceed the amount you have paid to access the Service (if any)</li>
+  </ul>
+
+  <h2>8. No Warranty</h2>
+  <p>The Service, including all market data, price information, charts, alerts, and related features, is provided <strong>"as is"</strong> and <strong>"as available"</strong> without warranties of any kind, whether express, implied, or statutory. We specifically disclaim all implied warranties of:</p>
+  <ul>
+    <li>Merchantability</li>
+    <li>Fitness for a particular purpose</li>
+    <li>Non-infringement</li>
+    <li>Accuracy or reliability of data</li>
+    <li>Uninterrupted or error-free operation</li>
+  </ul>
+  <p>No oral or written information or advice given by Nuno Ribeiro or OIL Benchmarks shall create a warranty not expressly stated in this disclaimer.</p>
+
+  <h2>9. Contact Information</h2>
+  <p>If you have any questions about this Market Data Disclaimer or the data provided by OIL Benchmarks, please contact us:</p>
+  <div class="highlight">
+    <strong>Nuno Ribeiro</strong><br>
+    OIL Benchmarks<br>
+    Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="90f3fffee4f1f3e4d0fff9fcf2f5fef3f8fdf1e2fbe3bef3fffd">[email&#160;protected]</a>
+  </div>
+
+  <div class="footer-note">
+    OIL Benchmarks &mdash; operated by Nuno Ribeiro<br>
+    <a href="terms.html">Terms of Service</a> &middot;
+    <a href="privacy.html">Privacy Policy</a> &middot;
+    <a href="acceptable-use.html">Acceptable Use</a> &middot;
+    <a href="cookie-policy.html">Cookie Policy</a> &middot;
+    <a href="copyright.html">Copyright</a>
+  </div>
+</div>
+
+<div id="content-pt" style="display:none">
+  <h1>Aviso de Dados de Mercado</h1>
+  <p class="effective">Data de Vigência: 28 de Março de 2026</p>
+
+  <h2>1. Aviso Geral</h2>
+  <div class="highlight">
+    Todos os dados de preços do petróleo bruto WTI, gráficos, informações históricas, alertas de preço e conteúdo relacionado fornecidos através do OIL Benchmarks são oferecidos <strong>"tal como estão" apenas para fins informativos</strong>. Nada neste Serviço constitui aconselhamento financeiro, de investimento, de negociação, fiscal, legal ou qualquer outra forma de aconselhamento profissional.
+  </div>
+  <p>O OIL Benchmarks, operado por Nuno Ribeiro, é uma ferramenta independente de visualização de dados. Não somos um corretor-negociante registado, consultor de investimentos, instituição financeira ou fornecedor de dados. O Serviço foi concebido para apresentar dados de preços do petróleo bruto WTI num formato de fácil utilização para uso educacional e informativo.</p>
+
+  <h2>2. Não Constitui Aconselhamento Financeiro</h2>
+  <p>Reconhece e concorda expressamente que:</p>
+  <ul>
+    <li>O OIL Benchmarks não fornece qualquer tipo de aconselhamento financeiro, de investimento ou de negociação</li>
+    <li>Os dados de preços, gráficos e visualizações exibidos no Serviço <strong>não</strong> devem ser utilizados como base exclusiva para qualquer decisão financeira, incluindo comprar, vender ou manter qualquer mercadoria, título ou instrumento financeiro</li>
+    <li>As tendências e padrões históricos de preços mostrados no Serviço não são indicativos de desempenho futuro ou movimentos de preços</li>
+    <li>Deve sempre consultar um profissional financeiro qualificado, corretor licenciado ou consultor de investimentos antes de tomar quaisquer decisões financeiras ou de investimento</li>
+    <li>Qualquer confiança que deposite nas informações fornecidas pelo Serviço é estritamente por sua conta e risco</li>
+  </ul>
+
+  <h2>3. Precisão e Atualidade dos Dados</h2>
+  <p>Embora nos esforcemos por fornecer informações precisas e atualizadas, reconhece que:</p>
+  <ul>
+    <li>Os dados históricos de preços abrangem o período desde aproximadamente 1950 até ao dia de hoje, e podem conter imprecisões, lacunas ou inconsistências, particularmente para períodos mais antigos</li>
+    <li>Os preços em tempo real ou quase em tempo real exibidos no painel de cotações ao vivo podem estar sujeitos a atrasos e podem não refletir os preços de mercado mais atuais num dado momento</li>
+    <li>Os dados podem estar temporariamente indisponíveis devido a manutenção do servidor, problemas de rede, interrupções do fornecedor de dados ou outros fatores técnicos</li>
+    <li>Não garantimos a integridade, precisão, fiabilidade ou atualidade de quaisquer dados de preços ou informações de mercado exibidos no Serviço</li>
+    <li>Podem existir discrepâncias entre os dados mostrados no OIL Benchmarks e os dados fornecidos por bolsas oficiais, agências governamentais ou outras fontes autorizadas</li>
+    <li>O desempenho passado dos preços do petróleo bruto não indica, garante ou prevê resultados futuros</li>
+  </ul>
+
+  <h2>4. Aviso sobre Alertas de Preço</h2>
+  <p>O OIL Benchmarks oferece uma funcionalidade de alertas de preço que permite aos utilizadores definir notificações quando os preços do petróleo bruto WTI ultrapassam limites especificados (acima ou abaixo). Relativamente a esta funcionalidade:</p>
+  <ul>
+    <li>Os alertas de preço são fornecidos <strong>apenas como funcionalidade de conveniência</strong> e não devem ser utilizados para decisões financeiras ou de negociação sensíveis ao tempo</li>
+    <li>Os alertas podem estar atrasados devido a tempos de processamento do servidor, latência de rede, atrasos no feed de dados ou outros fatores técnicos</li>
+    <li>Os alertas podem falhar completamente devido a erros do sistema, interrupções do serviço ou problemas de disponibilidade de dados</li>
+    <li>Os limites de alerta são comparados com dados que podem estar eles próprios atrasados ou aproximados</li>
+    <li>O OIL Benchmarks não é responsável por quaisquer perdas, danos ou oportunidades perdidas resultantes de alertas de preço atrasados, imprecisos ou falhados</li>
+    <li>Os utilizadores não devem depender dos alertas de preço como substituto de plataformas profissionais de negociação, ferramentas de monitorização de mercado ou serviços de consultoria financeira</li>
+  </ul>
+  <div class="highlight">
+    <strong>Importante:</strong> Não confie nos alertas de preço do OIL Benchmarks para quaisquer decisões financeiras críticas em termos de tempo. Os alertas são apenas informativos e podem não refletir as condições de mercado em tempo real.
+  </div>
+
+  <h2>5. Anotações de Eventos Históricos</h2>
+  <p>O OIL Benchmarks exibe anotações de eventos históricos nos seus gráficos de preços para fornecer contexto educacional sobre eventos que podem ter influenciado os preços do petróleo. Reconhece que:</p>
+  <ul>
+    <li>As descrições de eventos são resumos simplificados destinados a contexto educacional geral e não são análises históricas abrangentes</li>
+    <li>As anotações podem não captar todos os fatores, causas ou nuances que contribuíram para os movimentos de preços durante qualquer período</li>
+    <li>A correlação entre eventos anotados e alterações de preço é apresentada para fins informativos e não deve ser interpretada como estabelecendo causalidade</li>
+    <li>As anotações de eventos refletem seleções editoriais e podem não incluir todos os eventos significativos relevantes para os mercados petrolíferos</li>
+    <li>A precisão das descrições de eventos históricos é fornecida com base no melhor esforço e pode conter simplificações ou pequenas imprecisões</li>
+  </ul>
+
+  <h2>6. Dados de Terceiros</h2>
+  <p>Os dados de preços do petróleo exibidos no OIL Benchmarks podem ser provenientes de fornecedores de dados de terceiros, conjuntos de dados públicos e APIs externas. Relativamente a dados de terceiros:</p>
+  <ul>
+    <li>Não controlamos a precisão, integridade ou atualidade dos dados fornecidos por fontes de terceiros</li>
+    <li>Os fornecedores de dados de terceiros podem alterar, descontinuar ou modificar os seus feeds de dados sem aviso prévio</li>
+    <li>Não somos responsáveis por erros, omissões ou interrupções nos dados de terceiros</li>
+    <li>A disponibilidade de dados de fontes de terceiros pode afetar a capacidade do Serviço de exibir preços atuais ou históricos</li>
+  </ul>
+
+  <h2>7. Limitação de Responsabilidade</h2>
+  <p>Na máxima extensão permitida pela lei aplicável:</p>
+  <ul>
+    <li>Nuno Ribeiro e o OIL Benchmarks não serão responsabilizados por quaisquer danos diretos, indiretos, incidentais, especiais, consequenciais ou punitivos decorrentes da sua utilização ou confiança em dados de mercado, alertas de preço, gráficos ou qualquer outra informação fornecida pelo Serviço</li>
+    <li>Não seremos responsáveis por quaisquer perdas financeiras, lucros cessantes ou oportunidades de negociação perdidas resultantes de decisões tomadas com base em informações obtidas do Serviço</li>
+    <li>Não seremos responsáveis por quaisquer perdas resultantes de interrupções de serviço, imprecisões de dados, alertas atrasados ou tempo de inatividade do sistema, planeado ou não planeado</li>
+    <li>A nossa responsabilidade total por qualquer reclamação decorrente do Serviço não excederá o montante que pagou para aceder ao Serviço (se aplicável)</li>
+  </ul>
+
+  <h2>8. Sem Garantia</h2>
+  <p>O Serviço, incluindo todos os dados de mercado, informações de preços, gráficos, alertas e funcionalidades relacionadas, é fornecido <strong>"tal como está"</strong> e <strong>"conforme disponível"</strong> sem garantias de qualquer tipo, sejam expressas, implícitas ou legais. Rejeitamos especificamente todas as garantias implícitas de:</p>
+  <ul>
+    <li>Comercialização</li>
+    <li>Adequação a um fim específico</li>
+    <li>Não violação</li>
+    <li>Precisão ou fiabilidade dos dados</li>
+    <li>Funcionamento ininterrupto ou sem erros</li>
+  </ul>
+  <p>Nenhuma informação ou conselho oral ou escrito dado por Nuno Ribeiro ou OIL Benchmarks criará uma garantia não expressamente declarada neste aviso.</p>
+
+  <h2>9. Informações de Contacto</h2>
+  <p>Se tiver alguma questão sobre este Aviso de Dados de Mercado ou os dados fornecidos pelo OIL Benchmarks, por favor contacte-nos:</p>
+  <div class="highlight">
+    <strong>Nuno Ribeiro</strong><br>
+    OIL Benchmarks<br>
+    Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="80e3efeef4e1e3f4c0efe9ece2e5eee3e8ede1f2ebf3aee3efed">[email&#160;protected]</a>
+  </div>
+
+  <div class="footer-note">
+    OIL Benchmarks &mdash; operado por Nuno Ribeiro<br>
+    <a href="terms.html">Termos de Serviço</a> &middot;
+    <a href="privacy.html">Política de Privacidade</a> &middot;
+    <a href="acceptable-use.html">Uso Aceitável</a> &middot;
+    <a href="cookie-policy.html">Política de Cookies</a> &middot;
+    <a href="copyright.html">Direitos de Autor</a>
+  </div>
+</div>
+
+</main>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function toggleLang() {
+  var en = document.getElementById('content-en');
+  var pt = document.getElementById('content-pt');
+  var btn = document.getElementById('lang-toggle');
+  var link = document.getElementById('back-link');
+  if (en.style.display === 'none') {
+    en.style.display = ''; pt.style.display = 'none';
+    btn.textContent = 'PT'; link.textContent = 'Back to App';
+    document.documentElement.lang = 'en';
+    localStorage.setItem('oil-lang', 'en');
+  } else {
+    en.style.display = 'none'; pt.style.display = '';
+    btn.textContent = 'EN'; link.textContent = 'Voltar';
+    document.documentElement.lang = 'pt';
+    localStorage.setItem('oil-lang', 'pt');
+  }
+}
+(function() {
+  var lang = localStorage.getItem('oil-lang');
+  if (lang === 'pt') toggleLang();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Copyright &amp; Content Protection — OIL Benchmarks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0c0c0e;
+  --bg-card: #141418;
+  --bg-hover: #1a1a20;
+  --text: #e8e4dc;
+  --text-muted: #8a8780;
+  --accent: #c9a84c;
+  --accent-dim: rgba(201,168,76,0.15);
+  --border: #2a2a30;
+  --font: 'DM Mono', monospace;
+}
+[data-theme="light"] {
+  --bg: #f4f2ed;
+  --bg-card: #ffffff;
+  --bg-hover: #eae8e3;
+  --text: #1a1a1e;
+  --text-muted: #6b6860;
+  --border: #d4d2cd;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 14px;
+  min-height: 100vh;
+}
+a { color: var(--accent); text-decoration: none; transition: opacity .2s; }
+a:hover { opacity: .8; }
+.header {
+  border-bottom: 1px solid var(--border);
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 10;
+  backdrop-filter: blur(8px);
+}
+.logo {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+}
+.logo span { color: var(--text-muted); font-weight: 300; }
+.back-link {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  transition: border-color .2s, background .2s;
+}
+.back-link:hover { border-color: var(--accent); background: var(--accent-dim); opacity: 1; }
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
+}
+h1 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+.effective {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  letter-spacing: 0.03em;
+}
+h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-top: 2.5rem;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+h3 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+p { margin-bottom: 1rem; color: var(--text); }
+ul, ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+li { margin-bottom: 0.4rem; }
+.highlight {
+  background: var(--accent-dim);
+  border-left: 3px solid var(--accent);
+  padding: 1rem 1.2rem;
+  margin: 1.2rem 0;
+  border-radius: 0 4px 4px 0;
+  font-size: 0.85rem;
+}
+.footer-note {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .header { padding: 1rem 1.2rem; }
+  .container { padding: 2rem 1.2rem 3rem; }
+  h1 { font-size: 1.3rem; }
+}
+.lang-toggle {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  padding: 0.35rem 0.8rem;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  font-family: var(--font);
+  font-weight: 500;
+  transition: border-color .2s, background .2s;
+}
+.lang-toggle:hover { border-color: var(--accent); background: var(--accent-dim); }
+.header-right { display: flex; align-items: center; gap: 0.6rem; }
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="logo">OIL <span>BENCHMARKS</span></div>
+  <div class="header-right">
+    <button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">PT</button>
+    <a href="/" class="back-link" id="back-link">Back to App</a>
+  </div>
+</header>
+<main class="container">
+<div id="content-en">
+  <h1>Copyright &amp; Content Protection</h1>
+  <p class="effective">Effective Date: March 28, 2026</p>
+
+  <h2>1. Copyright Notice</h2>
+  <div class="highlight">
+    &copy; 2026 Nuno Ribeiro. All rights reserved.
+  </div>
+  <p>All content, design, and functionality of the OIL Benchmarks web application are the intellectual property of Nuno Ribeiro unless otherwise noted. This material is protected by applicable copyright laws and international treaties. Unauthorized reproduction or distribution of this material, or any portion thereof, may result in civil and criminal penalties.</p>
+
+  <h2>2. Protected Content</h2>
+  <p>The following elements of OIL Benchmarks are protected by copyright and other intellectual property rights:</p>
+  <ul>
+    <li><strong>Website Design and Layout:</strong> The overall visual design, page layouts, user interface structure, color schemes, and responsive design implementations</li>
+    <li><strong>Chart Visualizations and Interactive Features:</strong> The interactive WTI crude oil price charts, including their design, behavior, animations, and presentation spanning data from 1950 to present</li>
+    <li><strong>Historical Event Annotations:</strong> The curated descriptions, summaries, and contextual annotations associated with historical events displayed on price charts</li>
+    <li><strong>Source Code and Application Logic:</strong> All front-end and back-end source code, including the Express.js server application, single-page application client, service worker, and all associated scripts and configurations</li>
+    <li><strong>Icons, Graphics, and Branding:</strong> The OIL BENCHMARKS logo, brand identity, icons, and all original graphical elements used throughout the Service</li>
+    <li><strong>Typography:</strong> The specific typographic selections and usage of DM Mono, Instrument Serif, and Lora fonts as implemented in the Service (fonts themselves are licensed from Google Fonts under their respective open-source licenses)</li>
+  </ul>
+
+  <h2>3. Market Data Attribution</h2>
+  <p>WTI crude oil price data displayed on OIL Benchmarks may be sourced from publicly available sources and third-party data providers. While raw factual market data itself is not subject to copyright protection, the specific selection, arrangement, presentation, and visualization of this data on OIL Benchmarks is protected intellectual property.</p>
+  <p>The compilation of historical price data, the methodology of data presentation, and the pairing of price movements with historical event annotations represent original creative works subject to copyright protection.</p>
+
+  <h2>4. Permitted Uses</h2>
+  <p>You are permitted to use OIL Benchmarks content in the following ways without requiring additional permission:</p>
+  <ul>
+    <li><strong>Personal Viewing:</strong> Accessing and viewing oil price data, charts, and content through the Service for personal, non-commercial purposes</li>
+    <li><strong>Sharing Links:</strong> Sharing direct hyperlinks (URLs) to OIL Benchmarks pages with others</li>
+    <li><strong>Editorial and Educational Screenshots:</strong> Capturing screenshots of charts or data for use in non-commercial editorial, educational, or research contexts, provided that clear attribution is given to "OIL Benchmarks (oilbenchmarks.com) by Nuno Ribeiro"</li>
+  </ul>
+
+  <h2>5. Prohibited Uses</h2>
+  <p>The following uses of OIL Benchmarks content are prohibited without prior written permission from Nuno Ribeiro:</p>
+  <ul>
+    <li>Reproducing, duplicating, copying, or distributing any substantial portion of the Service's content, design, or functionality</li>
+    <li>Creating derivative works based on the Service's design, visualizations, or content</li>
+    <li>Removing, altering, or obscuring any copyright notices, watermarks, or attribution text</li>
+    <li>Using any content, design elements, or branding from the Service for commercial purposes without a written license agreement</li>
+    <li>Scraping, automated extraction, or systematic downloading of content or data from the Service</li>
+    <li>Framing, embedding, or mirroring the Service or any portion thereof within another website or application</li>
+    <li>Using the OIL BENCHMARKS name, logo, or brand identity in any manner that suggests endorsement, affiliation, or sponsorship without authorization</li>
+  </ul>
+
+  <h2>6. Open-Source Acknowledgments</h2>
+  <p>OIL Benchmarks is built using a number of open-source software libraries and frameworks. We gratefully acknowledge these projects and their contributors. These components are used under their respective open-source licenses:</p>
+  <ul>
+    <li><strong>Express.js</strong> &mdash; Fast, unopinionated web framework for Node.js (MIT License)</li>
+    <li><strong>Chart.js</strong> &mdash; Simple yet flexible JavaScript charting library (MIT License)</li>
+    <li><strong>better-sqlite3</strong> &mdash; Fast and simple SQLite3 library for Node.js (MIT License)</li>
+    <li><strong>Helmet</strong> &mdash; Security middleware for Express.js applications (MIT License)</li>
+    <li><strong>bcryptjs</strong> &mdash; Password hashing library (MIT License)</li>
+  </ul>
+  <p>The use of these open-source components does not grant any rights to the proprietary portions of OIL Benchmarks. Each open-source library retains its own copyright and license terms, which are available in their respective repositories.</p>
+
+  <h2>7. DMCA / Takedown Procedure</h2>
+  <p>If you believe that any content on OIL Benchmarks infringes upon your copyright, you may submit a takedown notice in accordance with the Digital Millennium Copyright Act (DMCA). Your notice must include:</p>
+  <ul>
+    <li>A physical or electronic signature of the copyright owner or authorized agent</li>
+    <li>Identification of the copyrighted work claimed to have been infringed</li>
+    <li>Identification of the material on the Service that is claimed to be infringing, with sufficient detail to locate it</li>
+    <li>Your contact information (name, address, telephone number, and email address)</li>
+    <li>A statement that you have a good-faith belief that the use is not authorized by the copyright owner, its agent, or the law</li>
+    <li>A statement, made under penalty of perjury, that the information in the notice is accurate and that you are authorized to act on behalf of the copyright owner</li>
+  </ul>
+  <p>Please send DMCA notices to the contact address listed below. We will respond to valid takedown requests in a timely manner.</p>
+
+  <h2>8. Contact Information</h2>
+  <p>For copyright inquiries, licensing requests, DMCA notices, or any other questions related to intellectual property, please contact us:</p>
+  <div class="highlight">
+    <strong>Nuno Ribeiro</strong><br>
+    OIL Benchmarks<br>
+    Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b6d5d9d8c2d7d5c2f6d9dfdad4d3d8d5dedbd7c4ddc598d5d9db">[email&#160;protected]</a>
+  </div>
+
+  <div class="footer-note">
+    OIL Benchmarks &mdash; operated by Nuno Ribeiro<br>
+    <a href="terms.html">Terms of Service</a> &middot;
+    <a href="privacy.html">Privacy Policy</a> &middot;
+    <a href="acceptable-use.html">Acceptable Use</a> &middot;
+    <a href="cookie-policy.html">Cookie Policy</a> &middot;
+    <a href="market-data.html">Market Data Disclaimer</a>
+  </div>
+</div>
+
+<div id="content-pt" style="display:none">
+  <h1>Direitos de Autor e Prote&#231;&#227;o de Conte&#250;do</h1>
+  <p class="effective">Data de Vig&#234;ncia: 28 de Mar&#231;o de 2026</p>
+
+  <h2>1. Aviso de Direitos de Autor</h2>
+  <div class="highlight">
+    &copy; 2026 Nuno Ribeiro. Todos os direitos reservados.
+  </div>
+  <p>Todo o conte&#250;do, design e funcionalidade da aplica&#231;&#227;o web OIL Benchmarks s&#227;o propriedade intelectual de Nuno Ribeiro, salvo indica&#231;&#227;o em contr&#225;rio. Este material est&#225; protegido pelas leis de direitos de autor aplic&#225;veis e tratados internacionais. A reprodu&#231;&#227;o ou distribui&#231;&#227;o n&#227;o autorizada deste material, ou qualquer parte dele, pode resultar em penalidades civis e criminais.</p>
+
+  <h2>2. Conte&#250;do Protegido</h2>
+  <p>Os seguintes elementos do OIL Benchmarks est&#227;o protegidos por direitos de autor e outros direitos de propriedade intelectual:</p>
+  <ul>
+    <li><strong>Design e Layout do Website:</strong> O design visual geral, layouts de p&#225;gina, estrutura da interface de utilizador, esquemas de cores e implementa&#231;&#245;es de design responsivo</li>
+    <li><strong>Visualiza&#231;&#245;es de Gr&#225;ficos e Funcionalidades Interativas:</strong> Os gr&#225;ficos interativos de pre&#231;os do petr&#243;leo bruto WTI, incluindo o seu design, comportamento, anima&#231;&#245;es e apresenta&#231;&#227;o abrangendo dados de 1950 at&#233; ao presente</li>
+    <li><strong>Anota&#231;&#245;es de Eventos Hist&#243;ricos:</strong> As descri&#231;&#245;es curadas, resumos e anota&#231;&#245;es contextuais associadas a eventos hist&#243;ricos exibidos nos gr&#225;ficos de pre&#231;os</li>
+    <li><strong>C&#243;digo-Fonte e L&#243;gica da Aplica&#231;&#227;o:</strong> Todo o c&#243;digo-fonte front-end e back-end, incluindo a aplica&#231;&#227;o de servidor Express.js, aplica&#231;&#227;o cliente de p&#225;gina &#250;nica, service worker e todos os scripts e configura&#231;&#245;es associados</li>
+    <li><strong>&#205;cones, Gr&#225;ficos e Marca:</strong> O log&#243;tipo OIL BENCHMARKS, identidade da marca, &#237;cones e todos os elementos gr&#225;ficos originais utilizados em todo o Servi&#231;o</li>
+    <li><strong>Tipografia:</strong> As sele&#231;&#245;es tipogr&#225;ficas espec&#237;ficas e utiliza&#231;&#227;o das fontes DM Mono, Instrument Serif e Lora conforme implementadas no Servi&#231;o (as fontes em si s&#227;o licenciadas do Google Fonts sob as respetivas licen&#231;as de c&#243;digo aberto)</li>
+  </ul>
+
+  <h2>3. Atribui&#231;&#227;o de Dados de Mercado</h2>
+  <p>Os dados de pre&#231;os do petr&#243;leo bruto WTI exibidos no OIL Benchmarks podem ser provenientes de fontes publicamente dispon&#237;veis e fornecedores de dados de terceiros. Embora os dados factuais brutos de mercado em si n&#227;o estejam sujeitos a prote&#231;&#227;o de direitos de autor, a sele&#231;&#227;o, organiza&#231;&#227;o, apresenta&#231;&#227;o e visualiza&#231;&#227;o espec&#237;ficas destes dados no OIL Benchmarks s&#227;o propriedade intelectual protegida.</p>
+  <p>A compila&#231;&#227;o de dados hist&#243;ricos de pre&#231;os, a metodologia de apresenta&#231;&#227;o de dados e o emparelhamento de movimentos de pre&#231;os com anota&#231;&#245;es de eventos hist&#243;ricos representam obras criativas originais sujeitas a prote&#231;&#227;o de direitos de autor.</p>
+
+  <h2>4. Usos Permitidos</h2>
+  <p>Est&#225; autorizado a utilizar o conte&#250;do do OIL Benchmarks das seguintes formas sem necessitar de permiss&#227;o adicional:</p>
+  <ul>
+    <li><strong>Visualiza&#231;&#227;o Pessoal:</strong> Aceder e visualizar dados de pre&#231;os do petr&#243;leo, gr&#225;ficos e conte&#250;do atrav&#233;s do Servi&#231;o para fins pessoais e n&#227;o comerciais</li>
+    <li><strong>Partilha de Links:</strong> Partilhar hiperlinks diretos (URLs) para p&#225;ginas do OIL Benchmarks com outros</li>
+    <li><strong>Capturas de Ecr&#227; Editoriais e Educacionais:</strong> Capturar screenshots de gr&#225;ficos ou dados para utiliza&#231;&#227;o em contextos editoriais, educacionais ou de investiga&#231;&#227;o n&#227;o comerciais, desde que seja dada atribui&#231;&#227;o clara a &#8220;OIL Benchmarks (oilbenchmarks.com) por Nuno Ribeiro&#8221;</li>
+  </ul>
+
+  <h2>5. Usos Proibidos</h2>
+  <p>Os seguintes usos do conte&#250;do do OIL Benchmarks s&#227;o proibidos sem autoriza&#231;&#227;o pr&#233;via por escrito de Nuno Ribeiro:</p>
+  <ul>
+    <li>Reproduzir, duplicar, copiar ou distribuir qualquer por&#231;&#227;o substancial do conte&#250;do, design ou funcionalidade do Servi&#231;o</li>
+    <li>Criar obras derivadas baseadas no design, visualiza&#231;&#245;es ou conte&#250;do do Servi&#231;o</li>
+    <li>Remover, alterar ou obscurecer quaisquer avisos de direitos de autor, marcas de &#225;gua ou texto de atribui&#231;&#227;o</li>
+    <li>Utilizar qualquer conte&#250;do, elementos de design ou marca do Servi&#231;o para fins comerciais sem um acordo de licen&#231;a por escrito</li>
+    <li>Scraping, extra&#231;&#227;o automatizada ou descarga sistem&#225;tica de conte&#250;do ou dados do Servi&#231;o</li>
+    <li>Enquadrar, incorporar ou espelhar o Servi&#231;o ou qualquer parte dele noutro website ou aplica&#231;&#227;o</li>
+    <li>Utilizar o nome OIL BENCHMARKS, log&#243;tipo ou identidade da marca de qualquer forma que sugira endosso, afilia&#231;&#227;o ou patroc&#237;nio sem autoriza&#231;&#227;o</li>
+  </ul>
+
+  <h2>6. Reconhecimentos de C&#243;digo Aberto</h2>
+  <p>O OIL Benchmarks &#233; constru&#237;do utilizando v&#225;rias bibliotecas e frameworks de software de c&#243;digo aberto. Reconhecemos com gratid&#227;o estes projetos e os seus contribuidores. Estes componentes s&#227;o utilizados sob as respetivas licen&#231;as de c&#243;digo aberto:</p>
+  <ul>
+    <li><strong>Express.js</strong> &mdash; Framework web r&#225;pida e sem opini&#245;es para Node.js (Licen&#231;a MIT)</li>
+    <li><strong>Chart.js</strong> &mdash; Biblioteca de gr&#225;ficos JavaScript simples mas flex&#237;vel (Licen&#231;a MIT)</li>
+    <li><strong>better-sqlite3</strong> &mdash; Biblioteca SQLite3 r&#225;pida e simples para Node.js (Licen&#231;a MIT)</li>
+    <li><strong>Helmet</strong> &mdash; Middleware de seguran&#231;a para aplica&#231;&#245;es Express.js (Licen&#231;a MIT)</li>
+    <li><strong>bcryptjs</strong> &mdash; Biblioteca de hashing de palavras-passe (Licen&#231;a MIT)</li>
+  </ul>
+  <p>A utiliza&#231;&#227;o destes componentes de c&#243;digo aberto n&#227;o concede quaisquer direitos sobre as partes propriet&#225;rias do OIL Benchmarks. Cada biblioteca de c&#243;digo aberto mant&#233;m os seus pr&#243;prios direitos de autor e termos de licen&#231;a, dispon&#237;veis nos respetivos reposit&#243;rios.</p>
+
+  <h2>7. Procedimento DMCA / Remo&#231;&#227;o</h2>
+  <p>Se acredita que qualquer conte&#250;do no OIL Benchmarks infringe os seus direitos de autor, pode submeter um aviso de remo&#231;&#227;o de acordo com o Digital Millennium Copyright Act (DMCA). O seu aviso deve incluir:</p>
+  <ul>
+    <li>Uma assinatura f&#237;sica ou eletr&#243;nica do propriet&#225;rio dos direitos de autor ou agente autorizado</li>
+    <li>Identifica&#231;&#227;o da obra protegida por direitos de autor alegadamente infringida</li>
+    <li>Identifica&#231;&#227;o do material no Servi&#231;o alegadamente infrator, com detalhe suficiente para o localizar</li>
+    <li>As suas informa&#231;&#245;es de contacto (nome, morada, n&#250;mero de telefone e endere&#231;o de email)</li>
+    <li>Uma declara&#231;&#227;o de que acredita de boa-f&#233; que a utiliza&#231;&#227;o n&#227;o &#233; autorizada pelo propriet&#225;rio dos direitos de autor, seu agente ou pela lei</li>
+    <li>Uma declara&#231;&#227;o, feita sob pena de perj&#250;rio, de que a informa&#231;&#227;o no aviso &#233; precisa e que est&#225; autorizado a agir em nome do propriet&#225;rio dos direitos de autor</li>
+  </ul>
+  <p>Por favor envie avisos DMCA para o endere&#231;o de contacto indicado abaixo. Responderemos a pedidos de remo&#231;&#227;o v&#225;lidos de forma atempada.</p>
+
+  <h2>8. Informa&#231;&#245;es de Contacto</h2>
+  <p>Para consultas sobre direitos de autor, pedidos de licenciamento, avisos DMCA ou quaisquer outras quest&#245;es relacionadas com propriedade intelectual, por favor contacte-nos:</p>
+  <div class="highlight">
+    <strong>Nuno Ribeiro</strong><br>
+    OIL Benchmarks<br>
+    Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bad9d5d4cedbd9cefad5d3d6d8dfd4d9d2d7dbc8d1c994d9d5d7">[email&#160;protected]</a>
+  </div>
+
+  <div class="footer-note">
+    OIL Benchmarks &mdash; operado por Nuno Ribeiro<br>
+    <a href="terms.html">Termos de Servi&#231;o</a> &middot;
+    <a href="privacy.html">Pol&#237;tica de Privacidade</a> &middot;
+    <a href="acceptable-use.html">Uso Aceit&#225;vel</a> &middot;
+    <a href="cookie-policy.html">Pol&#237;tica de Cookies</a> &middot;
+    <a href="market-data.html">Aviso de Dados de Mercado</a>
+  </div>
+</div>
+</main>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function toggleLang() {
+  var en = document.getElementById('content-en');
+  var pt = document.getElementById('content-pt');
+  var btn = document.getElementById('lang-toggle');
+  var link = document.getElementById('back-link');
+  if (en.style.display === 'none') {
+    en.style.display = ''; pt.style.display = 'none';
+    btn.textContent = 'PT'; link.textContent = 'Back to App';
+    document.documentElement.lang = 'en';
+    localStorage.setItem('oil-lang', 'en');
+  } else {
+    en.style.display = 'none'; pt.style.display = '';
+    btn.textContent = 'EN'; link.textContent = 'Voltar';
+    document.documentElement.lang = 'pt';
+    localStorage.setItem('oil-lang', 'pt');
+  }
+}
+(function() {
+  var lang = localStorage.getItem('oil-lang');
+  if (lang === 'pt') toggleLang();
+})();
+</script>
+</body>
+</html>

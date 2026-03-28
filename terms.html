@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — OIL Benchmarks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0c0c0e;
+  --bg-card: #141418;
+  --bg-hover: #1a1a20;
+  --text: #e8e4dc;
+  --text-muted: #8a8780;
+  --accent: #c9a84c;
+  --accent-dim: rgba(201,168,76,0.15);
+  --border: #2a2a30;
+  --font: 'DM Mono', monospace;
+}
+[data-theme="light"] {
+  --bg: #f4f2ed;
+  --bg-card: #ffffff;
+  --bg-hover: #eae8e3;
+  --text: #1a1a1e;
+  --text-muted: #6b6860;
+  --border: #d4d2cd;
+}
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 14px;
+  min-height: 100vh;
+}
+a { color: var(--accent); text-decoration: none; transition: opacity .2s; }
+a:hover { opacity: .8; }
+.header {
+  border-bottom: 1px solid var(--border);
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 10;
+  backdrop-filter: blur(8px);
+}
+.logo {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+}
+.logo span { color: var(--text-muted); font-weight: 300; }
+.back-link {
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  transition: border-color .2s, background .2s;
+}
+.back-link:hover { border-color: var(--accent); background: var(--accent-dim); opacity: 1; }
+.container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
+}
+h1 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+.effective {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  letter-spacing: 0.03em;
+}
+h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-top: 2.5rem;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+h3 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+p { margin-bottom: 1rem; color: var(--text); }
+ul, ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+li { margin-bottom: 0.4rem; }
+.highlight {
+  background: var(--accent-dim);
+  border-left: 3px solid var(--accent);
+  padding: 1rem 1.2rem;
+  margin: 1.2rem 0;
+  border-radius: 0 4px 4px 0;
+  font-size: 0.85rem;
+}
+.footer-note {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .header { padding: 1rem 1.2rem; }
+  .container { padding: 2rem 1.2rem 3rem; }
+  h1 { font-size: 1.3rem; }
+}
+.lang-toggle {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  padding: 0.35rem 0.8rem;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  font-family: var(--font);
+  font-weight: 500;
+  transition: border-color .2s, background .2s;
+}
+.lang-toggle:hover { border-color: var(--accent); background: var(--accent-dim); }
+.header-right { display: flex; align-items: center; gap: 0.6rem; }
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="logo">OIL <span>BENCHMARKS</span></div>
+  <div class="header-right">
+    <button class="lang-toggle" id="lang-toggle" onclick="toggleLang()">PT</button>
+    <a href="/" class="back-link" id="back-link">Back to App</a>
+  </div>
+</header>
+<main class="container">
+<div id="content-en">
+  <h1>Terms of Service</h1>
+  <p class="effective">Effective Date: March 28, 2026</p>
+
+  <h2>1. Acceptance of Terms</h2>
+  <p>By accessing or using OIL Benchmarks ("the Service"), operated by Nuno Ribeiro ("we," "us," or "our"), you agree to be bound by these Terms of Service. If you do not agree to these terms, you must not access or use the Service.</p>
+  <p>Your continued use of the Service following the posting of any changes to these Terms constitutes acceptance of those changes. We encourage you to review these Terms periodically.</p>
+
+  <h2>2. Description of Service</h2>
+  <p>OIL Benchmarks is a web application that provides WTI (West Texas Intermediate) crude oil price data visualization and tracking tools. The Service includes:</p>
+  <ul>
+    <li>Real-time and historical WTI crude oil price data display</li>
+    <li>Interactive historical price charts spanning from 1950 to present</li>
+    <li>Configurable price alert notifications</li>
+    <li>User accounts with personalized settings and preferences</li>
+    <li>A Progressive Web App (PWA) experience with offline capabilities</li>
+    <li>Dark and light theme display modes</li>
+  </ul>
+  <p>The Service is provided as a single-page application accessible via modern web browsers.</p>
+  <h3>2.1 Data Protection and Backups</h3>
+  <p>We maintain a comprehensive automated SQLite backup infrastructure to protect your data against loss:</p>
+  <ul>
+    <li><strong>Backup retention policy:</strong> Hourly snapshots for point-in-time recovery, 7 daily backups, 4 weekly backups, and 12 monthly backups. Older backups are automatically rotated and securely deleted</li>
+    <li><strong>Point-in-time recovery:</strong> Using periodic snapshots combined with WAL archiving, the Service can restore the database to any specific moment in time, minimising data loss beyond the last scheduled backup</li>
+    <li><strong>Backup integrity verification:</strong> Every backup undergoes SHA-256 checksum validation and periodic automated restore tests against an isolated environment to confirm recoverability, schema integrity, and data consistency</li>
+    <li><strong>One-click restore:</strong> Authorised administrators can initiate a restore from any available recovery point (hourly, daily, weekly, monthly) via the admin panel, with automatic pre-restore backup creation to prevent data loss during the restore operation</li>
+    <li><strong>WAL checkpoint management:</strong> Active checkpoint management ensures WAL files remain compact, all data is durably written, and backup snapshots capture a fully consistent database state</li>
+    <li><strong>Data migration tooling:</strong> The Service includes tooling to export data from SQLite to PostgreSQL or other relational databases if the platform needs to scale. Migrations include automated validation of row counts, data types, and referential integrity</li>
+  </ul>
+  <p>All backups are stored on our server infrastructure, encrypted at rest, and not shared with third parties. Upon account deletion, your personal data is purged from all backup copies within the next hourly backup cycle. For complete technical details, see our <a href="privacy.html">Privacy Policy</a>, Sections 6.4–6.7.</p>
+  <h3>2.2 Graceful Shutdown and Data Integrity</h3>
+  <p>The Service implements a graceful shutdown procedure to protect your data during server maintenance, updates, and restarts:</p>
+  <ul>
+    <li>All in-flight requests are completed before the server stops accepting new connections</li>
+    <li>The SQLite database connection is closed cleanly, ensuring all pending writes are flushed and committed without corruption</li>
+    <li>Active user sessions are preserved across restarts — you will not be forcibly logged out during routine maintenance</li>
+    <li>The process handles SIGTERM and SIGINT signals for orderly shutdown rather than abrupt termination</li>
+  </ul>
+  <p>While we take every measure to maintain continuous service, scheduled maintenance may result in brief periods of unavailability. No data loss, corrupted records, or interrupted transactions will occur as a result of these maintenance windows. For full technical details, see our <a href="privacy.html">Privacy Policy</a>, Section 6.6.</p>
+
+  <h2>3. User Accounts</h2>
+  <h3>3.1 Registration</h3>
+  <p>To access certain features of the Service, you may be required to create an account. You may register using an email address and password, or through a supported third-party OAuth provider (social login). You agree to provide accurate, current, and complete information during registration.</p>
+  <h3>3.2 Account Security</h3>
+  <p>You are responsible for maintaining the confidentiality of your account credentials. We provide the following security features to help protect your account:</p>
+  <ul>
+    <li>Passwords are hashed using bcryptjs and are never stored in plain text</li>
+    <li>Two-factor authentication (TOTP) is available for additional security</li>
+    <li>Accounts are temporarily locked after multiple failed login attempts</li>
+    <li>CAPTCHA verification is required during login</li>
+    <li>Sessions are managed with secure, HTTP-only cookies</li>
+  </ul>
+  <p>You must notify us immediately of any unauthorized access to or use of your account.</p>
+  <h3>3.3 Account Termination and Data Erasure</h3>
+  <p>We reserve the right to suspend or terminate your account at any time, with or without cause, and with or without notice. You may also delete your account at any time through your account settings. Upon termination, your right to use the Service ceases immediately.</p>
+  <p>In accordance with your Right to be Forgotten, when your account is deleted — whether by you or by us — all personal data associated with your account is <strong>completely and permanently erased</strong> from our systems. This includes account information, authentication data, profile data, user settings, price alert rules, notifications, sessions, and security tokens. This erasure is immediate and irreversible. For full details, see our <a href="privacy.html">Privacy Policy</a>, Section 7.1.</p>
+
+  <h2>4. Acceptable Use</h2>
+  <p>You agree not to use the Service to:</p>
+  <ul>
+    <li>Scrape, crawl, or use automated tools to extract data from the Service without prior written consent</li>
+    <li>Attempt to gain unauthorized access to any part of the Service, other user accounts, or related systems and networks</li>
+    <li>Interfere with or disrupt the Service, servers, or networks connected to the Service</li>
+    <li>Reverse-engineer, decompile, or disassemble any portion of the Service</li>
+    <li>Use the Service for any unlawful purpose or in violation of any applicable laws or regulations</li>
+    <li>Impersonate any person or entity, or misrepresent your affiliation with any person or entity</li>
+    <li>Circumvent or attempt to circumvent any security measures, including CSRF protection, rate limiting, or account lockout mechanisms</li>
+    <li>Share, sell, or transfer your account credentials to third parties</li>
+  </ul>
+  <p>Violation of these terms may result in immediate account suspension or termination.</p>
+
+  <h2>5. Market Data Disclaimer</h2>
+  <div class="highlight">
+    All crude oil price data, charts, and related information provided through OIL Benchmarks are for <strong>informational purposes only</strong> and do not constitute financial, investment, trading, or any other form of professional advice.
+  </div>
+  <p>You acknowledge and agree that:</p>
+  <ul>
+    <li>Price data displayed may be delayed, estimated, or otherwise not reflect real-time market conditions</li>
+    <li>Historical data is provided on a best-effort basis and may contain inaccuracies or gaps</li>
+    <li>Price alerts are delivered on a best-effort basis and may be delayed; you should not rely solely on alerts for trading decisions</li>
+    <li>We do not guarantee the accuracy, completeness, or timeliness of any market data</li>
+    <li>You should consult a qualified financial advisor before making any investment decisions</li>
+    <li>We are not a registered broker-dealer, investment advisor, or financial institution</li>
+  </ul>
+
+  <h2>6. Intellectual Property</h2>
+  <p>The Service, including its design, layout, graphics, user interface, and underlying source code, is the intellectual property of Nuno Ribeiro and is protected by applicable copyright, trademark, and other intellectual property laws.</p>
+  <p>You are granted a limited, non-exclusive, non-transferable, revocable license to access and use the Service for personal, non-commercial purposes in accordance with these Terms. This license does not include the right to modify, distribute, or create derivative works based on the Service.</p>
+  <p>The crude oil price data itself may be sourced from public or third-party sources and is subject to its own terms of use and licensing.</p>
+
+  <h2>7. Privacy</h2>
+  <p>Your use of the Service is also governed by our <a href="privacy.html">Privacy Policy</a>, which describes how we collect, use, and protect your personal data. By using the Service, you consent to the data practices described in the Privacy Policy.</p>
+  <p>We are committed to privacy-respecting analytics. Our self-hosted analytics system does not store IP addresses and uses session hashes rather than persistent identifiers.</p>
+
+  <h2>8. Cookie Policy</h2>
+  <p>The Service uses cookies to function properly. We categorize cookies into three types:</p>
+  <ul>
+    <li><strong>Essential cookies:</strong> Required for the Service to operate, including session management and CSRF protection</li>
+    <li><strong>Analytics cookies:</strong> Used by our self-hosted, privacy-respecting analytics to understand usage patterns</li>
+    <li><strong>Functional cookies:</strong> Enable personalization features such as theme preferences and cookie consent choices</li>
+  </ul>
+  <p>You can manage your cookie preferences through the cookie consent interface provided within the Service. Essential cookies cannot be disabled as they are necessary for the Service to function.</p>
+
+  <h2>9. Limitation of Liability</h2>
+  <p>To the fullest extent permitted by applicable law, OIL Benchmarks and its operator Nuno Ribeiro shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:</p>
+  <ul>
+    <li>Loss of profits, revenue, data, or business opportunities</li>
+    <li>Financial losses arising from reliance on price data, alerts, or information provided by the Service</li>
+    <li>Service interruptions, delays, or errors in data transmission</li>
+    <li>Unauthorized access to or alteration of your data</li>
+    <li>Any third-party conduct or content accessed through the Service</li>
+  </ul>
+  <p>The Service is provided "as is" and "as available" without warranties of any kind, whether express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+
+  <h2>10. Modifications to Terms</h2>
+  <p>We reserve the right to modify these Terms of Service at any time. Changes will be effective immediately upon posting the revised Terms on the Service, with an updated "Effective Date" at the top of this page.</p>
+  <p>Material changes will be communicated through the Service via in-app notifications or email (if you have opted in to notifications). Your continued use of the Service after any modifications constitutes acceptance of the updated Terms.</p>
+
+  <h2>11. Governing Law</h2>
+  <p>These Terms shall be governed by and construed in accordance with applicable laws, without regard to conflict of law principles. Any disputes arising under or in connection with these Terms shall be subject to the exclusive jurisdiction of the competent courts.</p>
+
+  <h2>12. Contact Information</h2>
+  <p>If you have any questions, concerns, or requests regarding these Terms of Service, please contact us:</p>
+  <div class="highlight">
+    <strong>Nuno Ribeiro</strong><br>
+    OIL Benchmarks<br>
+    Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0a6965647e6b697e4a656366686f646962676b78617924696567">[email&#160;protected]</a>
+  </div>
+
+  <div class="footer-note">
+    OIL Benchmarks &mdash; operated by Nuno Ribeiro<br>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+</div>
+
+<div id="content-pt" style="display:none">
+  <h1>Termos de Serviço</h1>
+  <p class="effective">Data de Vigência: 28 de Março de 2026</p>
+
+  <h2>1. Aceitação dos Termos</h2>
+  <p>Ao aceder ou utilizar o OIL Benchmarks ("o Serviço"), operado por Nuno Ribeiro ("nós" ou "nosso"), concorda em ficar vinculado a estes Termos de Serviço. Se não concordar com estes termos, não deve aceder ou utilizar o Serviço.</p>
+  <p>O seu uso continuado do Serviço após a publicação de quaisquer alterações a estes Termos constitui aceitação dessas alterações. Encorajamo-lo a rever estes Termos periodicamente.</p>
+
+  <h2>2. Descrição do Serviço</h2>
+  <p>O OIL Benchmarks é uma aplicação web que fornece visualização e ferramentas de acompanhamento de preços do petróleo bruto WTI (West Texas Intermediate). O Serviço inclui:</p>
+  <ul>
+    <li>Exibição de dados de preços do petróleo bruto WTI em tempo real e históricos</li>
+    <li>Gráficos históricos interativos de preços desde 1950 até ao presente</li>
+    <li>Notificações de alertas de preço configuráveis</li>
+    <li>Contas de utilizador com definições e preferências personalizadas</li>
+    <li>Uma experiência de Progressive Web App (PWA) com capacidades offline</li>
+    <li>Modos de exibição com tema escuro e claro</li>
+  </ul>
+  <p>O Serviço é fornecido como uma aplicação de página única acessível através de navegadores web modernos.</p>
+  <h3>2.1 Proteção de Dados e Cópias de Segurança</h3>
+  <p>Mantemos uma infraestrutura abrangente de cópias de segurança automatizadas SQLite para proteger os seus dados contra perda:</p>
+  <ul>
+    <li><strong>Política de retenção de cópias:</strong> Snapshots horários para recuperação point-in-time, 7 cópias diárias, 4 cópias semanais e 12 cópias mensais. As cópias mais antigas são automaticamente rotacionadas e eliminadas de forma segura</li>
+    <li><strong>Recuperação point-in-time:</strong> Utilizando snapshots periódicos combinados com arquivamento WAL, o Serviço pode restaurar a base de dados para qualquer momento específico no tempo, minimizando a perda de dados para além da última cópia agendada</li>
+    <li><strong>Verificação de integridade das cópias:</strong> Cada cópia de segurança é submetida a validação de checksum SHA-256 e testes de restauro automatizados periódicos contra um ambiente isolado para confirmar a recuperabilidade, integridade do esquema e consistência dos dados</li>
+    <li><strong>Restauro com um clique:</strong> Os administradores autorizados podem iniciar um restauro a partir de qualquer ponto de recuperação disponível (horário, diário, semanal, mensal) via painel de administração, com criação automática de cópia de segurança pré-restauro para prevenir perda de dados durante a operação</li>
+    <li><strong>Gestão de checkpoints WAL:</strong> A gestão ativa de checkpoints garante que os ficheiros WAL permanecem compactos, todos os dados são escritos de forma durável e os snapshots de cópia de segurança capturam um estado de base de dados totalmente consistente</li>
+    <li><strong>Ferramentas de migração de dados:</strong> O Serviço inclui ferramentas para exportar dados do SQLite para PostgreSQL ou outras bases de dados relacionais caso a plataforma necessite de escalar. As migrações incluem validação automatizada de contagens de registos, tipos de dados e integridade referencial</li>
+  </ul>
+  <p>Todas as cópias de segurança são armazenadas na nossa infraestrutura de servidores, encriptadas em repouso e não partilhadas com terceiros. Após a eliminação da conta, os seus dados pessoais são purgados de todas as cópias de segurança no próximo ciclo de cópia de segurança horária. Para detalhes técnicos completos, consulte a nossa <a href="privacy.html">Política de Privacidade</a>, Secções 6.4–6.7.</p>
+  <h3>2.2 Encerramento Gracioso e Integridade dos Dados</h3>
+  <p>O Serviço implementa um procedimento de encerramento gracioso para proteger os seus dados durante manutenção do servidor, atualizações e reinícios:</p>
+  <ul>
+    <li>Todos os pedidos em curso são completados antes de o servidor parar de aceitar novas ligações</li>
+    <li>A ligação à base de dados SQLite é encerrada de forma limpa, garantindo que todas as escritas pendentes são descarregadas e confirmadas sem corrupção</li>
+    <li>As sessões de utilizador ativas são preservadas durante os reinícios — não será forçado a terminar sessão durante manutenção de rotina</li>
+    <li>O processo trata sinais SIGTERM e SIGINT para encerramento ordenado em vez de terminação abrupta</li>
+  </ul>
+  <p>Embora tomemos todas as medidas para manter o serviço contínuo, a manutenção agendada pode resultar em breves períodos de indisponibilidade. Nenhuma perda de dados, registos corrompidos ou transações interrompidas ocorrerá como resultado destas janelas de manutenção. Para detalhes técnicos completos, consulte a nossa <a href="privacy.html">Política de Privacidade</a>, Secção 6.6.</p>
+
+  <h2>3. Contas de Utilizador</h2>
+  <h3>3.1 Registo</h3>
+  <p>Para aceder a determinadas funcionalidades do Serviço, poderá ser necessário criar uma conta. Pode registar-se utilizando um endereço de email e palavra-passe, ou através de um fornecedor OAuth de terceiros suportado (login social). Concorda em fornecer informações precisas, atuais e completas durante o registo.</p>
+  <h3>3.2 Segurança da Conta</h3>
+  <p>É responsável por manter a confidencialidade das credenciais da sua conta. Fornecemos as seguintes funcionalidades de segurança para ajudar a proteger a sua conta:</p>
+  <ul>
+    <li>As palavras-passe são encriptadas utilizando bcryptjs e nunca são armazenadas em texto simples</li>
+    <li>A autenticação de dois fatores (TOTP) está disponível para segurança adicional</li>
+    <li>As contas são temporariamente bloqueadas após múltiplas tentativas de login falhadas</li>
+    <li>A verificação CAPTCHA é necessária durante o login</li>
+    <li>As sessões são geridas com cookies seguros e HTTP-only</li>
+  </ul>
+  <p>Deve notificar-nos imediatamente de qualquer acesso não autorizado ou utilização da sua conta.</p>
+  <h3>3.3 Rescisão de Conta e Eliminação de Dados</h3>
+  <p>Reservamo-nos o direito de suspender ou encerrar a sua conta a qualquer momento, com ou sem motivo, e com ou sem aviso prévio. Também pode eliminar a sua conta a qualquer momento através das definições da conta. Após a rescisão, o seu direito de utilizar o Serviço cessa imediatamente.</p>
+  <p>De acordo com o seu Direito ao Esquecimento, quando a sua conta é eliminada — seja por si ou por nós — todos os dados pessoais associados à sua conta são <strong>completa e permanentemente apagados</strong> dos nossos sistemas. Isto inclui informações da conta, dados de autenticação, dados de perfil, definições do utilizador, regras de alertas de preço, notificações, sessões e tokens de segurança. Esta eliminação é imediata e irreversível. Para detalhes completos, consulte a nossa <a href="privacy.html">Política de Privacidade</a>, Secção 7.1.</p>
+
+  <h2>4. Uso Aceitável</h2>
+  <p>Concorda em não utilizar o Serviço para:</p>
+  <ul>
+    <li>Fazer scraping, crawling ou utilizar ferramentas automatizadas para extrair dados do Serviço sem consentimento prévio por escrito</li>
+    <li>Tentar obter acesso não autorizado a qualquer parte do Serviço, outras contas de utilizador ou sistemas e redes relacionados</li>
+    <li>Interferir ou perturbar o Serviço, servidores ou redes ligadas ao Serviço</li>
+    <li>Fazer engenharia reversa, descompilar ou desmontar qualquer parte do Serviço</li>
+    <li>Utilizar o Serviço para qualquer finalidade ilegal ou em violação de quaisquer leis ou regulamentos aplicáveis</li>
+    <li>Fazer-se passar por qualquer pessoa ou entidade, ou deturpar a sua afiliação com qualquer pessoa ou entidade</li>
+    <li>Contornar ou tentar contornar quaisquer medidas de segurança, incluindo proteção CSRF, limitação de taxa ou mecanismos de bloqueio de conta</li>
+    <li>Partilhar, vender ou transferir as credenciais da sua conta a terceiros</li>
+  </ul>
+  <p>A violação destes termos pode resultar na suspensão ou encerramento imediato da conta.</p>
+
+  <h2>5. Aviso de Dados de Mercado</h2>
+  <div class="highlight">
+    Todos os dados de preços do petróleo bruto, gráficos e informações relacionadas fornecidas através do OIL Benchmarks destinam-se <strong>apenas a fins informativos</strong> e não constituem aconselhamento financeiro, de investimento, de negociação ou qualquer outra forma de aconselhamento profissional.
+  </div>
+  <p>Reconhece e concorda que:</p>
+  <ul>
+    <li>Os dados de preços exibidos podem estar atrasados, estimados ou não refletir as condições de mercado em tempo real</li>
+    <li>Os dados históricos são fornecidos com base no melhor esforço e podem conter imprecisões ou lacunas</li>
+    <li>Os alertas de preço são entregues com base no melhor esforço e podem estar atrasados; não deve depender exclusivamente dos alertas para decisões de negociação</li>
+    <li>Não garantimos a precisão, integridade ou atualidade de quaisquer dados de mercado</li>
+    <li>Deve consultar um consultor financeiro qualificado antes de tomar quaisquer decisões de investimento</li>
+    <li>Não somos um corretor-negociante registado, consultor de investimentos ou instituição financeira</li>
+  </ul>
+
+  <h2>6. Propriedade Intelectual</h2>
+  <p>O Serviço, incluindo o seu design, layout, gráficos, interface de utilizador e código-fonte subjacente, é propriedade intelectual de Nuno Ribeiro e está protegido por leis de direitos de autor, marcas registadas e outras leis de propriedade intelectual aplicáveis.</p>
+  <p>É-lhe concedida uma licença limitada, não exclusiva, intransferível e revogável para aceder e utilizar o Serviço para fins pessoais e não comerciais, de acordo com estes Termos. Esta licença não inclui o direito de modificar, distribuir ou criar obras derivadas com base no Serviço.</p>
+  <p>Os dados de preços do petróleo bruto podem ser provenientes de fontes públicas ou de terceiros e estão sujeitos aos seus próprios termos de utilização e licenciamento.</p>
+
+  <h2>7. Privacidade</h2>
+  <p>A sua utilização do Serviço é também regida pela nossa <a href="privacy.html">Política de Privacidade</a>, que descreve como recolhemos, utilizamos e protegemos os seus dados pessoais. Ao utilizar o Serviço, consente as práticas de dados descritas na Política de Privacidade.</p>
+  <p>Estamos comprometidos com análises que respeitam a privacidade. O nosso sistema de análise auto-hospedado não armazena endereços IP e utiliza hashes de sessão em vez de identificadores persistentes.</p>
+
+  <h2>8. Política de Cookies</h2>
+  <p>O Serviço utiliza cookies para funcionar corretamente. Categorizamos os cookies em três tipos:</p>
+  <ul>
+    <li><strong>Cookies essenciais:</strong> Necessários para o funcionamento do Serviço, incluindo gestão de sessões e proteção CSRF</li>
+    <li><strong>Cookies de análise:</strong> Utilizados pelo nosso sistema de análise auto-hospedado e que respeita a privacidade para compreender padrões de utilização</li>
+    <li><strong>Cookies funcionais:</strong> Permitem funcionalidades de personalização como preferências de tema e escolhas de consentimento de cookies</li>
+  </ul>
+  <p>Pode gerir as suas preferências de cookies através da interface de consentimento de cookies fornecida no Serviço. Os cookies essenciais não podem ser desativados pois são necessários para o funcionamento do Serviço.</p>
+
+  <h2>9. Limitação de Responsabilidade</h2>
+  <p>Na máxima extensão permitida pela lei aplicável, o OIL Benchmarks e o seu operador Nuno Ribeiro não serão responsáveis por quaisquer danos indiretos, incidentais, especiais, consequenciais ou punitivos, incluindo mas não limitado a:</p>
+  <ul>
+    <li>Perda de lucros, receitas, dados ou oportunidades de negócio</li>
+    <li>Perdas financeiras resultantes da confiança em dados de preços, alertas ou informações fornecidas pelo Serviço</li>
+    <li>Interrupções de serviço, atrasos ou erros na transmissão de dados</li>
+    <li>Acesso não autorizado ou alteração dos seus dados</li>
+    <li>Qualquer conduta ou conteúdo de terceiros acedido através do Serviço</li>
+  </ul>
+  <p>O Serviço é fornecido "tal como está" e "conforme disponível" sem garantias de qualquer tipo, sejam expressas ou implícitas, incluindo mas não limitado a garantias implícitas de comercialização, adequação a um fim específico e não violação.</p>
+
+  <h2>10. Alterações aos Termos</h2>
+  <p>Reservamo-nos o direito de modificar estes Termos de Serviço a qualquer momento. As alterações entrarão em vigor imediatamente após a publicação dos Termos revistos no Serviço, com uma "Data de Vigência" atualizada no topo desta página.</p>
+  <p>Alterações materiais serão comunicadas através do Serviço via notificações na aplicação ou email (se tiver optado por receber notificações). O seu uso continuado do Serviço após quaisquer modificações constitui aceitação dos Termos atualizados.</p>
+
+  <h2>11. Lei Aplicável</h2>
+  <p>Estes Termos serão regidos e interpretados de acordo com as leis aplicáveis, sem considerar princípios de conflito de leis. Quaisquer disputas decorrentes ou relacionadas com estes Termos estarão sujeitas à jurisdição exclusiva dos tribunais competentes.</p>
+
+  <h2>12. Informações de Contacto</h2>
+  <p>Se tiver alguma questão, preocupação ou pedido relativamente a estes Termos de Serviço, por favor contacte-nos:</p>
+  <div class="highlight">
+    <strong>Nuno Ribeiro</strong><br>
+    OIL Benchmarks<br>
+    Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e685898892878592a6898f8a848388858e8b87948d95c885898b">[email&#160;protected]</a>
+  </div>
+
+  <div class="footer-note">
+    OIL Benchmarks &mdash; operado por Nuno Ribeiro<br>
+    <a href="privacy.html">Política de Privacidade</a>
+  </div>
+</div>
+</main>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function toggleLang() {
+  var en = document.getElementById('content-en');
+  var pt = document.getElementById('content-pt');
+  var btn = document.getElementById('lang-toggle');
+  var link = document.getElementById('back-link');
+  if (en.style.display === 'none') {
+    en.style.display = ''; pt.style.display = 'none';
+    btn.textContent = 'PT'; link.textContent = 'Back to App';
+    document.documentElement.lang = 'en';
+    localStorage.setItem('oil-lang', 'en');
+  } else {
+    en.style.display = 'none'; pt.style.display = '';
+    btn.textContent = 'EN'; link.textContent = 'Voltar';
+    document.documentElement.lang = 'pt';
+    localStorage.setItem('oil-lang', 'pt');
+  }
+}
+(function() {
+  var lang = localStorage.getItem('oil-lang');
+  if (lang === 'pt') toggleLang();
+})();
+</script>
+</body>
+</html>
