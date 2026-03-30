@@ -1,0 +1,15 @@
+node_modules/
+server/node_modules/
+server/.env
+server/data.db
+server/data.db-wal
+server/data.db-shm
+server/uploads/*
+!server/uploads/.gitkeep
+server/backups/*
+!server/backups/.gitkeep
+server/certs/*.pem
+server/certs/*.tmp
+server/logs/*
+!server/logs/.gitkeep
+*.log
