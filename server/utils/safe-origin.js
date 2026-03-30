@@ -56,8 +56,17 @@ function getSafeOrigin(req) {
         if (u.host === reqHost) return origin;
       } catch (_) { /* skip malformed */ }
     }
-    // No match — return the first (primary) origin
-    return allowedOrigins[0];
+    // No match — Host header doesn't correspond to any allowed origin.
+    // Returning an arbitrary origin here would let an attacker with a
+    // crafted Host header trigger password-reset emails pointing to the
+    // wrong domain.  Log the mismatch and fall back to localhost.
+    log.warn(
+      { requestHost: reqHost, allowedOrigins },
+      'Host header does not match any ALLOWED_ORIGIN — using localhost fallback'
+    );
+    const port = process.env.PORT || '8080';
+    const protocol = req.protocol || 'https';
+    return `${protocol}://localhost${port !== '80' && port !== '443' ? ':' + port : ''}`;
   }
 
   // 2. Fallback: validate the Host header to block injection
