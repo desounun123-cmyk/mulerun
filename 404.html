@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Page Not Found</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0f1117;
+      color: #e4e4e7;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+    }
+    .container {
+      text-align: center;
+      padding: 2rem;
+      max-width: 480px;
+    }
+    .code {
+      font-size: 6rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      background: linear-gradient(135deg, #f59e0b, #ef4444);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #a1a1aa;
+    }
+    p {
+      color: #71717a;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    a {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      background: #f59e0b;
+      color: #0f1117;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+    a:hover { background: #d97706; }
+    .toggle {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      display: flex;
+      gap: 0;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid #27272a;
+    }
+    .toggle button {
+      padding: 0.4rem 0.9rem;
+      background: transparent;
+      color: #71717a;
+      border: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      font-family: inherit;
+    }
+    .toggle button.active {
+      background: #f59e0b;
+      color: #0f1117;
+    }
+  </style>
+</head>
+<body>
+  <div class="toggle" id="langToggle">
+    <button data-lang="en" class="active">EN</button>
+    <button data-lang="pt">PT</button>
+  </div>
+  <div class="container">
+    <div class="code">404</div>
+    <h1 id="title">Page Not Found</h1>
+    <p id="desc">The page you are looking for does not exist or has been moved.</p>
+    <a id="link" href="/">Back to Home</a>
+  </div>
+  <script>
+    (function() {
+      var t = {
+        en: { title: 'Page Not Found', desc: 'The page you are looking for does not exist or has been moved.', link: 'Back to Home', dir: 'ltr' },
+        zh: { title: '\u9875\u9762\u672a\u627e\u5230', desc: '\u60a8\u8bbf\u95ee\u7684\u9875\u9762\u4e0d\u5b58\u5728\u6216\u5df2\u88ab\u79fb\u52a8\u3002', link: '\u8fd4\u56de\u9996\u9875', dir: 'ltr' },
+        es: { title: 'P\u00e1gina no encontrada', desc: 'La p\u00e1gina que buscas no existe o ha sido movida.', link: 'Volver al inicio', dir: 'ltr' },
+        fr: { title: 'Page introuvable', desc: 'La page que vous recherchez n\u2019existe pas ou a \u00e9t\u00e9 d\u00e9plac\u00e9e.', link: 'Retour \u00e0 l\u2019accueil', dir: 'ltr' },
+        de: { title: 'Seite nicht gefunden', desc: 'Die gesuchte Seite existiert nicht oder wurde verschoben.', link: 'Zur Startseite', dir: 'ltr' },
+        pt: { title: 'P\u00e1gina n\u00e3o encontrada', desc: 'A p\u00e1gina que voc\u00ea procura n\u00e3o existe ou foi movida.', link: 'Voltar ao in\u00edcio', dir: 'ltr' },
+        ja: { title: '\u30da\u30fc\u30b8\u304c\u898b\u3064\u304b\u308a\u307e\u305b\u3093', desc: '\u304a\u63a2\u3057\u306e\u30da\u30fc\u30b8\u306f\u5b58\u5728\u3057\u306a\u3044\u304b\u3001\u79fb\u52d5\u3055\u308c\u305f\u53ef\u80fd\u6027\u304c\u3042\u308a\u307e\u3059\u3002', link: '\u30db\u30fc\u30e0\u306b\u623b\u308b', dir: 'ltr' },
+        ko: { title: '\ud398\uc774\uc9c0\ub97c \ucc3e\uc744 \uc218 \uc5c6\uc2b5\ub2c8\ub2e4', desc: '\ucc3e\uc73c\uc2dc\ub294 \ud398\uc774\uc9c0\uac00 \uc874\uc7ac\ud558\uc9c0 \uc54a\uac70\ub098 \uc774\ub3d9\ub418\uc5c8\uc2b5\ub2c8\ub2e4.', link: '\ud648\uc73c\ub85c \ub3cc\uc544\uac00\uae30', dir: 'ltr' },
+        ar: { title: '\u0627\u0644\u0635\u0641\u062d\u0629 \u063a\u064a\u0631 \u0645\u0648\u062c\u0648\u062f\u0629', desc: '\u0627\u0644\u0635\u0641\u062d\u0629 \u0627\u0644\u062a\u064a \u062a\u0628\u062d\u062b \u0639\u0646\u0647\u0627 \u063a\u064a\u0631 \u0645\u0648\u062c\u0648\u062f\u0629 \u0623\u0648 \u062a\u0645 \u0646\u0642\u0644\u0647\u0627.', link: '\u0627\u0644\u0639\u0648\u062f\u0629 \u0625\u0644\u0649 \u0627\u0644\u0631\u0626\u064a\u0633\u064a\u0629', dir: 'rtl' },
+        ru: { title: '\u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u0430', desc: '\u0421\u0442\u0440\u0430\u043d\u0438\u0446\u0430, \u043a\u043e\u0442\u043e\u0440\u0443\u044e \u0432\u044b \u0438\u0449\u0435\u0442\u0435, \u043d\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442 \u0438\u043b\u0438 \u0431\u044b\u043b\u0430 \u043f\u0435\u0440\u0435\u043c\u0435\u0449\u0435\u043d\u0430.', link: '\u041d\u0430 \u0433\u043b\u0430\u0432\u043d\u0443\u044e', dir: 'ltr' },
+        hi: { title: '\u092a\u0943\u0937\u094d\u0920 \u0928\u0939\u0940\u0902 \u092e\u093f\u0932\u093e', desc: '\u0906\u092a \u091c\u093f\u0938 \u092a\u0943\u0937\u094d\u0920 \u0915\u0940 \u0924\u0932\u093e\u0936 \u0915\u0930 \u0930\u0939\u0947 \u0939\u0948\u0902 \u0935\u0939 \u092e\u094c\u091c\u0942\u0926 \u0928\u0939\u0940\u0902 \u0939\u0948 \u092f\u093e \u0938\u094d\u0925\u093e\u0928\u093e\u0902\u0924\u0930\u093f\u0924 \u0915\u0930 \u0926\u093f\u092f\u093e \u0917\u092f\u093e \u0939\u0948\u0964', link: '\u0939\u094b\u092e \u092a\u0930 \u0935\u093e\u092a\u0938 \u091c\u093e\u090f\u0902', dir: 'ltr' },
+        tr: { title: 'Sayfa bulunamad\u0131', desc: 'Arad\u0131\u011f\u0131n\u0131z sayfa mevcut de\u011fil veya ta\u015f\u0131nm\u0131\u015f.', link: 'Ana sayfaya d\u00f6n', dir: 'ltr' }
+      };
+
+      function applyLang(code) {
+        var l = t[code] || t.en;
+        document.documentElement.lang = code;
+        document.documentElement.dir = l.dir;
+        document.getElementById('title').textContent = l.title;
+        document.getElementById('desc').textContent = l.desc;
+        document.getElementById('link').textContent = l.link;
+        document.title = '404 \u2014 ' + l.title;
+        var btns = document.querySelectorAll('#langToggle button');
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].classList.toggle('active', btns[i].getAttribute('data-lang') === code);
+        }
+      }
+
+      // Auto-detect on load
+      var lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+      var base = lang.split('-')[0];
+      var initial = (base === 'pt') ? 'pt' : 'en';
+      applyLang(initial);
+
+      // Toggle buttons
+      document.getElementById('langToggle').addEventListener('click', function(e) {
+        var btn = e.target.closest('button');
+        if (btn) applyLang(btn.getAttribute('data-lang'));
+      });
+    })();
+  </script>
+</body>
+</html>
