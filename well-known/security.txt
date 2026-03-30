@@ -1,0 +1,9 @@
+# security.txt — https://securitytxt.org/
+# This file provides security researchers with contact information
+# for responsible vulnerability disclosure.
+
+Contact: mailto:security@mulerun.com
+Expires: 2027-03-30T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://mulerun.com/.well-known/security.txt
+Policy: https://mulerun.com/security-policy
