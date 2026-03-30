@@ -1,0 +1,12 @@
+# robots.txt — Oil Benchmark Platform
+# https://mulerun.com
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /uploads/
+Disallow: /reset-password
+
+# Sitemaps
+# Sitemap: https://yourdomain.com/sitemap.xml
