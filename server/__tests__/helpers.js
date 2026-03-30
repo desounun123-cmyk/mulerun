@@ -1,10 +1,13 @@
 /**
  * Shared test setup — provides a fresh app instance backed by an
  * in-memory SQLite database so tests never touch production data.
+ *
+ * NOTE: NODE_ENV=test disables rate limiters and CAPTCHA validation
+ * so tests can register users without solving math challenges.
  */
 const path = require('path');
 
-// Signal test environment — disables rate limiters
+// Signal test environment — disables rate limiters and CAPTCHA
 process.env.NODE_ENV = 'test';
 
 // Point DB_PATH to a per-worker temp file so each jest worker is isolated.
@@ -18,7 +21,7 @@ const app = require('../index');
 const request = require('supertest');
 const db = require('../db');
 
-/** Helper: register + login and return the supertest agent (cookie jar). */
+/** Helper: login with existing credentials and return the supertest agent (cookie jar). */
 async function loginAs(email, password) {
   const agent = request.agent(app);
   await agent
@@ -28,7 +31,7 @@ async function loginAs(email, password) {
   return agent;
 }
 
-/** Helper: register a new user and return the agent. */
+/** Helper: register a new user and return the agent (CAPTCHA bypassed in test mode). */
 async function registerAndLogin(name, email, password) {
   const agent = request.agent(app);
   await agent
