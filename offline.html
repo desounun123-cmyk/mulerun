@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Offline — OIL Benchmarks</title>
+<link rel="icon" href="/icons/favicon.svg" type="image/svg+xml">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0c0c0e;color:#e8e4dc;font-family:'DM Mono',monospace,system-ui;display:flex;align-items:center;justify-content:center;min-height:100vh;padding:24px;text-align:center}
+.container{max-width:420px;width:100%}
+.icon{margin-bottom:24px}
+.icon svg{width:64px;height:64px}
+h1{font-size:16px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#c9a84c;margin-bottom:12px}
+p{font-size:11px;color:#888;line-height:1.7;margin-bottom:20px}
+.status-line{display:inline-flex;align-items:center;gap:8px;font-size:10px;color:#555;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:28px}
+.status-dot{width:8px;height:8px;border-radius:50%;background:#e05040;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+.retry-btn{display:inline-block;padding:10px 28px;background:linear-gradient(135deg,#85783c,#c9a84c);border:none;border-radius:4px;color:#0c0c0e;font-family:inherit;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:filter 0.2s;text-decoration:none}
+.retry-btn:hover{filter:brightness(1.15)}
+.tip{margin-top:28px;padding:16px;background:#111;border:1px solid #282828;border-radius:6px;text-align:left}
+.tip-title{font-size:9px;font-weight:700;color:#c9a84c;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+.tip ul{list-style:none;padding:0}
+.tip li{font-size:10px;color:#666;line-height:1.8;padding-left:14px;position:relative}
+.tip li::before{content:"\203A";position:absolute;left:0;color:#c9a84c}
+.lang-toggle{position:absolute;top:16px;right:16px;display:flex;gap:0;border:1px solid #333;border-radius:4px;overflow:hidden}
+.lang-toggle button{background:#1a1a1a;color:#666;border:none;font-family:inherit;font-size:10px;font-weight:700;letter-spacing:1px;padding:6px 12px;cursor:pointer;transition:background 0.2s,color 0.2s;text-transform:uppercase}
+.lang-toggle button.active{background:linear-gradient(135deg,#85783c,#c9a84c);color:#0c0c0e}
+.lang-toggle button:not(.active):hover{background:#222;color:#aaa}
+</style>
+</head>
+<body>
+<div class="lang-toggle" id="lang-toggle">
+  <button data-lang="en" id="lang-en">EN</button>
+  <button data-lang="pt" id="lang-pt">PT</button>
+</div>
+<div class="container">
+  <div class="icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 12l12 12M17 12L5 24" opacity="0.5"/>
+      <path d="M20 32c3.5-3.5 8.2-5.5 13-5.5s9.5 2 13 5.5"/>
+      <path d="M26 38c1.8-1.8 4.2-2.8 7-2.8s5.2 1 7 2.8"/>
+      <circle cx="33" cy="46" r="2.5" fill="#c9a84c" stroke="none"/>
+      <path d="M14 26c5.2-5.2 12.2-8 19-8s13.8 2.8 19 8" opacity="0.35"/>
+    </svg>
+  </div>
+  <h1 data-i18n="title">You're Offline</h1>
+  <p data-i18n="desc">It looks like your internet connection dropped. OIL Benchmarks needs a network connection to fetch live crude oil data.</p>
+  <div class="status-line">
+    <span class="status-dot"></span>
+    <span data-i18n="status">No connection detected</span>
+  </div>
+  <br><br>
+  <button class="retry-btn" onclick="window.location.reload()" data-i18n="retry">Retry Connection</button>
+  <div class="tip">
+    <div class="tip-title" data-i18n="tipTitle">While you wait</div>
+    <ul>
+      <li data-i18n="tip1">Check your Wi-Fi or mobile data</li>
+      <li data-i18n="tip2">Try moving closer to your router</li>
+      <li data-i18n="tip3">Disable and re-enable airplane mode</li>
+      <li data-i18n="tip4">Previously viewed charts may still load from cache</li>
+    </ul>
+  </div>
+</div>
+<script>
+// ── i18n translations ────────────────────────────────────────────
+// Add new languages by adding a key to this object.
+// The key should match the ISO 639-1 language code (e.g. 'pt', 'es').
+var TR = {
+  en: {
+    title: "You're Offline",
+    desc: 'It looks like your internet connection dropped. OIL Benchmarks needs a network connection to fetch live crude oil data.',
+    status: 'No connection detected',
+    retry: 'Retry Connection',
+    tipTitle: 'While you wait',
+    tip1: 'Check your Wi-Fi or mobile data',
+    tip2: 'Try moving closer to your router',
+    tip3: 'Disable and re-enable airplane mode',
+    tip4: 'Previously viewed charts may still load from cache'
+  },
+  'en-GB': {
+    title: "You're Offline",
+    desc: 'It looks like your internet connexion dropped. OIL Benchmarks needs a network connexion to fetch live crude oil data.',
+    status: 'No connexion detected',
+    retry: 'Retry Connexion',
+    tipTitle: 'Whilst you wait',
+    tip1: 'Check your Wi-Fi or mobile data',
+    tip2: 'Try moving closer to your router',
+    tip3: 'Disable and re-enable aeroplane mode',
+    tip4: 'Previously viewed charts may still load from cache'
+  },
+  'pt-BR': {
+    title: 'Sem Conex\u00e3o',
+    desc: 'Parece que sua conex\u00e3o com a internet caiu. O OIL Benchmarks precisa de uma conex\u00e3o de rede para buscar dados de petr\u00f3leo em tempo real.',
+    status: 'Nenhuma conex\u00e3o detectada',
+    retry: 'Tentar Novamente',
+    tipTitle: 'Enquanto voc\u00ea espera',
+    tip1: 'Verifique o Wi-Fi ou os dados m\u00f3veis',
+    tip2: 'Tente se aproximar do roteador',
+    tip3: 'Desative e reative o modo avi\u00e3o',
+    tip4: 'Gr\u00e1ficos vistos anteriormente podem ainda carregar do cache'
+  },
+  pt: {
+    title: 'Sem Conex\u00e3o',
+    desc: 'Parece que a sua liga\u00e7\u00e3o \u00e0 internet caiu. O OIL Benchmarks precisa de uma liga\u00e7\u00e3o de rede para obter dados de petr\u00f3leo em tempo real.',
+    status: 'Nenhuma conex\u00e3o detetada',
+    retry: 'Tentar Novamente',
+    tipTitle: 'Enquanto espera',
+    tip1: 'Verifique o Wi-Fi ou os dados m\u00f3veis',
+    tip2: 'Tente aproximar-se do router',
+    tip3: 'Desative e reative o modo de avi\u00e3o',
+    tip4: 'Gr\u00e1ficos vistos anteriormente podem ainda carregar da cache'
+  },
+  'es-419': {
+    title: 'Sin Conexi\u00f3n',
+    desc: 'Parece que se perdi\u00f3 la conexi\u00f3n a internet. OIL Benchmarks necesita conexi\u00f3n de red para obtener datos de petr\u00f3leo en tiempo real.',
+    status: 'No se detect\u00f3 conexi\u00f3n',
+    retry: 'Reintentar Conexi\u00f3n',
+    tipTitle: 'Mientras esperas',
+    tip1: 'Revisa tu Wi-Fi o datos m\u00f3viles',
+    tip2: 'Int\u00e9ntalo m\u00e1s cerca del router',
+    tip3: 'Desactiva y reactiva el modo avi\u00f3n',
+    tip4: 'Las gr\u00e1ficas vistas anteriormente podr\u00edan cargarse desde el cach\u00e9'
+  },
+  es: {
+    title: 'Sin Conexi\u00f3n',
+    desc: 'Parece que se ha perdido la conexi\u00f3n a internet. OIL Benchmarks necesita conexi\u00f3n de red para obtener datos de petr\u00f3leo en tiempo real.',
+    status: 'No se detect\u00f3 conexi\u00f3n',
+    retry: 'Reintentar Conexi\u00f3n',
+    tipTitle: 'Mientras esperas',
+    tip1: 'Comprueba tu Wi-Fi o datos m\u00f3viles',
+    tip2: 'Int\u00e9ntalo m\u00e1s cerca del router',
+    tip3: 'Desactiva y reactiva el modo avi\u00f3n',
+    tip4: 'Los gr\u00e1ficos vistos anteriormente podr\u00edan cargarse desde la cach\u00e9'
+  },
+  'fr-CA': {
+    title: 'Hors Ligne',
+    desc: 'Il semble que votre connexion internet ait \u00e9t\u00e9 coup\u00e9e. OIL Benchmarks a besoin d\u2019une connexion r\u00e9seau pour r\u00e9cup\u00e9rer les donn\u00e9es p\u00e9troli\u00e8res en direct.',
+    status: 'Aucune connexion d\u00e9tect\u00e9e',
+    retry: 'R\u00e9essayer',
+    tipTitle: 'En attendant',
+    tip1: 'V\u00e9rifiez votre Wi-Fi ou vos donn\u00e9es mobiles',
+    tip2: 'Essayez de vous rapprocher de votre routeur',
+    tip3: 'D\u00e9sactivez puis r\u00e9activez le mode avion',
+    tip4: 'Les graphiques d\u00e9j\u00e0 consult\u00e9s peuvent encore se charger \u00e0 partir de la cache'
+  },
+  fr: {
+    title: 'Hors Ligne',
+    desc: 'Il semble que votre connexion internet ait \u00e9t\u00e9 coup\u00e9e. OIL Benchmarks a besoin d\u2019une connexion r\u00e9seau pour r\u00e9cup\u00e9rer les donn\u00e9es p\u00e9troli\u00e8res en direct.',
+    status: 'Aucune connexion d\u00e9tect\u00e9e',
+    retry: 'R\u00e9essayer',
+    tipTitle: 'En attendant',
+    tip1: 'V\u00e9rifiez votre Wi-Fi ou vos donn\u00e9es mobiles',
+    tip2: 'Essayez de vous rapprocher de votre routeur',
+    tip3: 'D\u00e9sactivez puis r\u00e9activez le mode avion',
+    tip4: 'Les graphiques d\u00e9j\u00e0 consult\u00e9s peuvent encore se charger depuis le cache'
+  },
+  de: {
+    title: 'Offline',
+    desc: 'Ihre Internetverbindung scheint unterbrochen zu sein. OIL Benchmarks ben\u00f6tigt eine Netzwerkverbindung, um aktuelle Roh\u00f6ldaten abzurufen.',
+    status: 'Keine Verbindung erkannt',
+    retry: 'Erneut versuchen',
+    tipTitle: 'In der Zwischenzeit',
+    tip1: 'Pr\u00fcfen Sie Ihr WLAN oder Ihre mobilen Daten',
+    tip2: 'Versuchen Sie, n\u00e4her an Ihren Router zu gehen',
+    tip3: 'Deaktivieren und reaktivieren Sie den Flugmodus',
+    tip4: 'Zuvor angesehene Diagramme k\u00f6nnen m\u00f6glicherweise noch aus dem Cache geladen werden'
+  },
+  'zh-TW': {
+    title: '\u7DB2\u8DEF\u5DF2\u65B7\u958B',
+    desc: '\u60A8\u7684\u7DB2\u969B\u7DB2\u8DEF\u9023\u7DDA\u4F3C\u4E4E\u5DF2\u4E2D\u65B7\u3002OIL Benchmarks \u9700\u8981\u7DB2\u8DEF\u9023\u7DDA\u4F86\u53D6\u5F97\u5373\u6642\u539F\u6CB9\u6578\u64DA\u3002',
+    status: '\u672A\u5075\u6E2C\u5230\u9023\u7DDA',
+    retry: '\u91CD\u8A66\u9023\u7DDA',
+    tipTitle: '\u7B49\u5F85\u671F\u9593',
+    tip1: '\u6AA2\u67E5\u60A8\u7684 Wi-Fi \u6216\u884C\u52D5\u6578\u64DA',
+    tip2: '\u5617\u8A66\u9760\u8FD1\u8DEF\u7531\u5668',
+    tip3: '\u95DC\u9589\u4E26\u91CD\u65B0\u958B\u555F\u98DB\u822A\u6A21\u5F0F',
+    tip4: '\u5148\u524D\u700F\u89BD\u7684\u5716\u8868\u53EF\u80FD\u4ECD\u53EF\u5F9E\u5FEB\u53D6\u8F09\u5165'
+  },
+  zh: {
+    title: '\u7F51\u7EDC\u5DF2\u65AD\u5F00',
+    desc: '\u60A8\u7684\u4E92\u8054\u7F51\u8FDE\u63A5\u4F3C\u4E4E\u5DF2\u4E2D\u65AD\u3002OIL Benchmarks \u9700\u8981\u7F51\u7EDC\u8FDE\u63A5\u6765\u83B7\u53D6\u5B9E\u65F6\u539F\u6CB9\u6570\u636E\u3002',
+    status: '\u672A\u68C0\u6D4B\u5230\u8FDE\u63A5',
+    retry: '\u91CD\u8BD5\u8FDE\u63A5',
+    tipTitle: '\u7B49\u5F85\u671F\u95F4',
+    tip1: '\u68C0\u67E5\u60A8\u7684 Wi-Fi \u6216\u79FB\u52A8\u6570\u636E',
+    tip2: '\u5C1D\u8BD5\u9760\u8FD1\u8DEF\u7531\u5668',
+    tip3: '\u5173\u95ED\u5E76\u91CD\u65B0\u5F00\u542F\u98DE\u884C\u6A21\u5F0F',
+    tip4: '\u4E4B\u524D\u67E5\u770B\u7684\u56FE\u8868\u53EF\u80FD\u4ECD\u53EF\u4ECE\u7F13\u5B58\u52A0\u8F7D'
+  },
+  ja: {
+    title: '\u30AA\u30D5\u30E9\u30A4\u30F3',
+    desc: '\u30A4\u30F3\u30BF\u30FC\u30CD\u30C3\u30C8\u63A5\u7D9A\u304C\u5207\u65AD\u3055\u308C\u305F\u3088\u3046\u3067\u3059\u3002OIL Benchmarks \u306F\u30EA\u30A2\u30EB\u30BF\u30A4\u30E0\u306E\u539F\u6CB9\u30C7\u30FC\u30BF\u3092\u53D6\u5F97\u3059\u308B\u305F\u3081\u306B\u30CD\u30C3\u30C8\u30EF\u30FC\u30AF\u63A5\u7D9A\u304C\u5FC5\u8981\u3067\u3059\u3002',
+    status: '\u63A5\u7D9A\u304C\u691C\u51FA\u3055\u308C\u307E\u305B\u3093',
+    retry: '\u518D\u63A5\u7D9A',
+    tipTitle: '\u304A\u5F85\u3061\u306E\u9593',
+    tip1: 'Wi-Fi\u307E\u305F\u306F\u30E2\u30D0\u30A4\u30EB\u30C7\u30FC\u30BF\u3092\u78BA\u8A8D\u3057\u3066\u304F\u3060\u3055\u3044',
+    tip2: '\u30EB\u30FC\u30BF\u30FC\u306B\u8FD1\u3065\u3044\u3066\u307F\u3066\u304F\u3060\u3055\u3044',
+    tip3: '\u6A5F\u5185\u30E2\u30FC\u30C9\u3092\u30AA\u30D5\u306B\u3057\u3066\u518D\u5EA6\u30AA\u30F3\u306B\u3057\u3066\u304F\u3060\u3055\u3044',
+    tip4: '\u4EE5\u524D\u898B\u305F\u30C1\u30E3\u30FC\u30C8\u306F\u30AD\u30E3\u30C3\u30B7\u30E5\u304B\u3089\u8AAD\u307F\u8FBC\u3081\u308B\u5834\u5408\u304C\u3042\u308A\u307E\u3059'
+  },
+  ar: {
+    title: '\u063A\u064A\u0631 \u0645\u062A\u0635\u0644',
+    desc: '\u064A\u0628\u062F\u0648 \u0623\u0646 \u0627\u062A\u0635\u0627\u0644\u0643 \u0628\u0627\u0644\u0625\u0646\u062A\u0631\u0646\u062A \u0642\u062F \u0627\u0646\u0642\u0637\u0639. \u064A\u062D\u062A\u0627\u062C OIL Benchmarks \u0625\u0644\u0649 \u0627\u062A\u0635\u0627\u0644 \u0628\u0627\u0644\u0634\u0628\u0643\u0629 \u0644\u062C\u0644\u0628 \u0628\u064A\u0627\u0646\u0627\u062A \u0627\u0644\u0646\u0641\u0637 \u0627\u0644\u062D\u064A\u0629.',
+    status: '\u0644\u0645 \u064A\u062A\u0645 \u0627\u0643\u062A\u0634\u0627\u0641 \u0627\u062A\u0635\u0627\u0644',
+    retry: '\u0625\u0639\u0627\u062F\u0629 \u0627\u0644\u0645\u062D\u0627\u0648\u0644\u0629',
+    tipTitle: '\u0623\u062B\u0646\u0627\u0621 \u0627\u0644\u0627\u0646\u062A\u0638\u0627\u0631',
+    tip1: '\u062A\u062D\u0642\u0642 \u0645\u0646 \u0627\u0644\u0648\u0627\u064A \u0641\u0627\u064A \u0623\u0648 \u0628\u064A\u0627\u0646\u0627\u062A \u0627\u0644\u0647\u0627\u062A\u0641',
+    tip2: '\u062D\u0627\u0648\u0644 \u0627\u0644\u0627\u0642\u062A\u0631\u0627\u0628 \u0645\u0646 \u062C\u0647\u0627\u0632 \u0627\u0644\u0631\u0627\u0648\u062A\u0631',
+    tip3: '\u0642\u0645 \u0628\u062A\u0639\u0637\u064A\u0644 \u0648\u0625\u0639\u0627\u062F\u0629 \u062A\u0641\u0639\u064A\u0644 \u0648\u0636\u0639 \u0627\u0644\u0637\u064A\u0631\u0627\u0646',
+    tip4: '\u0642\u062F \u064A\u062A\u0645 \u062A\u062D\u0645\u064A\u0644 \u0627\u0644\u0631\u0633\u0648\u0645 \u0627\u0644\u0628\u064A\u0627\u0646\u064A\u0629 \u0627\u0644\u0633\u0627\u0628\u0642\u0629 \u0645\u0646 \u0630\u0627\u0643\u0631\u0629 \u0627\u0644\u062A\u062E\u0632\u064A\u0646'
+  }
+};
+
+// Detect language from browser with regional variant support.
+// Resolution order: full tag (e.g. 'pt-BR') → base code (e.g. 'pt') → 'en'
+var rawLang = (navigator.language || navigator.userLanguage || 'en');
+var lang;
+// 1) Try exact match on the full BCP 47 tag (case-normalised)
+var parts = rawLang.split('-');
+var fullTag = parts.length > 1
+  ? parts[0].toLowerCase() + '-' + parts[1].toUpperCase()
+  : parts[0].toLowerCase();
+if (TR[fullTag]) {
+  lang = fullTag;
+} else {
+  // 2) Fall back to base language code
+  var base = parts[0].toLowerCase();
+  lang = TR[base] ? base : 'en';
+}
+
+// ── Apply translations to the page ──────────────────────────────
+function applyLang(code) {
+  lang = code;
+  var strings = TR[lang];
+  if (!strings) { strings = TR['en']; lang = 'en'; }
+  document.documentElement.lang = lang;
+  // RTL handling
+  if (lang === 'ar' || lang.startsWith('ar-') || lang === 'he' || lang.startsWith('he-')) {
+    document.documentElement.dir = 'rtl';
+  } else {
+    document.documentElement.dir = 'ltr';
+  }
+  // Translate all data-i18n elements
+  document.querySelectorAll('[data-i18n]').forEach(function(el) {
+    var key = el.getAttribute('data-i18n');
+    if (strings[key]) el.textContent = strings[key];
+  });
+  document.title = strings.title + ' \u2014 OIL Benchmarks';
+  // Update toggle active state — determine which button matches
+  var baseLang = lang.split('-')[0];
+  document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === baseLang);
+  });
+}
+
+// Initial render
+applyLang(lang);
+
+// ── EN / PT toggle ──────────────────────────────────────────────
+document.getElementById('lang-toggle').addEventListener('click', function(e) {
+  var btn = e.target.closest('button[data-lang]');
+  if (!btn) return;
+  var chosen = btn.getAttribute('data-lang'); // 'en' or 'pt'
+  // Try to pick the regional variant that matches the browser region,
+  // otherwise use the base code
+  var region = parts.length > 1 ? parts[1].toUpperCase() : '';
+  var regionalKey = chosen + '-' + region; // e.g. 'pt-BR'
+  if (TR[regionalKey]) {
+    applyLang(regionalKey);
+  } else {
+    applyLang(chosen);
+  }
+});
+
+// Auto-reload when connection comes back
+window.addEventListener('online', function() {
+  window.location.reload();
+});
+</script>
+</body>
+</html>
