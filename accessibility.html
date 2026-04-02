@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Accessibility Statement — OIL Benchmarks</title>
+<meta name="description" content="Accessibility commitment and conformance statement for OIL Benchmarks.">
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" type="image/svg+xml" href="/icons/favicon.svg">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0c0c0e;color:#e8e4dc;font-family:'DM Mono',monospace;font-size:14px;line-height:1.8;padding:0}
+a{color:#c9a84c;text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);transition:border-color 0.2s}
+a:hover{border-color:#c9a84c}
+a:focus-visible{outline:2px solid #c9a84c;outline-offset:2px;border-radius:2px}
+.wrap{max-width:740px;margin:0 auto;padding:40px 24px 80px}
+header{margin-bottom:40px}
+.brand{display:flex;align-items:center;gap:8px;margin-bottom:24px}
+.brand-oil{font-size:18px;font-weight:500;color:#c9a84c;letter-spacing:2px;text-transform:uppercase}
+.brand-bench{font-size:18px;font-weight:300;color:#e8e4dc;letter-spacing:1px}
+h1{font-size:22px;color:#c9a84c;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;font-weight:500}
+.subtitle{font-size:11px;color:#666;letter-spacing:0.5px}
+h2{font-size:14px;color:#c9a84c;letter-spacing:1.5px;text-transform:uppercase;margin:36px 0 12px;padding-bottom:6px;border-bottom:1px solid #282828;font-weight:500}
+h3{font-size:13px;color:#e8e4dc;margin:20px 0 8px;font-weight:500}
+p,li{color:#bbb;margin-bottom:12px}
+ul,ol{padding-left:20px;margin-bottom:16px}
+li{margin-bottom:6px}
+strong{color:#e8e4dc;font-weight:500}
+.tag{display:inline-block;padding:2px 10px;border-radius:3px;font-size:10px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase}
+.tag-pass{background:rgba(93,220,120,0.12);color:#5ddc78;border:1px solid rgba(93,220,120,0.3)}
+.tag-partial{background:rgba(232,168,50,0.1);color:#e8a832;border:1px solid rgba(232,168,50,0.3)}
+table{width:100%;border-collapse:collapse;margin:16px 0 24px;font-size:12px}
+th{text-align:left;font-size:10px;color:#666;text-transform:uppercase;letter-spacing:1px;padding:10px 12px;border-bottom:2px solid #333;font-weight:700}
+td{padding:10px 12px;border-bottom:1px solid #1e1e1e;color:#bbb}
+tr:hover td{background:rgba(201,168,76,0.03)}
+.date-box{background:#141418;border:1px solid #282828;border-radius:6px;padding:12px 16px;font-size:11px;color:#888;margin:24px 0;display:flex;gap:24px;flex-wrap:wrap}
+.date-box .d-label{font-size:9px;color:#666;text-transform:uppercase;letter-spacing:1px}
+.date-box .d-val{color:#c9a84c;font-weight:500;font-size:12px;margin-top:2px}
+.contact-box{background:#141418;border:1px solid #282828;border-radius:6px;padding:20px;margin:16px 0}
+.contact-box p{margin-bottom:8px}
+.back{display:inline-block;margin-top:32px;padding:8px 16px;background:linear-gradient(135deg,#85783c,#c9a84c);border-radius:4px;color:#0c0c0e;font-weight:700;font-size:10px;letter-spacing:1px;text-decoration:none;text-transform:uppercase;border:none}
+.back:hover{filter:brightness(1.15)}
+.back:focus-visible{outline:2px solid #e8e4dc;outline-offset:2px}
+@media(max-width:600px){.wrap{padding:24px 16px 60px}h1{font-size:18px}h2{font-size:12px}.date-box{flex-direction:column;gap:12px}}
+</style>
+</head>
+<body>
+<div class="wrap" role="main">
+
+<header>
+  <nav class="brand" aria-label="Site">
+    <a href="/" style="border:none;display:flex;align-items:center;gap:8px">
+      <span class="brand-oil">OIL</span><span class="brand-bench">Benchmarks</span>
+    </a>
+  </nav>
+  <h1>Accessibility Statement</h1>
+  <p class="subtitle">Commitment to digital accessibility for all users</p>
+</header>
+
+<div class="date-box">
+  <div><div class="d-label">Published</div><div class="d-val">2 April 2026</div></div>
+  <div><div class="d-label">Last reviewed</div><div class="d-val">2 April 2026</div></div>
+  <div><div class="d-label">Next review</div><div class="d-val">2 October 2026</div></div>
+  <div><div class="d-label">Standard</div><div class="d-val">WCAG 2.2 Level AA</div></div>
+</div>
+
+<!-- ── Introduction ─────────────────────────────────────────── -->
+<h2>Our commitment</h2>
+<p>OIL Benchmarks is committed to ensuring digital accessibility for people
+with disabilities. We continually improve the user experience for everyone
+and apply the relevant accessibility standards to make our content and
+functionality available to the widest possible audience.</p>
+
+<p>This statement applies to the web application at
+<strong>oilbenchmarks.com</strong>, including all pages served by the
+application and the installable Progressive Web App (PWA).</p>
+
+<!-- ── Conformance status ───────────────────────────────────── -->
+<h2>Conformance status</h2>
+<p>We target conformance with the
+<a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines (WCAG) 2.2</a>
+at <strong>Level AA</strong>. This is also the technical standard referenced
+by the <strong>European Accessibility Act (EAA)</strong>, Directive (EU)
+2019/882, enforceable from 28 June 2025, and by
+<strong>EN 301 549 v3.2.1</strong>, the harmonised European standard for
+ICT accessibility.</p>
+
+<p>Current self-assessed status: <span class="tag tag-partial">Partially conformant</span></p>
+<p>"Partially conformant" means that some portions of the content do not
+yet fully conform to the standard. Known gaps are listed below.</p>
+
+<!-- ── What we already do ───────────────────────────────────── -->
+<h2>Accessibility features</h2>
+<p>The following features are implemented across the application:</p>
+
+<h3>Perceivable</h3>
+<ul>
+  <li><strong>Text alternatives:</strong> all informational images, icons, and
+    chart elements include <code>alt</code> text or <code>aria-label</code>
+    descriptions.</li>
+  <li><strong>Colour contrast:</strong> the default dark theme uses gold
+    (#c9a84c) on dark (#0c0c0e) with a contrast ratio of 7.4:1 for body text,
+    exceeding the AA minimum of 4.5:1.</li>
+  <li><strong>Resizable text:</strong> all text sizes are defined in relative
+    units. The layout remains usable at 200% zoom.</li>
+  <li><strong>Colour independence:</strong> status indicators (on/off, up/down)
+    use text labels and icons alongside colour, so information is not conveyed
+    by colour alone.</li>
+</ul>
+
+<h3>Operable</h3>
+<ul>
+  <li><strong>Keyboard navigation:</strong> all interactive elements (buttons,
+    links, form fields, dialogs, chart controls) are reachable and operable
+    via keyboard alone.</li>
+  <li><strong>Focus indicators:</strong> visible focus rings are applied to all
+    focusable elements, with a minimum 2 px outline offset.</li>
+  <li><strong>Skip links:</strong> a "Skip to main content" link is provided
+    as the first focusable element.</li>
+  <li><strong>No keyboard traps:</strong> modal dialogs (delete confirmation,
+    restore confirmation) trap focus while open and return focus to the trigger
+    element on close.</li>
+  <li><strong>Timeouts:</strong> sessions have configurable timeouts; users
+    receive a warning notification before session expiry when push
+    notifications are enabled.</li>
+</ul>
+
+<h3>Understandable</h3>
+<ul>
+  <li><strong>Language:</strong> the page language is declared
+    (<code>lang="en"</code>) and the admin panel supports English/Portuguese
+    switching.</li>
+  <li><strong>Consistent navigation:</strong> the bottom navigation bar
+    (mobile) and sidebar (desktop) follow the same order on every page.</li>
+  <li><strong>Error identification:</strong> form validation errors are
+    announced with descriptive messages adjacent to the field, associated
+    via <code>aria-describedby</code>.</li>
+  <li><strong>Labels:</strong> all form inputs have visible labels or
+    accessible names via <code>&lt;label&gt;</code> or
+    <code>aria-label</code>.</li>
+</ul>
+
+<h3>Robust</h3>
+<ul>
+  <li><strong>Semantic HTML:</strong> pages use landmarks
+    (<code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>,
+    <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>), headings in
+    logical order, and ARIA roles where native semantics are insufficient.</li>
+  <li><strong>ARIA patterns:</strong> toggle switches, tab panels, toast
+    notifications (<code>role="status"</code>), and alert dialogs
+    follow WAI-ARIA Authoring Practices.</li>
+  <li><strong>Progressive enhancement:</strong> the offline fallback and
+    service worker are designed to degrade gracefully, with context
+    injected via <code>window.__OFFLINE_CONTEXT</code> for screen
+    readers.</li>
+</ul>
+
+<!-- ── Known limitations ────────────────────────────────────── -->
+<h2>Known limitations</h2>
+<p>We are aware of the following gaps and are actively working to address them:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Area</th>
+      <th>Issue</th>
+      <th>WCAG criteria</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Price chart</td>
+      <td>Canvas-rendered chart data is not fully exposed to assistive
+        technology. A data table alternative is provided below the chart,
+        but live tooltip values are not announced.</td>
+      <td>1.1.1, 4.1.2</td>
+      <td>In progress</td>
+    </tr>
+    <tr>
+      <td>Admin panel charts</td>
+      <td>Chart.js canvases in the admin dashboard lack structured data
+        table equivalents for some chart types.</td>
+      <td>1.1.1</td>
+      <td>Planned</td>
+    </tr>
+    <tr>
+      <td>PDF export</td>
+      <td>Admin PDF reports are not tagged for accessibility. Screen readers
+        may not correctly parse the document structure.</td>
+      <td>1.3.1, 4.1.2</td>
+      <td>Planned</td>
+    </tr>
+    <tr>
+      <td>CAPTCHA</td>
+      <td>Image CAPTCHA on registration is not accessible to users with
+        visual impairments. An audio alternative is not yet available.</td>
+      <td>1.1.1, 1.3.1</td>
+      <td>Evaluating alternatives</td>
+    </tr>
+    <tr>
+      <td>Touch targets</td>
+      <td>Some compact table action buttons in the admin panel are below the
+        recommended 44 &times; 44 CSS pixel minimum on mobile viewports.</td>
+      <td>2.5.8</td>
+      <td>In progress</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ── Testing ──────────────────────────────────────────────── -->
+<h2>Assessment methodology</h2>
+<p>We evaluate accessibility using a combination of:</p>
+<ul>
+  <li><strong>Automated scanning:</strong> axe-core (integrated into CI),
+    Lighthouse Accessibility audit, WAVE browser extension.</li>
+  <li><strong>Manual testing:</strong> keyboard-only navigation, screen reader
+    testing with VoiceOver (macOS/iOS) and NVDA (Windows), high-contrast
+    mode, 200% text zoom, reduced-motion preference.</li>
+  <li><strong>Code review:</strong> ARIA usage and semantic HTML are checked
+    during pull request review.</li>
+</ul>
+
+<!-- ── Compatibility ────────────────────────────────────────── -->
+<h2>Compatibility</h2>
+<p>The application is designed to be compatible with:</p>
+<ul>
+  <li>Recent versions of Chrome, Firefox, Safari, and Edge.</li>
+  <li>VoiceOver on macOS and iOS Safari.</li>
+  <li>NVDA and JAWS on Windows with Chrome and Firefox.</li>
+  <li>TalkBack on Android Chrome.</li>
+  <li>OS-level high-contrast / forced-colours modes.</li>
+  <li><code>prefers-reduced-motion</code> and
+    <code>prefers-color-scheme</code> media queries.</li>
+</ul>
+
+<!-- ── Legal framework ──────────────────────────────────────── -->
+<h2>Legal framework</h2>
+<p>This statement is provided in accordance with:</p>
+<ul>
+  <li><strong>European Accessibility Act (EAA)</strong> — Directive (EU) 2019/882,
+    applicable from 28 June 2025 to products and services offered to
+    consumers in the EU, including websites and mobile applications.</li>
+  <li><strong>EN 301 549 v3.2.1</strong> — harmonised European standard for
+    accessibility requirements of ICT products and services, which
+    incorporates WCAG 2.1 Level AA and extends it with additional
+    requirements for software and non-web documents.</li>
+  <li><strong>Web Accessibility Directive (EU) 2016/2102</strong> — applicable
+    to public-sector bodies; included here as a reference standard.</li>
+</ul>
+<p>While OIL Benchmarks is not a public-sector body, we voluntarily align
+with these standards to serve all users equitably and to comply with the
+EAA's requirements for digital services.</p>
+
+<!-- ── Feedback & enforcement ───────────────────────────────── -->
+<h2>Feedback</h2>
+<p>We welcome feedback on the accessibility of OIL Benchmarks. If you
+encounter an accessibility barrier, please contact us:</p>
+
+<div class="contact-box">
+  <p><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#b4d5d7d7d1c7c7ddd6ddd8ddc0cdf4dbddd8d6d1dad7dcd9d5c6dfc79ad7dbd9"><span class="__cf_email__" data-cfemail="f79694949284849e959e9b9e838eb7989e9b959299949f9a96859c84d994989a">[email&#160;protected]</span></a></p>
+  <p><strong>Response time:</strong> We aim to respond within 5 business days
+    and to provide an accessible alternative within 15 business days.</p>
+  <p><strong>Escalation:</strong> If you are not satisfied with our response,
+    you may contact the relevant national enforcement body in your EU member
+    state. A list of enforcement bodies is maintained by the
+    <a href="https://ec.europa.eu/social/main.jsp?catId=1202">European Commission</a>.</p>
+</div>
+
+<!-- ── Continuous improvement ───────────────────────────────── -->
+<h2>Continuous improvement</h2>
+<p>We review this statement and conduct a fresh accessibility audit at
+least every six months. Improvements are tracked in our issue tracker
+and prioritised alongside security and performance work.</p>
+<p>Our goal is to reach <strong>full WCAG 2.2 Level AA conformance</strong>
+and to resolve all known limitations listed above.</p>
+
+<a class="back" href="/">&larr; Back to App</a>
+
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>
