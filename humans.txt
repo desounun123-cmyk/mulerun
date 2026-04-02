@@ -1,0 +1,27 @@
+/* TEAM */
+
+Project:     OIL Benchmarks — WTI Crude Oil Prices
+Site:        https://oilbenchmarks.com
+Contact:     hello@oilbenchmarks.com
+
+/* THANKS */
+
+Node.js community
+Express.js contributors
+better-sqlite3 maintainers
+Chart.js team
+Zod schema library
+pino logging library
+All open-source contributors whose work makes this possible
+
+/* SITE */
+
+Standards:   HTML5, CSS3, ES2020
+Language:    English, Português
+Frameworks:  Express, Chart.js
+Runtime:     Node.js
+Database:    SQLite (better-sqlite3), PostgreSQL
+Components:  PWA, Service Worker, Web Push API
+Security:    Helmet, CSRF tokens, Argon2, TOTP 2FA, CSP
+Compliance:  GDPR, EAA (WCAG 2.2 AA)
+Last update: 2026-04-02
