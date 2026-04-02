@@ -1,0 +1,14 @@
+# ads.txt — Authorized Digital Sellers
+# https://iabtechlab.com/ads-txt/
+#
+# This file declares which advertising systems are authorised to sell
+# inventory on oilbenchmarks.com.  Placing an empty (no records) ads.txt
+# signals to programmatic buyers that NO entity is authorised to sell ads
+# on this domain, which prevents domain spoofing and unauthorised
+# inventory resale.
+#
+# If you later partner with an ad network, add DOMAIN, ACCOUNT_ID,
+# RELATIONSHIP, CERT_AUTHORITY lines per the IAB spec.  Example:
+#   google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
+#
+# Last reviewed: 2026-04-02
