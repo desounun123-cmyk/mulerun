@@ -25,7 +25,7 @@
     "multer": "^2.1.1",
     "nodemailer": "^8.0.4",
     "otpauth": "^9.5.0",
-    "pdfkit": "^0.16.0",
+    "pdfkit": "^0.18.0",
     "pino": "^10.3.1",
     "pino-http": "^11.0.0",
     "pino-roll": "^4.0.0",
