@@ -1,0 +1,60 @@
+# Dependabot configuration
+# https://docs.github.com/en/code-security/dependabot/dependabot-version-updates
+#
+# Scans npm dependencies for known CVEs and outdated packages.
+# Opens PRs automatically so vulnerabilities don't accumulate silently
+# across the 293+ transitive dependencies in the dependency tree.
+
+version: 2
+updates:
+  # ── npm (server/) ────────────────────────────────────────────────
+  - package-ecosystem: "npm"
+    directory: "/server"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "08:00"
+      timezone: "UTC"
+    open-pull-requests-limit: 10
+    # Security updates always get PRs regardless of this limit.
+    # Version updates are batched to avoid PR noise.
+    versioning-strategy: increase
+    labels:
+      - "dependencies"
+      - "npm"
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    # Group minor/patch updates into a single PR to reduce noise.
+    # Major version bumps get individual PRs since they may contain
+    # breaking changes that need manual review.
+    groups:
+      minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
+    # Ignore packages that are pinned for compatibility reasons.
+    # Add entries here if a major upgrade requires migration work
+    # that isn't yet scheduled.
+    # ignore:
+    #   - dependency-name: "example-pkg"
+    #     update-types: ["version-update:semver-major"]
+
+  # ── GitHub Actions ───────────────────────────────────────────────
+  # Keep CI workflow actions up to date. Outdated actions can have
+  # their own CVEs and may stop working when GitHub deprecates
+  # older Node.js runner versions.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "08:00"
+      timezone: "UTC"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "ci"
+    commit-message:
+      prefix: "ci"
+      include: "scope"
