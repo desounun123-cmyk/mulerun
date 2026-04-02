@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  sitemap.xml — OIL Benchmarks
+  Helps search engines discover all publicly accessible pages.
+
+  Notes:
+  - Only public (unauthenticated) pages are listed.
+  - /admin, /verify-email, and /reset-password are excluded (gated or transient).
+  - SPA client-side routes (/alerts, /history, /settings) are included because
+    they render distinct, indexable content via the catch-all → index.html handler.
+  - Update <lastmod> dates when page content meaningfully changes.
+  - Registered at Google Search Console / Bing Webmaster Tools for faster indexing.
+  - Referenced from robots.txt:  Sitemap: https://oilbenchmarks.com/sitemap.xml
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- ── Core pages ──────────────────────────────────────────────── -->
+
+  <url>
+    <loc>https://oilbenchmarks.com/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://oilbenchmarks.com/alerts</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://oilbenchmarks.com/history</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://oilbenchmarks.com/settings</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- ── Legal / compliance ──────────────────────────────────────── -->
+
+  <url>
+    <loc>https://oilbenchmarks.com/privacy.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://oilbenchmarks.com/terms.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://oilbenchmarks.com/cookie-policy.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://oilbenchmarks.com/accessibility.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- ── Market data (if served as a distinct public page) ───────── -->
+
+  <url>
+    <loc>https://oilbenchmarks.com/market-data.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
