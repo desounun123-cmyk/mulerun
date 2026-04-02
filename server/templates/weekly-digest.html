@@ -1,0 +1,81 @@
+<!-- subject: Your Weekly Oil Market Summary -->
+<!-- weekly-digest.html — Sent to users with weekly_newsletter enabled -->
+
+<h2 style="margin:0 0 20px 0;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#c9a84c;">
+  Weekly Digest
+</h2>
+
+<p style="margin:0 0 16px 0;font-size:12px;line-height:1.7;color:#bbb;">
+  Hi <strong style="color:#e8e4dc;">{{name}}</strong>, here's your oil market
+  summary for the week ending <strong style="color:#e8e4dc;">{{weekEnding}}</strong>.
+</p>
+
+<!-- Price table -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:24px;border:1px solid #1a1a1f;border-radius:6px;overflow:hidden;">
+  <!-- Header row -->
+  <tr style="background-color:#111114;">
+    <td style="padding:10px 16px;font-size:10px;font-weight:700;color:#666;text-transform:uppercase;letter-spacing:1px;border-bottom:1px solid #1a1a1f;">
+      Product
+    </td>
+    <td style="padding:10px 16px;font-size:10px;font-weight:700;color:#666;text-transform:uppercase;letter-spacing:1px;border-bottom:1px solid #1a1a1f;text-align:right;">
+      Price
+    </td>
+    <td style="padding:10px 16px;font-size:10px;font-weight:700;color:#666;text-transform:uppercase;letter-spacing:1px;border-bottom:1px solid #1a1a1f;text-align:right;">
+      Change
+    </td>
+  </tr>
+  <!-- WTI -->
+  <tr>
+    <td style="padding:10px 16px;font-size:12px;color:#e8e4dc;border-bottom:1px solid #1a1a1f;">WTI Crude</td>
+    <td style="padding:10px 16px;font-size:12px;color:#e8e4dc;border-bottom:1px solid #1a1a1f;text-align:right;">${{wtiPrice}}</td>
+    <td style="padding:10px 16px;font-size:12px;border-bottom:1px solid #1a1a1f;text-align:right;color:{{wtiColor}};">{{wtiChange}}</td>
+  </tr>
+  <!-- Brent -->
+  <tr>
+    <td style="padding:10px 16px;font-size:12px;color:#e8e4dc;border-bottom:1px solid #1a1a1f;">Brent Crude</td>
+    <td style="padding:10px 16px;font-size:12px;color:#e8e4dc;border-bottom:1px solid #1a1a1f;text-align:right;">${{brentPrice}}</td>
+    <td style="padding:10px 16px;font-size:12px;border-bottom:1px solid #1a1a1f;text-align:right;color:{{brentColor}};">{{brentChange}}</td>
+  </tr>
+  <!-- Heating Oil -->
+  <tr>
+    <td style="padding:10px 16px;font-size:12px;color:#e8e4dc;border-bottom:1px solid #1a1a1f;">Heating Oil</td>
+    <td style="padding:10px 16px;font-size:12px;color:#e8e4dc;border-bottom:1px solid #1a1a1f;text-align:right;">${{hoPrice}}</td>
+    <td style="padding:10px 16px;font-size:12px;border-bottom:1px solid #1a1a1f;text-align:right;color:{{hoColor}};">{{hoChange}}</td>
+  </tr>
+  <!-- Natural Gas -->
+  <tr>
+    <td style="padding:10px 16px;font-size:12px;color:#e8e4dc;">Natural Gas</td>
+    <td style="padding:10px 16px;font-size:12px;color:#e8e4dc;text-align:right;">${{gasPrice}}</td>
+    <td style="padding:10px 16px;font-size:12px;text-align:right;color:{{gasColor}};">{{gasChange}}</td>
+  </tr>
+</table>
+
+<!-- Active alerts summary -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:24px;">
+  <tr>
+    <td style="padding:16px;background-color:#111114;border-radius:6px;border-left:3px solid #c9a84c;">
+      <p style="margin:0;font-size:11px;color:#bbb;line-height:1.6;">
+        You have <strong style="color:#e8e4dc;">{{activeAlerts}}</strong> active price alert(s).
+        {{alertSummary}}
+      </p>
+    </td>
+  </tr>
+</table>
+
+<!-- CTA Button -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+    <td align="center" style="padding:0 0 20px 0;">
+      <a href="{{appUrl}}"
+         style="display:inline-block;padding:10px 28px;background:linear-gradient(135deg,#85783c,#c9a84c);color:#0c0c0e;font-weight:700;font-size:11px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border-radius:4px;">
+        View Dashboard
+      </a>
+    </td>
+  </tr>
+</table>
+
+<p style="margin:0;font-size:10px;color:#555;line-height:1.5;">
+  You're receiving this because you opted into the weekly newsletter.
+  <a href="{{settingsUrl}}" style="color:#85783c;text-decoration:none;">Unsubscribe</a>
+  from your settings page at any time.
+</p>

@@ -1,0 +1,82 @@
+<!-- subject: Account Deletion Requested — OIL Benchmarks -->
+<!-- account-deletion.html — Sent when a GDPR deletion request is created -->
+
+<h2 style="margin:0 0 20px 0;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#c9a84c;">
+  Account Deletion Request
+</h2>
+
+<p style="margin:0 0 16px 0;font-size:12px;line-height:1.7;color:#bbb;">
+  Hi <strong style="color:#e8e4dc;">{{name}}</strong>,
+</p>
+
+<p style="margin:0 0 16px 0;font-size:12px;line-height:1.7;color:#bbb;">
+  We received a request to permanently delete your OIL Benchmarks account
+  and all associated data.
+</p>
+
+<!-- Warning box -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:24px;">
+  <tr>
+    <td style="padding:16px;background-color:#1a1210;border-radius:6px;border-left:3px solid #c0392b;">
+      <p style="margin:0 0 8px 0;font-size:11px;font-weight:700;color:#e74c3c;text-transform:uppercase;letter-spacing:1px;">
+        This action is irreversible
+      </p>
+      <p style="margin:0;font-size:11px;color:#bbb;line-height:1.6;">
+        Once confirmed, all your data will be permanently erased — profile,
+        settings, alerts, notifications, and push subscriptions. This cannot
+        be undone.
+      </p>
+    </td>
+  </tr>
+</table>
+
+<!-- Details -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:24px;">
+  <tr>
+    <td style="padding:16px;background-color:#111114;border-radius:6px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td style="padding:4px 0;">
+            <span style="font-size:10px;color:#666;">Cooling-off period:</span>
+            <span style="font-size:11px;color:#e8e4dc;float:right;">{{coolingOffHours}} hours</span>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:4px 0;">
+            <span style="font-size:10px;color:#666;">Expires at:</span>
+            <span style="font-size:11px;color:#e8e4dc;float:right;">{{expiresAt}}</span>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:4px 0;">
+            <span style="font-size:10px;color:#666;">Requested from:</span>
+            <span style="font-size:11px;color:#e8e4dc;float:right;">{{ipAddress}}</span>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<p style="margin:0 0 24px 0;font-size:12px;line-height:1.7;color:#bbb;">
+  If you did not request this, please secure your account immediately by
+  changing your password.
+</p>
+
+<!-- CTA Buttons -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+    <td align="center" style="padding:0 0 12px 0;">
+      <a href="{{settingsUrl}}"
+         style="display:inline-block;padding:10px 28px;background:linear-gradient(135deg,#85783c,#c9a84c);color:#0c0c0e;font-weight:700;font-size:11px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border-radius:4px;">
+        Review Account Settings
+      </a>
+    </td>
+  </tr>
+</table>
+
+<p style="margin:0;font-size:10px;color:#555;line-height:1.5;">
+  You can cancel this request within the cooling-off period from your
+  account settings. After that, the request will expire automatically if
+  not confirmed.
+</p>

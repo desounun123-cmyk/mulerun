@@ -1,0 +1,78 @@
+<!-- base.html — Shared email layout for OIL Benchmarks
+     All emails inherit this shell. The partial is injected at {{{content}}}.
+     Inline CSS for maximum email client compatibility.
+-->
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="supported-color-schemes" content="dark" />
+  <title>{{subject}}</title>
+  <!--[if mso]>
+  <style>body,table,td{font-family:Consolas,monospace!important}</style>
+  <![endif]-->
+</head>
+<body style="margin:0;padding:0;background-color:#08080a;font-family:Consolas,'Courier New',monospace;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;">
+
+  <!-- Preheader (hidden preview text in inbox) -->
+  <div style="display:none;font-size:1px;color:#08080a;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">
+    {{preheader}}
+  </div>
+
+  <!-- Outer wrapper (dark background) -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#08080a;">
+    <tr>
+      <td align="center" style="padding:32px 16px;">
+
+        <!-- Inner card -->
+        <table role="presentation" width="560" cellpadding="0" cellspacing="0" border="0" style="max-width:560px;width:100%;background-color:#0c0c0e;border:1px solid #1a1a1f;border-radius:8px;">
+
+          <!-- Header bar -->
+          <tr>
+            <td style="padding:24px 32px 16px 32px;border-bottom:1px solid #1a1a1f;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td>
+                    <span style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#c9a84c;">OIL Benchmarks</span>
+                  </td>
+                  <td align="right">
+                    <span style="font-size:10px;color:#555;">WTI &middot; Brent &middot; HO &middot; Gas</span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Body content (injected from partial) -->
+          <tr>
+            <td style="padding:28px 32px;">
+              {{{content}}}
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding:20px 32px;border-top:1px solid #1a1a1f;">
+              <p style="margin:0 0 8px 0;font-size:10px;color:#555;line-height:1.5;">
+                This email was sent by <a href="{{appUrl}}" style="color:#85783c;text-decoration:none;">{{appName}}</a>.
+                You're receiving it because of activity on your account.
+              </p>
+              <p style="margin:0;font-size:10px;color:#444;line-height:1.5;">
+                Questions? Contact <a href="/cdn-cgi/l/email-protection#f78c8c84828787988583b29a969e9b8a8a" style="color:#85783c;text-decoration:none;">{{supportEmail}}</a>
+                &nbsp;&middot;&nbsp; &copy; {{year}} {{appName}}
+              </p>
+            </td>
+          </tr>
+
+        </table>
+        <!-- /Inner card -->
+
+      </td>
+    </tr>
+  </table>
+  <!-- /Outer wrapper -->
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>

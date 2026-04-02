@@ -1,0 +1,46 @@
+<!-- subject: Verify your email — OIL Benchmarks -->
+<!-- verify-email.html — Sent on registration and resend-verification -->
+
+<h2 style="margin:0 0 20px 0;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#c9a84c;">
+  Email Verification
+</h2>
+
+<p style="margin:0 0 16px 0;font-size:12px;line-height:1.7;color:#bbb;">
+  Welcome to OIL Benchmarks, <strong style="color:#e8e4dc;">{{name}}</strong>!
+</p>
+
+<p style="margin:0 0 24px 0;font-size:12px;line-height:1.7;color:#bbb;">
+  Please verify your email address by clicking the button below. This link is
+  valid for <strong style="color:#e8e4dc;">24 hours</strong>.
+</p>
+
+<!-- CTA Button -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+    <td align="center" style="padding:8px 0 24px 0;">
+      <!--[if mso]>
+      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" href="{{verifyUrl}}" style="height:38px;v-text-anchor:middle;width:200px;" arcsize="11%" strokecolor="#85783c" fillcolor="#b8981f">
+        <center style="color:#0c0c0e;font-family:Consolas,monospace;font-size:11px;font-weight:bold;letter-spacing:1px;text-transform:uppercase;">VERIFY EMAIL</center>
+      </v:roundrect>
+      <![endif]-->
+      <!--[if !mso]><!-->
+      <a href="{{verifyUrl}}"
+         style="display:inline-block;padding:10px 28px;background:linear-gradient(135deg,#85783c,#c9a84c);color:#0c0c0e;font-weight:700;font-size:11px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border-radius:4px;mso-hide:all;">
+        Verify Email
+      </a>
+      <!--<![endif]-->
+    </td>
+  </tr>
+</table>
+
+<!-- Fallback link -->
+<p style="margin:0 0 8px 0;font-size:10px;color:#666;line-height:1.5;">
+  Or copy and paste this URL into your browser:
+</p>
+<p style="margin:0 0 20px 0;font-size:10px;color:#85783c;line-height:1.5;word-break:break-all;">
+  <a href="{{verifyUrl}}" style="color:#85783c;text-decoration:none;">{{verifyUrl}}</a>
+</p>
+
+<p style="margin:0;font-size:10px;color:#555;line-height:1.5;">
+  If you did not create this account, you can safely ignore this email.
+</p>
